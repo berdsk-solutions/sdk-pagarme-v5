@@ -31,6 +31,11 @@ jobs:
         with:
           dotnet-version: '10.0.x'
 
+      - name: Setup Integration Tests Config
+        if: github.ref == 'refs/heads/develop'
+        run: |
+          echo '${{ secrets.PAGARME_CONFIG }}' > tests/Berdsk.Sdk.PagarMe.V5.Tests.Integration/appsettings.test.json
+
       - name: Restore
         run: dotnet restore
 
@@ -41,11 +46,6 @@ jobs:
           if [ -z "$VERSION" ]; then VERSION="0.1.0-preview"; fi
           echo "Building version: $VERSION"
           dotnet build --configuration Release --no-restore /p:Version="$VERSION"
-
-      - name: Setup Integration Tests Config
-        if: github.ref == 'refs/heads/develop'
-        run: |
-          echo '${{ secrets.PAGARME_CONFIG }}' > tests/Berdsk.Sdk.PagarMe.V5.Tests.Integration/appsettings.test.json
 
       - name: Test
         if: github.ref == 'refs/heads/develop'
