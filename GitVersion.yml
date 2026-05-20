@@ -1,16 +1,16 @@
 next-version: 0.1.0
-mode: Mainline
+mode: ContinuousDelivery
 branches:
   main:
+    regex: ^main$
     tag: ""
     increment: Patch
-    regex: ^main$
     is-release-branch: true
   develop:
+    regex: ^develop$
     tag: preview
     increment: Minor
-    regex: ^develop$
-    source-branches: [ 'main' ]
     is-release-branch: false
+    source-branches: ['main']
 ignore:
   sha: []
