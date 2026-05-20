@@ -1,4 +1,4 @@
-next-version: 0.1.0
+next-version: 1.0.1
 mode: ContinuousDelivery
 branches:
   main:
@@ -6,9 +6,10 @@ branches:
     tag: ""
     increment: Patch
     is-release-branch: true
+    source-branches: ['develop']
   develop:
     regex: ^develop$
-    tag: preview
+    tag: alpha
     increment: Minor
     is-release-branch: false
     source-branches: ['main']
