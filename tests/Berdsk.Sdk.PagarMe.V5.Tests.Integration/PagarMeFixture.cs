@@ -14,8 +14,9 @@ public class PagarMeFixture : IDisposable
         var apiKey =
             Configuration["PagarMe:SecretKey"] ?? "sk_test_default"; // Fallback para compilação, mas deve ser fornecida
         var baseUrl = Configuration["PagarMe:BaseUrl"] ?? "https://api.pagar.me/core/v5/";
-
-        Console.WriteLine($"PagarMe API Key [FOR DEBUG]: {apiKey.Substring(0, 4)}...{apiKey.Substring(apiKey.Length - 4)}");
+        
+        if(apiKey == "sk_test_default")
+            throw new InvalidOperationException("PagarMe API Key não fornecida. Verifique as configurações.");
         
         Client = new PagarMeClient(apiKey, baseUrl);
     }
