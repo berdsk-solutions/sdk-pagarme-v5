@@ -7,7 +7,7 @@ public class PagarMeFixture : IDisposable
     public PagarMeFixture()
     {
         Configuration = new ConfigurationBuilder()
-            .AddJsonFile("appsettings.test.json", true)
+            .AddJsonFile("appsettings.test.json", false)
             .AddEnvironmentVariables()
             .Build();
 
