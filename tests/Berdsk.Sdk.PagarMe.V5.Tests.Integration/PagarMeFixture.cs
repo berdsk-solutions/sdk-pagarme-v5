@@ -11,9 +11,8 @@ public class PagarMeFixture : IDisposable
             .AddEnvironmentVariables()
             .Build();
 
-        // var apiKey =
-        //     Configuration["PagarMe:SecretKey"] ?? "sk_test_default"; // Fallback para compilação, mas deve ser fornecida
-        var apiKey = "sk_test_089896f442fd4ab58552471f14fdd61e";
+        var apiKey =
+            Configuration["PagarMe:SecretKey"] ?? "sk_test_default";
         var baseUrl = Configuration["PagarMe:BaseUrl"] ?? "https://api.pagar.me/core/v5/";
         
         if(apiKey == "sk_test_default")
