@@ -15,6 +15,8 @@ public class PagarMeFixture : IDisposable
             Configuration["PagarMe:SecretKey"] ?? "sk_test_default"; // Fallback para compilação, mas deve ser fornecida
         var baseUrl = Configuration["PagarMe:BaseUrl"] ?? "https://api.pagar.me/core/v5/";
 
+        Console.WriteLine($"PagarMe API Key [FOR DEBUG]: {apiKey[^5]}");
+        
         Client = new PagarMeClient(apiKey, baseUrl);
     }
 
