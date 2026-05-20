@@ -45,7 +45,7 @@ jobs:
       - name: Setup Integration Tests Config
         if: github.ref == 'refs/heads/develop'
         run: |
-          echo "${{ secrets.PAGARME_CONFIG }}" > tests/Berdsk.Sdk.PagarMe.V5.Tests.Integration/appsettings.test.json
+          echo '${{ secrets.PAGARME_CONFIG }}' > tests/Berdsk.Sdk.PagarMe.V5.Tests.Integration/appsettings.test.json
 
       - name: Test
         if: github.ref == 'refs/heads/develop'
