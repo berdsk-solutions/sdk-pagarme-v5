@@ -10,7 +10,7 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.Settlements
     {
         /// <summary>
         ///     Lista os pagamentos (Settlements) de um recebedor.
-        ///     <para>Referência: https://docs.pagar.me/reference/retornando-pagamentos</para>
+        ///     <see href="https://docs.pagar.me/reference/retornando-pagamentos">Documentação Oficial PagarMe</see>
         /// </summary>
         Task<PmListSettlementsResponse?> ListSettlementsAsync(
             string paymentDateStart,
@@ -25,14 +25,14 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.Settlements
 
         /// <summary>
         ///     Lista os pagamentos (Settlements) de um recebedor específico.
-        ///     <para>Referência: https://docs.pagar.me/reference/retornando-pagamentos-por-recebedor</para>
+        ///     <see href="https://docs.pagar.me/reference/retornando-pagamentos-por-recebedor">Documentação Oficial PagarMe</see>
         /// </summary>
         Task<PmListSettlementsResponse?> ListRecipientSettlementsAsync(string recipientId, string paymentDateStart,
             string paymentDateEnd);
 
         /// <summary>
         ///     Obtém um pagamento específico pelo ID.
-        ///     <para>Referência: https://docs.pagar.me/reference/retornando-um-pagamento</para>
+        ///     <see href="https://docs.pagar.me/reference/retornando-um-pagamento">Documentação Oficial PagarMe</see>
         /// </summary>
         Task<PmSettlementResponse?> GetSettlementAsync(string settlementId);
     }

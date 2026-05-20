@@ -10,7 +10,7 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.RecipientBalance
     {
         /// <summary>
         ///     Obter saldo do recebedor.
-        ///     <para>Referência: https://docs.pagar.me/reference/obter-saldo.md</para>
+        ///     <see href="https://docs.pagar.me/reference/obter-saldo">Documentação Oficial PagarMe</see>
         /// </summary>
         /// <param name="recipientId">Identificador do recebedor (rp_...)</param>
         /// <returns>Saldo do recebedor</returns>

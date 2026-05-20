@@ -7,7 +7,7 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.Cards.Dtos
 {
     /// <summary>
     ///     Resposta de cartão.
-    ///     <para>Referência: https://docs.pagar.me/reference/obter-cartão.md</para>
+    ///     <see href="https://docs.pagar.me/reference/obter-cartão">Documentação Oficial PagarMe</see>
     /// </summary>
     public class PmCardResponse
     {

@@ -11,7 +11,7 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.SubscriptionItem
     {
         /// <summary>
         ///     Inclui um item em uma assinatura.
-        ///     <para>Referência: https://docs.pagar.me/reference/incluir-item-1.md</para>
+        ///     <see href="https://docs.pagar.me/reference/incluir-item-1">Documentação Oficial PagarMe</see>
         /// </summary>
         /// <param name="subscriptionId">Identificador da assinatura</param>
         /// <param name="request">Dados do item</param>
@@ -21,7 +21,7 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.SubscriptionItem
 
         /// <summary>
         ///     Obtém os dados de um item específico de uma assinatura.
-        ///     <para>Referência: https://docs.pagar.me/reference/obter-item-da-assinatura.md</para>
+        ///     <see href="https://docs.pagar.me/reference/obter-item-da-assinatura.md">Documentação Oficial PagarMe</see>
         /// </summary>
         /// <param name="subscriptionId">Identificador da assinatura</param>
         /// <param name="itemId">Identificador do item (si_xxxxxxxxxxxxxxxx)</param>
@@ -30,7 +30,7 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.SubscriptionItem
 
         /// <summary>
         ///     Lista os itens de uma assinatura.
-        ///     <para>Referência: https://docs.pagar.me/reference/listar-itens-de-uma-assinatura.md</para>
+        ///     <see href="https://docs.pagar.me/reference/listar-itens-de-uma-assinatura.md">Documentação Oficial PagarMe</see>
         /// </summary>
         /// <param name="subscriptionId">Identificador da assinatura</param>
         /// <param name="page">número da página</param>
@@ -44,7 +44,7 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.SubscriptionItem
 
         /// <summary>
         ///     Edita um item de uma assinatura.
-        ///     <para>Referência: https://docs.pagar.me/reference/editar-item.md</para>
+        ///     <see href="https://docs.pagar.me/reference/editar-item.md">Documentação Oficial PagarMe</see>
         /// </summary>
         /// <param name="subscriptionId">Identificador da assinatura</param>
         /// <param name="itemId">Identificador do item</param>
@@ -55,7 +55,7 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.SubscriptionItem
 
         /// <summary>
         ///     Remove um item de uma assinatura.
-        ///     <para>Referência: https://docs.pagar.me/reference/remover-item.md</para>
+        ///     <see href="https://docs.pagar.me/reference/remover-item.md">Documentação Oficial PagarMe</see>
         /// </summary>
         /// <param name="subscriptionId">Identificador da assinatura</param>
         /// <param name="itemId">Identificador do item</param>

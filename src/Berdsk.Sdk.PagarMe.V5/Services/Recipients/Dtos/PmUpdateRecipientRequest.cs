@@ -5,7 +5,7 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.Recipients.Dtos
 {
     /// <summary>
     ///     Requisição para editar um recebedor.
-    ///     <para>Referência: https://docs.pagar.me/reference/editar-recebedor-1.md</para>
+    ///     <see href="https://docs.pagar.me/reference/editar-recebedor-1">Documentação Oficial PagarMe</see>
     /// </summary>
     public class PmUpdateRecipientRequest
     {

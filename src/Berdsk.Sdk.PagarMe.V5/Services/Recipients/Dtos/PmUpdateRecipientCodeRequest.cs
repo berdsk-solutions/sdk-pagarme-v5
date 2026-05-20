@@ -4,7 +4,7 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.Recipients.Dtos
 {
     /// <summary>
     ///     Requisição para atualizar o código de referência externa de um recebedor.
-    ///     <para>Referência: https://docs.pagar.me/reference/atualizar-code-de-recebedor.md</para>
+    ///     <see href="https://docs.pagar.me/reference/atualizar-code-de-recebedor">Documentação Oficial PagarMe</see>
     /// </summary>
     public class PmUpdateRecipientCodeRequest
     {

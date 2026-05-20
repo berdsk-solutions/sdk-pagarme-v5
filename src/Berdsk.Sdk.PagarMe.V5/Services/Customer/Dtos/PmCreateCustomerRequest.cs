@@ -71,7 +71,7 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.Customer.Dtos
 
         /// <summary>
         ///     Objeto chave/valor utilizado para armazenar informações adicionais sobre o cliente. Saiba mais sobre metadata:
-        ///     https://docs.pagar.me/reference/metadata-1
+        ///     <see href="https://docs.pagar.me/reference/metadata-1">Documentação Oficial PagarMe</see>
         /// </summary>
         [JsonPropertyName("metadata")]
         public Dictionary<string, string>? Metadata { get; set; }

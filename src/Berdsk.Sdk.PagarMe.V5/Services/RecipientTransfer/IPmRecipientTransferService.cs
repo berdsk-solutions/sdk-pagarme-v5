@@ -11,7 +11,7 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.RecipientTransfer
     {
         /// <summary>
         ///     Rota para atualizar as informações de transferência de um recebedor.
-        ///     <para>Referência: https://docs.pagar.me/reference/atualizar-informações-de-transferência-1.md</para>
+        ///     <see href="https://docs.pagar.me/reference/atualizar-informações-de-transferência-1">Documentação Oficial PagarMe</see>
         /// </summary>
         Task<PmRecipientResponse?> UpdateTransferSettingsAsync(string recipientId,
             PmUpdateTransferSettingsRequest request);

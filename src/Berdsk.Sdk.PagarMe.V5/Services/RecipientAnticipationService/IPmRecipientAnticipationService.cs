@@ -13,7 +13,7 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.RecipientAnticipationService
     {
         /// <summary>
         ///     Cria uma antecipação para um recebedor.
-        ///     <para>Referência: https://docs.pagar.me/reference/criando-uma-antecipação</para>
+        ///     <see href="https://docs.pagar.me/reference/criando-uma-antecipação">Documentação Oficial PagarMe</see>
         /// </summary>
         /// <param name="recipientId">Identificador do recebedor</param>
         /// <param name="request">Dados da antecipação</param>
@@ -22,7 +22,7 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.RecipientAnticipationService
 
         /// <summary>
         ///     Obtém os dados de uma antecipação específica.
-        ///     <para>Referência: https://docs.pagar.me/reference/objeto-antecipação</para>
+        ///     <see href="https://docs.pagar.me/reference/objeto-antecipação">Documentação Oficial PagarMe</see>
         /// </summary>
         /// <param name="recipientId">Identificador do recebedor</param>
         /// <param name="anticipationId">Identificador da antecipação</param>
@@ -31,7 +31,7 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.RecipientAnticipationService
 
         /// <summary>
         ///     Lista as antecipações de um recebedor.
-        ///     <para>Referência: https://docs.pagar.me/reference/retornando-antecipações</para>
+        ///     <see href="https://docs.pagar.me/reference/retornando-antecipações">Documentação Oficial PagarMe</see>
         /// </summary>
         /// <param name="recipientId">Identificador do recebedor</param>
         /// <param name="page">Número da página</param>
@@ -45,7 +45,7 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.RecipientAnticipationService
 
         /// <summary>
         ///     Simula uma antecipação spot para um recebedor.
-        ///     <para>Referência: https://docs.pagar.me/reference/simulando-uma-antecipação-spot</para>
+        ///     <see href="https://docs.pagar.me/reference/simulando-uma-antecipação-spot">Documentação Oficial PagarMe</see>
         /// </summary>
         /// <param name="recipientId">Identificador do recebedor</param>
         /// <param name="request">Dados para simulação</param>
@@ -55,7 +55,7 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.RecipientAnticipationService
 
         /// <summary>
         ///     Obtém os limites máximos e mínimos de antecipação que um recebedor pode fazer.
-        ///     <para>Referência: https://docs.pagar.me/reference/obtendo-os-limites-de-antecipação</para>
+        ///     <see href="https://docs.pagar.me/reference/obtendo-os-limites-de-antecipação">Documentação Oficial PagarMe</see>
         /// </summary>
         /// <param name="recipientId">Identificador do recebedor</param>
         /// <param name="paymentDate">Data de pagamento desejada para a antecipação</param>
@@ -66,7 +66,7 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.RecipientAnticipationService
 
         /// <summary>
         ///     Cancela uma antecipação com status pending.
-        ///     <para>Referência: https://docs.pagar.me/reference/cancelando-uma-antecipação-pending</para>
+        ///     <see href="https://docs.pagar.me/reference/cancelando-uma-antecipação-pending">Documentação Oficial PagarMe</see>
         /// </summary>
         /// <param name="recipientId">Identificador do recebedor</param>
         /// <param name="anticipationId">Identificador da antecipação</param>
@@ -75,7 +75,10 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.RecipientAnticipationService
 
         /// <summary>
         ///     Atualiza as configurações de antecipação automática de um recebedor.
-        ///     <para>Referência: https://docs.pagar.me/reference/atualizar-informações-de-antecipação-automática-1.md</para>
+        ///     <see href="https://docs.pagar.me/reference/atualizar-informações-de-antecipação-automática-1">
+        ///         Documentação Oficial
+        ///         PagarMe
+        ///     </see>
         /// </summary>
         /// <param name="recipientId">Identificador do recebedor</param>
         /// <param name="request">Novas configurações</param>

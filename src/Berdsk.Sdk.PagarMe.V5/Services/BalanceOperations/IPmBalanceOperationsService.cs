@@ -11,7 +11,7 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.BalanceOperations
     {
         /// <summary>
         ///     Obtém o histórico das operações de saldo com filtros opcionais.
-        ///     <para>Referência: https://docs.pagar.me/reference/obter-histórico-das-operações.md</para>
+        ///     <see href="https://docs.pagar.me/reference/obter-histórico-das-operações">Documentação Oficial PagarMe</see>
         /// </summary>
         /// <param name="createdSince">Filtro pela data de criação da operação de saldo, como data de partida</param>
         /// <param name="createdUntil">Filtro pela data de criação da operação de saldo, como data limite</param>
@@ -30,7 +30,7 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.BalanceOperations
 
         /// <summary>
         ///     Obtém os detalhes de uma operação de saldo específica.
-        ///     <para>Referência: https://docs.pagar.me/reference/obter-histórico-específico-de-uma-operação.md</para>
+        ///     <see href="https://docs.pagar.me/reference/obter-histórico-específico-de-uma-operação">Documentação Oficial PagarMe</see>
         /// </summary>
         /// <param name="balanceOperationId">Identificador da operação de saldo</param>
         /// <returns>Dados da operação de saldo ou null se não encontrada</returns>

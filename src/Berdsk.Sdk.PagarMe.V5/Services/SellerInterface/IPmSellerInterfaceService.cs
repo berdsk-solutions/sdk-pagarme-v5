@@ -12,7 +12,7 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.SellerInterface
     {
         /// <summary>
         ///     Retorna as Unidades de Recebíveis (URs) de um recebedor.
-        ///     <para>Referência: https://docs.pagar.me/reference/retornando-urs-de-um-recebedor-v5.md</para>
+        ///     <see href="https://docs.pagar.me/reference/retornando-urs-de-um-recebedor-v5">Documentação Oficial PagarMe</see>
         /// </summary>
         /// <param name="recipientId">Identificador do recebedor</param>
         /// <param name="startDate">Dia inicial da consulta de agenda</param>
@@ -23,7 +23,7 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.SellerInterface
 
         /// <summary>
         ///     Retorna os efeitos de contratos (obrigações de liquidação).
-        ///     <para>Referência: https://docs.pagar.me/reference/retornando-efeitos-de-contratos-v5.md</para>
+        ///     <see href="https://docs.pagar.me/reference/retornando-efeitos-de-contratos-v5.md">Documentação Oficial PagarMe</see>
         /// </summary>
         /// <param name="expectedSettlementDateSince">Data inicial da consulta</param>
         /// <param name="expectedSettlementDateUntil">Data final da consulta</param>
@@ -40,7 +40,7 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.SellerInterface
 
         /// <summary>
         ///     Retorna os contratos de um recebedor.
-        ///     <para>Referência: https://docs.pagar.me/reference/retornando-efeitos-de-contratos-copy.md</para>
+        ///     <see href="https://docs.pagar.me/reference/retornando-efeitos-de-contratos-copy.md">Documentação Oficial PagarMe</see>
         /// </summary>
         /// <param name="recipientId">ID de recebedor desejado</param>
         /// <param name="expectedSettlementDateSince">Data inicial da consulta</param>
@@ -51,7 +51,7 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.SellerInterface
 
         /// <summary>
         ///     Retorna as contestações de contratos.
-        ///     <para>Referência: https://docs.pagar.me/reference/retornando-contestações.md</para>
+        ///     <see href="https://docs.pagar.me/reference/retornando-contestações.md">Documentação Oficial PagarMe</see>
         /// </summary>
         /// <param name="contractKey">Chave Identificadora do contrato</param>
         /// <param name="page">Paginação</param>
@@ -72,7 +72,7 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.SellerInterface
 
         /// <summary>
         ///     Cria uma nova contestação de contrato.
-        ///     <para>Referência: https://docs.pagar.me/reference/contestando-um-contrato-v5.md</para>
+        ///     <see href="https://docs.pagar.me/reference/contestando-um-contrato-v5.md">Documentação Oficial PagarMe</see>
         /// </summary>
         /// <param name="request">Dados da contestação</param>
         Task CreateContestationAsync(PmCreateContestationRequest request);

@@ -53,37 +53,37 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.Recipients
         /// <summary>
         ///     Rota para criar um recebedor, definindo os dados do recebedor, transferência e qual a conta bancária que será
         ///     utilizada para envio dos pagamentos.
-        ///     <para>Referência: https://docs.pagar.me/reference/criar-recebedor-1.md</para>
+        ///     <see href="https://docs.pagar.me/reference/criar-recebedor-1">Documentação Oficial PagarMe</see>
         /// </summary>
         Task<PmRecipientResponse?> CreateRecipientAsync(PmCreateRecipientRequest request);
 
         /// <summary>
         ///     Rota para criar um link de recebedor.
-        ///     <para>Referência: https://docs.pagar.me/reference/criar-link-recebedor.md</para>
+        ///     <see href="https://docs.pagar.me/reference/criar-link-recebedor.md">Documentação Oficial PagarMe</see>
         /// </summary>
         Task<PmRecipientResponse?> CreateRecipientLinkAsync(PmCreateRecipientRequest request);
 
         /// <summary>
         ///     Rota para obter os dados de um recebedor através do seu ID.
-        ///     <para>Referência: https://docs.pagar.me/reference/obter-recebedor-1.md</para>
+        ///     <see href="https://docs.pagar.me/reference/obter-recebedor-1.md">Documentação Oficial PagarMe</see>
         /// </summary>
         Task<PmRecipientResponse?> GetRecipientAsync(string recipientId);
 
         /// <summary>
         ///     Rota para listar todos os recebedores da sua conta.
-        ///     <para>Referência: https://docs.pagar.me/reference/listar-recebedores-1.md</para>
+        ///     <see href="https://docs.pagar.me/reference/listar-recebedores-1.md">Documentação Oficial PagarMe</see>
         /// </summary>
         Task<PmListRecipientsResponse?> ListRecipientsAsync(int page = 1, int size = 10);
 
         /// <summary>
         ///     Rota para editar os dados de um recebedor.
-        ///     <para>Referência: https://docs.pagar.me/reference/editar-recebedor-1.md</para>
+        ///     <see href="https://docs.pagar.me/reference/editar-recebedor-1.md">Documentação Oficial PagarMe</see>
         /// </summary>
         Task<PmRecipientResponse?> UpdateRecipientAsync(string recipientId, PmUpdateRecipientRequest request);
 
         /// <summary>
         ///     Rota para atualizar o código de referência externa (code) de um recebedor.
-        ///     <para>Referência: https://docs.pagar.me/reference/atualizar-code-de-recebedor.md</para>
+        ///     <see href="https://docs.pagar.me/reference/atualizar-code-de-recebedor.md">Documentação Oficial PagarMe</see>
         /// </summary>
         Task<PmRecipientResponse?> UpdateRecipientCodeAsync(string recipientId, PmUpdateRecipientCodeRequest request);
     }

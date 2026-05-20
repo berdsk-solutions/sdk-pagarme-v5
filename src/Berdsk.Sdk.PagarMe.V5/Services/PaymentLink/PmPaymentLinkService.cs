@@ -6,16 +6,6 @@ using Berdsk.Sdk.PagarMe.V5.Services.PaymentLink.Dtos;
 
 namespace Berdsk.Sdk.PagarMe.V5.Services.PaymentLink
 {
-    /// <summary>
-    ///     Serviço de Links de Pagamento da Pagar.me.
-    ///     <para>
-    ///         Observação: a Pagar.me utiliza URLs distintas para Links de Pagamento entre os ambientes
-    ///         de produção (<c>https://api.pagar.me/core/v5</c>) e desenvolvimento/sandbox
-    ///         (<c>https://sdx-api.pagar.me/core/v5</c>). Como o <see cref="HttpClient.BaseAddress" />
-    ///         do <c>PagarMeClient</c> já é configurado com a URL de produção, este serviço aceita uma
-    ///         <c>baseUrl</c> alternativa no construtor para sobrescrever o destino em todas as chamadas.
-    ///     </para>
-    /// </summary>
     /// <inheritdoc />
     public class PmPaymentLinkService : PmBaseService, IPmPaymentLinkService
     {

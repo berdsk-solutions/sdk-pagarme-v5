@@ -10,7 +10,7 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.Address
     {
         /// <summary>
         ///     Cria um novo endereço para um cliente.
-        ///     <para>Referência: https://docs.pagar.me/reference/criar-endereço-1.md</para>
+        ///     <see href="https://docs.pagar.me/reference/criar-endereço-1">Documentação Oficial PagarMe</see>
         /// </summary>
         /// <param name="customerId">Identificador do cliente (cus_xxxxxxxxxxxxxxxx)</param>
         /// <param name="request">Dados do endereço</param>
@@ -19,7 +19,7 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.Address
 
         /// <summary>
         ///     Obtém os dados de um endereço específico de um cliente.
-        ///     <para>Referência: https://docs.pagar.me/reference/obter-endereço-1.md</para>
+        ///     <see href="https://docs.pagar.me/reference/obter-endereço-1">Documentação Oficial PagarMe</see>
         /// </summary>
         /// <param name="customerId">Identificador do cliente</param>
         /// <param name="addressId">Identificador do endereço (addr_xxxxxxxxxxxxxxxx)</param>
@@ -28,7 +28,7 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.Address
 
         /// <summary>
         ///     Lista os endereços de um cliente.
-        ///     <para>Referência: https://docs.pagar.me/reference/listar-endereços-1.md</para>
+        ///     <see href="https://docs.pagar.me/reference/listar-endereços-1">Documentação Oficial PagarMe</see>
         /// </summary>
         /// <param name="customerId">Identificador do cliente</param>
         /// <param name="page">número da página</param>
@@ -38,7 +38,7 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.Address
 
         /// <summary>
         ///     Atualiza os dados de um endereço existente.
-        ///     <para>Referência: https://docs.pagar.me/reference/editar-endereço-1.md</para>
+        ///     <see href="https://docs.pagar.me/reference/editar-endereço-1">Documentação Oficial PagarMe</see>
         /// </summary>
         /// <param name="customerId">Identificador do cliente</param>
         /// <param name="addressId">Identificador do endereço</param>
@@ -49,7 +49,7 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.Address
 
         /// <summary>
         ///     Exclui um endereço de um cliente.
-        ///     <para>Referência: https://docs.pagar.me/reference/excluir-endereço-1.md</para>
+        ///     <see href="https://docs.pagar.me/reference/excluir-endereço-1">Documentação Oficial PagarMe</see>
         /// </summary>
         /// <param name="customerId">Identificador do cliente</param>
         /// <param name="addressId">Identificador do endereço</param>

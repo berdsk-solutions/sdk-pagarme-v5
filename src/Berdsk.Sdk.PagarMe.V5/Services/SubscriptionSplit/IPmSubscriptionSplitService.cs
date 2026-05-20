@@ -10,7 +10,7 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.SubscriptionSplit
     {
         /// <summary>
         ///     Obtém as regras de split de uma assinatura.
-        ///     <para>Referência: https://docs.pagar.me/reference/editar-ativação-ou-regras-do-split.md</para>
+        ///     <see href="https://docs.pagar.me/reference/editar-ativação-ou-regras-do-split.md">Documentação Oficial PagarMe</see>
         /// </summary>
         /// <param name="subscriptionId">Identificador da assinatura</param>
         /// <returns>Regras de split da assinatura</returns>
@@ -18,7 +18,7 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.SubscriptionSplit
 
         /// <summary>
         ///     Edita as regras de split de uma assinatura.
-        ///     <para>Referência: https://docs.pagar.me/reference/editar-ativação-ou-regras-do-split.md</para>
+        ///     <see href="https://docs.pagar.me/reference/editar-ativação-ou-regras-do-split.md">Documentação Oficial PagarMe</see>
         /// </summary>
         /// <param name="subscriptionId">Identificador da assinatura</param>
         /// <param name="request">Novas regras de split</param>

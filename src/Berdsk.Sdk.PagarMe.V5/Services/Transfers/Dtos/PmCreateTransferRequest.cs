@@ -5,7 +5,7 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.Transfers.Dtos
 {
     /// <summary>
     ///     Requisição para criar uma transferência.
-    ///     <para>Referência: https://docs.pagar.me/reference/criando-uma-transferência</para>
+    ///     <see href="https://docs.pagar.me/reference/criando-uma-transferência">Documentação Oficial PagarMe</see>
     /// </summary>
     public class PmCreateTransferRequest
     {

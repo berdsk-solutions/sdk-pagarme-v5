@@ -10,7 +10,7 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.SubscriptionCycle
     {
         /// <summary>
         ///     Lista os ciclos de uma assinatura.
-        ///     <para>Referência: https://docs.pagar.me/reference/listar-ciclos-1.md</para>
+        ///     <see href="https://docs.pagar.me/reference/listar-ciclos-1">Documentação Oficial PagarMe</see>
         /// </summary>
         /// <param name="subscriptionId">Identificador da assinatura</param>
         /// <param name="page">Número da página</param>
@@ -21,7 +21,7 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.SubscriptionCycle
 
         /// <summary>
         ///     Obtém os dados de um ciclo específico.
-        ///     <para>Referência: https://docs.pagar.me/reference/obter-ciclo-1.md</para>
+        ///     <see href="https://docs.pagar.me/reference/obter-ciclo-1.md">Documentação Oficial PagarMe</see>
         /// </summary>
         /// <param name="subscriptionId">Identificador da assinatura</param>
         /// <param name="cycleId">Identificador do ciclo</param>
@@ -30,7 +30,7 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.SubscriptionCycle
 
         /// <summary>
         ///     Renova o ciclo atual da assinatura.
-        ///     <para>Referência: https://docs.pagar.me/reference/renovar-ciclo-1.md</para>
+        ///     <see href="https://docs.pagar.me/reference/renovar-ciclo-1.md">Documentação Oficial PagarMe</see>
         /// </summary>
         /// <param name="subscriptionId">Identificador da assinatura</param>
         /// <returns>Dados do ciclo renovado</returns>
