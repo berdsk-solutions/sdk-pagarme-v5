@@ -13,7 +13,7 @@
         <Company>Berdsk</Company>
         <Description>Biblioteca não oficial para integração com a API PagarMe v5. SDK moderno e tipado para facilitar transações de cartão, boleto, pix e gestão de assinaturas. Integração completa.</Description>
         <PackageTags>pagarme;pagamento;gateway;sdk;v5;pix;boleto;assinaturas;berdsk</PackageTags>
-        <PackageProjectUrl>https://berdsk.com.br</PackageProjectUrl>
+        <PackageProjectUrl>https://berdsk.com.br#sdk</PackageProjectUrl>
         <PackageIcon>berdsk-icon.png</PackageIcon>
         <PackageReadmeFile>README.md</PackageReadmeFile>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
