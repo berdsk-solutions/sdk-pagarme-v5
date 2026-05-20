@@ -74,8 +74,7 @@ namespace Berdsk.Sdk.PagarMe.V5.Services
             if (response.IsSuccessStatusCode)
             {
                 if (response.StatusCode == HttpStatusCode.NoContent)
-                    return default;
-
+                    return null;
                 return await response.Content.ReadFromJsonAsync<T>(JsonOptions);
             }
 

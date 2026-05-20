@@ -34,6 +34,12 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.Order.Dtos
         public PmOrderDebitCardRequest? DebitCard { get; set; }
 
         /// <summary>
+        ///     Dados sobre o pagamento com Pix
+        /// </summary>
+        [JsonPropertyName("pix")]
+        public PmOrderPixRequest? Pix { get; set; }
+
+        /// <summary>
         ///     Dados para o split de pagamentos
         /// </summary>
         [JsonPropertyName("split")]

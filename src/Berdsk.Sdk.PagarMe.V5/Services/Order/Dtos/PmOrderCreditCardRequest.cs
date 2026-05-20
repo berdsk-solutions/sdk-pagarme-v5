@@ -1,4 +1,6 @@
 ﻿using System.Text.Json.Serialization;
+using Berdsk.Sdk.PagarMe.V5.Services.Customer.Dtos;
+
 namespace Berdsk.Sdk.PagarMe.V5.Services.Order.Dtos
 {
     /// <summary>
@@ -41,6 +43,12 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.Order.Dtos
         /// </summary>
         [JsonPropertyName("card_token")]
         public string? CardToken { get; set; }
+
+        [JsonPropertyName("billing_address_id")]
+        public string? BillingAddressId { get; set; }
+
+        [JsonPropertyName("billing_address")]
+        public PmCreateCustomerAddressRequest? BillingAddress { get; set; }
     }
 }
 
