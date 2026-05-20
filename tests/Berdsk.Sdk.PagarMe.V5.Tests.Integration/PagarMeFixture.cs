@@ -7,16 +7,14 @@ public class PagarMeFixture : IDisposable
     public PagarMeFixture()
     {
         Configuration = new ConfigurationBuilder()
-            .AddJsonFile("appsettings.test.json", false)
             .AddEnvironmentVariables()
             .Build();
 
-        var apiKey =
-            Configuration["PagarMe:SecretKey"] ?? "sk_test_default";
-        var baseUrl = Configuration["PagarMe:BaseUrl"] ?? "https://api.pagar.me/core/v5/";
+        var apiKey = Configuration["PAGARME_SECRET_KEY"] ?? Configuration["PagarMe:SecretKey"];
+        var baseUrl = Configuration["PAGARME_BASE_URL"] ?? Configuration["PagarMe:BaseUrl"] ?? "https://api.pagar.me/core/v5/";
         
-        if(apiKey == "sk_test_default")
-            throw new InvalidOperationException("PagarMe API Key não fornecida. Verifique as configurações.");
+        if (string.IsNullOrEmpty(apiKey))
+            throw new InvalidOperationException("PagarMe API Key não fornecida. Defina a variável de ambiente PAGARME_SECRET_KEY.");
         
         Client = new PagarMeClient(apiKey, baseUrl);
     }

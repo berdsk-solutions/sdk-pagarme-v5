@@ -145,14 +145,16 @@ O projeto conta com uma suíte de testes de integração localizados em `tests/B
 ### Como executar os testes
 
 1. **Configurar a Secret Key:**
-   Crie um arquivo `appsettings.test.json` na raiz do projeto de testes:
-   ```json
-   {
-     "PagarMe": {
-       "SecretKey": "sua_secret_key_aqui",
-       "BaseUrl": "https://api.pagar.me/core/v5/"
-     }
-   }
+   Os testes buscam a chave de API através de variáveis de ambiente.
+
+   **No Windows (PowerShell):**
+   ```powershell
+   $env:PAGARME_SECRET_KEY = "SUA_SECRET_KEY_AQUI"
+   ```
+
+   **No Linux/macOS:**
+   ```bash
+   export PAGARME_SECRET_KEY="SUA_SECRET_KEY_AQUI"
    ```
 
 2. **Executar:**
