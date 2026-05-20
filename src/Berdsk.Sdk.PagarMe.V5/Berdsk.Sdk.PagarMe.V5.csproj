@@ -4,6 +4,9 @@
         <TargetFramework>netstandard2.1</TargetFramework>
         <Nullable>enable</Nullable>
 
+        <GenerateDocumentationFile>true</GenerateDocumentationFile>
+        <NoWarn>$(NoWarn);1591</NoWarn>
+
         <!-- NuGet Metadata -->
         <PackageId>Berdsk.Sdk.PagarMe.V5</PackageId>
         <AssemblyName>Berdsk.Sdk.PagarMe.V5</AssemblyName>
