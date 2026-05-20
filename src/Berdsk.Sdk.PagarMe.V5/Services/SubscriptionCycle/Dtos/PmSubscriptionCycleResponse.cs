@@ -1,5 +1,6 @@
-﻿using System.Text.Json.Serialization;
-using System;
+﻿using System;
+using System.Text.Json.Serialization;
+
 namespace Berdsk.Sdk.PagarMe.V5.Services.SubscriptionCycle.Dtos
 {
     /// <summary>
@@ -62,5 +63,3 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.SubscriptionCycle.Dtos
         public string Status { get; set; }
     }
 }
-
-

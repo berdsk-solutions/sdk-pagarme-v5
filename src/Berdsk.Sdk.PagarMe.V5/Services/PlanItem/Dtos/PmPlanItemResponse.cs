@@ -1,5 +1,5 @@
-﻿using System.Text.Json.Serialization;
-using System;
+﻿using System;
+using System.Text.Json.Serialization;
 using Berdsk.Sdk.PagarMe.V5.Services.Plan.Dtos;
 
 namespace Berdsk.Sdk.PagarMe.V5.Services.PlanItem.Dtos
@@ -70,5 +70,3 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.PlanItem.Dtos
         public PmPlanResponse? Plan { get; set; }
     }
 }
-
-

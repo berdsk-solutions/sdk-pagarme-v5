@@ -1,4 +1,5 @@
 ﻿using System.Text.Json.Serialization;
+
 namespace Berdsk.Sdk.PagarMe.V5.Services.Common.Dtos
 {
     /// <summary>
@@ -31,5 +32,3 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.Common.Dtos
         public PmSplitOptionsRequest? Options { get; set; }
     }
 }
-
-

@@ -4,7 +4,7 @@ using Berdsk.Sdk.PagarMe.V5.Services.Address.Dtos;
 namespace Berdsk.Sdk.PagarMe.V5.Services.Address
 {
     /// <summary>
-    /// Interface para o serviço de endereços.
+    ///     Interface para o serviço de endereços.
     /// </summary>
     public interface IPmAddressService
     {
@@ -44,7 +44,8 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.Address
         /// <param name="addressId">Identificador do endereço</param>
         /// <param name="request">Dados para atualização</param>
         /// <returns>Dados do endereço atualizado</returns>
-        Task<PmAddressResponse?> UpdateAddressAsync(string customerId, string addressId, PmUpdateAddressRequest request);
+        Task<PmAddressResponse?>
+            UpdateAddressAsync(string customerId, string addressId, PmUpdateAddressRequest request);
 
         /// <summary>
         ///     Exclui um endereço de um cliente.
@@ -56,5 +57,3 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.Address
         Task<PmAddressResponse?> DeleteAddressAsync(string customerId, string addressId);
     }
 }
-
-

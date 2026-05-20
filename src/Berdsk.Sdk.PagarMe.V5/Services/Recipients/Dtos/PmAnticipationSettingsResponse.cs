@@ -1,4 +1,5 @@
 ﻿using System.Text.Json.Serialization;
+
 namespace Berdsk.Sdk.PagarMe.V5.Services.Recipients.Dtos
 {
     public class PmAnticipationSettingsResponse
@@ -13,5 +14,3 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.Recipients.Dtos
         [JsonPropertyName("delay")] public int? Delay { get; set; }
     }
 }
-
-

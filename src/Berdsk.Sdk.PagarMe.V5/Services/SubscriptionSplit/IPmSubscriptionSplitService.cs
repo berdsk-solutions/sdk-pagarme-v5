@@ -4,7 +4,7 @@ using Berdsk.Sdk.PagarMe.V5.Services.SubscriptionSplit.Dtos;
 namespace Berdsk.Sdk.PagarMe.V5.Services.SubscriptionSplit
 {
     /// <summary>
-    /// Interface para o serviço de split de assinaturas.
+    ///     Interface para o serviço de split de assinaturas.
     /// </summary>
     public interface IPmSubscriptionSplitService
     {
@@ -23,8 +23,7 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.SubscriptionSplit
         /// <param name="subscriptionId">Identificador da assinatura</param>
         /// <param name="request">Novas regras de split</param>
         /// <returns>Regras de split atualizadas</returns>
-        Task<PmSubscriptionSplitResponse?> UpdateSubscriptionSplitAsync(string subscriptionId, PmUpdateSubscriptionSplitRequest request);
+        Task<PmSubscriptionSplitResponse?> UpdateSubscriptionSplitAsync(string subscriptionId,
+            PmUpdateSubscriptionSplitRequest request);
     }
 }
-
-

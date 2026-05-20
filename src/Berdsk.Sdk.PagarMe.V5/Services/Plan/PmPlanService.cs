@@ -1,7 +1,7 @@
-﻿using System.Threading.Tasks;
+﻿using System;
 using System.Collections.Generic;
-using System;
 using System.Net.Http;
+using System.Threading.Tasks;
 using Berdsk.Sdk.PagarMe.V5.Services.Plan.Dtos;
 using Berdsk.Sdk.PagarMe.V5.Services.PlanItem;
 
@@ -45,7 +45,8 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.Plan
         }
 
         /// <inheritdoc />
-        public async Task<PmListPlansResponse?> ListPlansAsync(string? name = null, string? status = null, int? page = null,
+        public async Task<PmListPlansResponse?> ListPlansAsync(string? name = null, string? status = null,
+            int? page = null,
             int? size = null)
         {
             var queryParameters = new List<string>();
@@ -69,6 +70,3 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.Plan
         }
     }
 }
-
-
-

@@ -27,5 +27,3 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.Subscription.Dtos
         public string? CardId { get; set; }
     }
 }
-
-

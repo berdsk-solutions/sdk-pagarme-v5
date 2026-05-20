@@ -1,7 +1,7 @@
-﻿using System.Threading.Tasks;
+﻿using System;
 using System.Collections.Generic;
-using System;
 using System.Net.Http;
+using System.Threading.Tasks;
 using Berdsk.Sdk.PagarMe.V5.Services.SellerInterface.Dtos;
 
 namespace Berdsk.Sdk.PagarMe.V5.Services.SellerInterface
@@ -14,7 +14,8 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.SellerInterface
         }
 
         /// <inheritdoc />
-        public async Task<List<PmReceivableUnitResponse>?> ListReceivableUnitsAsync(string recipientId, DateTime startDate,
+        public async Task<List<PmReceivableUnitResponse>?> ListReceivableUnitsAsync(string recipientId,
+            DateTime startDate,
             DateTime endDate)
         {
             var url = string.Format(PmEndpoints.Recipients.ReceivableUnits, recipientId);
@@ -93,5 +94,3 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.SellerInterface
         }
     }
 }
-
-

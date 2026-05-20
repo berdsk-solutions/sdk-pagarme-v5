@@ -10,6 +10,7 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.RecipientAnticipationService.Dtos
 
         [JsonPropertyName("fee")] public long Fee { get; set; }
 
-        [JsonPropertyName("fraud_coverage_fee")] public long FraudCoverageFee { get; set; }
+        [JsonPropertyName("fraud_coverage_fee")]
+        public long FraudCoverageFee { get; set; }
     }
 }

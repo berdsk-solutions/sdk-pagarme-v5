@@ -1,7 +1,7 @@
-﻿using System.Threading.Tasks;
+﻿using System;
 using System.Collections.Generic;
-using System;
 using System.Net.Http;
+using System.Threading.Tasks;
 using Berdsk.Sdk.PagarMe.V5.Services.Subscription.Dtos;
 using Berdsk.Sdk.PagarMe.V5.Services.SubscriptionCycle;
 using Berdsk.Sdk.PagarMe.V5.Services.SubscriptionDiscount;
@@ -62,13 +62,15 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.Subscription
         }
 
         /// <inheritdoc />
-        public async Task<PmListSubscriptionsResponse?> ListSubscriptionsAsync(string? code = null, string? status = null,
+        public async Task<PmListSubscriptionsResponse?> ListSubscriptionsAsync(string? code = null,
+            string? status = null,
             string? customerId = null, string? planId = null, int? page = null, int? size = null)
         {
             var queryParameters = new List<string>();
             if (!string.IsNullOrEmpty(code)) queryParameters.Add($"code={Uri.EscapeDataString(code)}");
             if (!string.IsNullOrEmpty(status)) queryParameters.Add($"status={Uri.EscapeDataString(status)}");
-            if (!string.IsNullOrEmpty(customerId)) queryParameters.Add($"customer_id={Uri.EscapeDataString(customerId)}");
+            if (!string.IsNullOrEmpty(customerId))
+                queryParameters.Add($"customer_id={Uri.EscapeDataString(customerId)}");
             if (!string.IsNullOrEmpty(planId)) queryParameters.Add($"plan_id={Uri.EscapeDataString(planId)}");
             if (page.HasValue) queryParameters.Add($"page={page.Value}");
             if (size.HasValue) queryParameters.Add($"size={size.Value}");
@@ -120,7 +122,8 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.Subscription
         }
 
         /// <inheritdoc />
-        public async Task<PmSubscriptionResponse?> UpdateSubscriptionStartAtAsync(string subscriptionId, DateTime startAt)
+        public async Task<PmSubscriptionResponse?> UpdateSubscriptionStartAtAsync(string subscriptionId,
+            DateTime startAt)
         {
             var url = string.Format(PmEndpoints.Subscriptions.UpdateStartAt, subscriptionId);
             return await PatchAsync<PmSubscriptionResponse, PmUpdateSubscriptionStartAtRequest>(url,
@@ -147,6 +150,3 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.Subscription
         }
     }
 }
-
-
-

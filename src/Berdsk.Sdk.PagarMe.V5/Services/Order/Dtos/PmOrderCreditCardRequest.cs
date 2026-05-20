@@ -47,9 +47,6 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.Order.Dtos
         [JsonPropertyName("billing_address_id")]
         public string? BillingAddressId { get; set; }
 
-        [JsonPropertyName("billing_address")]
-        public PmCreateCustomerAddressRequest? BillingAddress { get; set; }
+        [JsonPropertyName("billing_address")] public PmCreateCustomerAddressRequest? BillingAddress { get; set; }
     }
 }
-
-

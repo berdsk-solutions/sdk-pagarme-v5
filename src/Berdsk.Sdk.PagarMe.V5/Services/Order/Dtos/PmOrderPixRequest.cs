@@ -1,6 +1,6 @@
-using System.Text.Json.Serialization;
-using System.Collections.Generic;
 using System;
+using System.Collections.Generic;
+using System.Text.Json.Serialization;
 
 namespace Berdsk.Sdk.PagarMe.V5.Services.Order.Dtos
 {
@@ -33,10 +33,8 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.Order.Dtos
     /// </summary>
     public class PmOrderPixAdditionalInformationRequest
     {
-        [JsonPropertyName("name")]
-        public string Name { get; set; }
+        [JsonPropertyName("name")] public string Name { get; set; }
 
-        [JsonPropertyName("value")]
-        public string Value { get; set; }
+        [JsonPropertyName("value")] public string Value { get; set; }
     }
 }

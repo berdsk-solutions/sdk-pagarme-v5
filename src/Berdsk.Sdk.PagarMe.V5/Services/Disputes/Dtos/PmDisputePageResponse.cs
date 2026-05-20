@@ -1,4 +1,5 @@
 ﻿using System.Text.Json.Serialization;
+
 namespace Berdsk.Sdk.PagarMe.V5.Services.Disputes.Dtos
 {
     /// <summary>
@@ -13,5 +14,3 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.Disputes.Dtos
         public string ForwardCursor { get; set; }
     }
 }
-
-

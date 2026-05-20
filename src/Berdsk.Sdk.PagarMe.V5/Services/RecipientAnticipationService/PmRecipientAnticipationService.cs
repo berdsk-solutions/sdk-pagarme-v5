@@ -1,7 +1,7 @@
-﻿using System.Threading.Tasks;
+﻿using System;
 using System.Collections.Generic;
-using System;
 using System.Net.Http;
+using System.Threading.Tasks;
 using Berdsk.Sdk.PagarMe.V5.Services.RecipientAnticipationService.Dtos;
 using Berdsk.Sdk.PagarMe.V5.Services.Recipients.Dtos;
 
@@ -94,5 +94,3 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.RecipientAnticipationService
         }
     }
 }
-
-

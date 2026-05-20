@@ -1,4 +1,5 @@
 ﻿using System.Text.Json.Serialization;
+
 namespace Berdsk.Sdk.PagarMe.V5.Services.RecipientBalance.Dtos
 {
     /// <summary>
@@ -20,5 +21,3 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.RecipientBalance.Dtos
         [JsonPropertyName("recipient")] public PmRecipientBalanceRecipientResponse Recipient { get; set; }
     }
 }
-
-

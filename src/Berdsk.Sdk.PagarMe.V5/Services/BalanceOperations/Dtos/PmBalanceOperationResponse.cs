@@ -1,5 +1,6 @@
-﻿using System.Text.Json.Serialization;
-using System;
+﻿using System;
+using System.Text.Json.Serialization;
+
 namespace Berdsk.Sdk.PagarMe.V5.Services.BalanceOperations.Dtos
 {
     /// <summary>
@@ -24,5 +25,3 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.BalanceOperations.Dtos
         [JsonPropertyName("movement_object")] public PmBalanceOperationMovementResponse MovementObject { get; set; }
     }
 }
-
-

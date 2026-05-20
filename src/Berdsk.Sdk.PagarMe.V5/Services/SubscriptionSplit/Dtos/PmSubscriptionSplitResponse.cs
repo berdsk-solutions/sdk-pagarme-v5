@@ -1,5 +1,5 @@
-﻿using System.Text.Json.Serialization;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using System.Text.Json.Serialization;
 using Berdsk.Sdk.PagarMe.V5.Services.Common.Dtos;
 
 namespace Berdsk.Sdk.PagarMe.V5.Services.SubscriptionSplit.Dtos
@@ -14,5 +14,3 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.SubscriptionSplit.Dtos
         [JsonPropertyName("rules")] public List<PmSplitRequest> Rules { get; set; } = new List<PmSplitRequest>();
     }
 }
-
-

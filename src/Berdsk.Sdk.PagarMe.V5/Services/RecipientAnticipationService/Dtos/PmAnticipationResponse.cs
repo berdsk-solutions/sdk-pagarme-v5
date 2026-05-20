@@ -1,5 +1,6 @@
-﻿using System.Text.Json.Serialization;
-using System;
+﻿using System;
+using System.Text.Json.Serialization;
+
 namespace Berdsk.Sdk.PagarMe.V5.Services.RecipientAnticipationService.Dtos
 {
     /// <summary>
@@ -15,11 +16,13 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.RecipientAnticipationService.Dtos
 
         [JsonPropertyName("anticipation_fee")] public long AnticipationFee { get; set; }
 
-        [JsonPropertyName("fraud_coverage_fee")] public long FraudCoverageFee { get; set; }
+        [JsonPropertyName("fraud_coverage_fee")]
+        public long FraudCoverageFee { get; set; }
 
         [JsonPropertyName("status")] public string Status { get; set; }
 
-        [JsonPropertyName("automatic_transfer")] public bool AutomaticTransfer { get; set; }
+        [JsonPropertyName("automatic_transfer")]
+        public bool AutomaticTransfer { get; set; }
 
         [JsonPropertyName("type")] public string Type { get; set; }
 
@@ -34,5 +37,3 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.RecipientAnticipationService.Dtos
         [JsonPropertyName("anticipation_tax")] public double? AnticipationTax { get; set; }
     }
 }
-
-

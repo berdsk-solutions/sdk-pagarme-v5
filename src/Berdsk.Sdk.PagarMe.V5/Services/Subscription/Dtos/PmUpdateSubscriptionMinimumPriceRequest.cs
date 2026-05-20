@@ -1,4 +1,5 @@
 ﻿using System.Text.Json.Serialization;
+
 namespace Berdsk.Sdk.PagarMe.V5.Services.Subscription.Dtos
 {
     /// <summary>
@@ -13,5 +14,3 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.Subscription.Dtos
         public int? MinimumPrice { get; set; }
     }
 }
-
-

@@ -1,5 +1,6 @@
-﻿using System.Text.Json.Serialization;
-using System;
+﻿using System;
+using System.Text.Json.Serialization;
+
 namespace Berdsk.Sdk.PagarMe.V5.Services.Cards.Dtos
 {
     /// <summary>
@@ -39,5 +40,3 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.Cards.Dtos
         public PmCardTokenDetailsResponse Card { get; set; }
     }
 }
-
-

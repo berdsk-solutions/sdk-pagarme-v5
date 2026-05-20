@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Net;
 using System.Net.Http;
 using System.Net.Http.Json;
@@ -12,18 +11,18 @@ namespace Berdsk.Sdk.PagarMe.V5.Services
 {
     public abstract class PmBaseService
     {
+        private static readonly JsonSerializerOptions JsonOptions = new JsonSerializerOptions
+        {
+            PropertyNameCaseInsensitive = true,
+            DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull
+        };
+
         protected readonly HttpClient HttpClient;
 
         protected PmBaseService(HttpClient httpClient)
         {
             HttpClient = httpClient;
         }
-
-        private static readonly JsonSerializerOptions JsonOptions = new JsonSerializerOptions
-        {
-            PropertyNameCaseInsensitive = true,
-            DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull
-        };
 
         protected async Task<TResponse?> PostAsync<TResponse, TRequest>(string url, TRequest request,
             IDictionary<string, string>? headers = null) where TResponse : class
@@ -45,7 +44,8 @@ namespace Berdsk.Sdk.PagarMe.V5.Services
             return await HandleResponseAsync<T>(response);
         }
 
-        protected async Task<TResponse?> PutAsync<TResponse, TRequest>(string url, TRequest request) where TResponse : class
+        protected async Task<TResponse?> PutAsync<TResponse, TRequest>(string url, TRequest request)
+            where TResponse : class
         {
             var response = await HttpClient.PutAsJsonAsync(url, request, JsonOptions);
             return await HandleResponseAsync<TResponse>(response);
@@ -63,7 +63,8 @@ namespace Berdsk.Sdk.PagarMe.V5.Services
             return await HandleResponseAsync<T>(response);
         }
 
-        protected async Task<TResponse?> PatchAsync<TResponse, TRequest>(string url, TRequest request) where TResponse : class
+        protected async Task<TResponse?> PatchAsync<TResponse, TRequest>(string url, TRequest request)
+            where TResponse : class
         {
             var response = await HttpClient.PatchAsJsonAsync(url, request, JsonOptions);
             return await HandleResponseAsync<TResponse>(response);
@@ -104,5 +105,3 @@ namespace Berdsk.Sdk.PagarMe.V5.Services
         }
     }
 }
-
-

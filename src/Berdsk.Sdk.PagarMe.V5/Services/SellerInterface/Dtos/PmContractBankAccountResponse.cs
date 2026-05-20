@@ -1,4 +1,5 @@
 ﻿using System.Text.Json.Serialization;
+
 namespace Berdsk.Sdk.PagarMe.V5.Services.SellerInterface.Dtos
 {
     /// <summary>
@@ -49,5 +50,3 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.SellerInterface.Dtos
         public string DocumentNumber { get; set; }
     }
 }
-
-

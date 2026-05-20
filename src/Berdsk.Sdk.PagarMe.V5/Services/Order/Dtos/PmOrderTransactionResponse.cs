@@ -1,5 +1,6 @@
-﻿using System.Text.Json.Serialization;
-using System;
+﻿using System;
+using System.Text.Json.Serialization;
+
 namespace Berdsk.Sdk.PagarMe.V5.Services.Order.Dtos
 {
     /// <summary>
@@ -28,5 +29,3 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.Order.Dtos
         [JsonPropertyName("expires_at")] public DateTime? ExpiresAt { get; set; }
     }
 }
-
-

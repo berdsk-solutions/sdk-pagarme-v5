@@ -1,5 +1,6 @@
-﻿using System.Text.Json.Serialization;
-using System;
+﻿using System;
+using System.Text.Json.Serialization;
+
 namespace Berdsk.Sdk.PagarMe.V5.Services.Payables.Dtos
 {
     /// <summary>
@@ -42,5 +43,3 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.Payables.Dtos
         [JsonPropertyName("created_at")] public DateTime? CreatedAt { get; set; }
     }
 }
-
-

@@ -4,7 +4,7 @@ using Berdsk.Sdk.PagarMe.V5.Services.Transfers.Dtos;
 namespace Berdsk.Sdk.PagarMe.V5.Services.Transfers
 {
     /// <summary>
-    /// Interface para o serviço de transferências.
+    ///     Interface para o serviço de transferências.
     /// </summary>
     public interface IPmTransferService
     {

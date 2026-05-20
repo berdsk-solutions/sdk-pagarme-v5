@@ -4,7 +4,7 @@ using Berdsk.Sdk.PagarMe.V5.Services.CardBin.Dtos;
 namespace Berdsk.Sdk.PagarMe.V5.Services.CardBin
 {
     /// <summary>
-    /// Interface para o serviço de BIN de cartão.
+    ///     Interface para o serviço de BIN de cartão.
     /// </summary>
     public interface IPmBinService
     {
@@ -17,5 +17,3 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.CardBin
         Task<PmBinResponse?> GetBinAsync(string bin);
     }
 }
-
-

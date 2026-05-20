@@ -13,42 +13,42 @@ using Berdsk.Sdk.PagarMe.V5.Services.SubscriptionSplit;
 namespace Berdsk.Sdk.PagarMe.V5.Services.Subscription
 {
     /// <summary>
-    /// Interface para o serviço de assinaturas.
+    ///     Interface para o serviço de assinaturas.
     /// </summary>
     public interface IPmSubscriptionService
     {
         /// <summary>
-        /// Serviço de itens da assinatura.
+        ///     Serviço de itens da assinatura.
         /// </summary>
         IPmSubscriptionItemService Items { get; }
 
         /// <summary>
-        /// Serviço de ciclos da assinatura.
+        ///     Serviço de ciclos da assinatura.
         /// </summary>
         IPmSubscriptionCycleService Cycles { get; }
 
         /// <summary>
-        /// Serviço de descontos da assinatura.
+        ///     Serviço de descontos da assinatura.
         /// </summary>
         IPmSubscriptionDiscountService Discounts { get; }
 
         /// <summary>
-        /// Serviço de acréscimos da assinatura.
+        ///     Serviço de acréscimos da assinatura.
         /// </summary>
         IPmSubscriptionIncrementService Increments { get; }
 
         /// <summary>
-        /// Serviço de faturas da assinatura.
+        ///     Serviço de faturas da assinatura.
         /// </summary>
         IPmSubscriptionInvoiceService Invoices { get; }
 
         /// <summary>
-        /// Serviço de uso de itens da assinatura.
+        ///     Serviço de uso de itens da assinatura.
         /// </summary>
         IPmSubscriptionItemUsageService ItemUsage { get; }
 
         /// <summary>
-        /// Serviço de split da assinatura.
+        ///     Serviço de split da assinatura.
         /// </summary>
         IPmSubscriptionSplitService Splits { get; }
 
@@ -99,7 +99,8 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.Subscription
         /// <param name="subscriptionId">Identificador da assinatura</param>
         /// <param name="request">Dados do novo cartão</param>
         /// <returns>Dados da assinatura atualizada</returns>
-        Task<PmSubscriptionResponse?> UpdateSubscriptionCardAsync(string subscriptionId, PmUpdateSubscriptionCardRequest request);
+        Task<PmSubscriptionResponse?> UpdateSubscriptionCardAsync(string subscriptionId,
+            PmUpdateSubscriptionCardRequest request);
 
         /// <summary>
         ///     Atualiza os metadados da assinatura.
@@ -108,7 +109,8 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.Subscription
         /// <param name="subscriptionId">Identificador da assinatura</param>
         /// <param name="metadata">Novos metadados</param>
         /// <returns>Dados da assinatura atualizada</returns>
-        Task<PmSubscriptionResponse?> UpdateSubscriptionMetadataAsync(string subscriptionId, Dictionary<string, string> metadata);
+        Task<PmSubscriptionResponse?> UpdateSubscriptionMetadataAsync(string subscriptionId,
+            Dictionary<string, string> metadata);
 
         /// <summary>
         ///     Atualiza o meio de pagamento da assinatura.
@@ -117,7 +119,8 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.Subscription
         /// <param name="subscriptionId">Identificador da assinatura</param>
         /// <param name="request">Novos dados de pagamento</param>
         /// <returns>Dados da assinatura atualizada</returns>
-        Task<PmSubscriptionResponse?> UpdateSubscriptionPaymentMethodAsync(string subscriptionId, PmUpdateSubscriptionPaymentMethodRequest request);
+        Task<PmSubscriptionResponse?> UpdateSubscriptionPaymentMethodAsync(string subscriptionId,
+            PmUpdateSubscriptionPaymentMethodRequest request);
 
         /// <summary>
         ///     Atualiza a data de início da assinatura.
@@ -148,5 +151,3 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.Subscription
         Task<bool> SetManualBillingAsync(string subscriptionId, bool enabled);
     }
 }
-
-

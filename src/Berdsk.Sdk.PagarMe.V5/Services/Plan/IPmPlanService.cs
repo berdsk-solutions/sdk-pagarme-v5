@@ -6,12 +6,12 @@ using Berdsk.Sdk.PagarMe.V5.Services.PlanItem;
 namespace Berdsk.Sdk.PagarMe.V5.Services.Plan
 {
     /// <summary>
-    /// Interface para o serviço de planos.
+    ///     Interface para o serviço de planos.
     /// </summary>
     public interface IPmPlanService
     {
         /// <summary>
-        /// Serviço de itens do plano.
+        ///     Serviço de itens do plano.
         /// </summary>
         IPmPlanItemService Items { get; }
 
@@ -57,7 +57,8 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.Plan
         /// <param name="page">número da página</param>
         /// <param name="size">Quantidade de registros por página</param>
         /// <returns>Lista de planos</returns>
-        Task<PmListPlansResponse?> ListPlansAsync(string? name = null, string? status = null, int? page = null, int? size = null);
+        Task<PmListPlansResponse?> ListPlansAsync(string? name = null, string? status = null, int? page = null,
+            int? size = null);
 
         /// <summary>
         ///     Atualiza os metadados de um plano.
@@ -69,5 +70,3 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.Plan
         Task<PmPlanResponse?> UpdatePlanMetadataAsync(string planId, Dictionary<string, string> metadata);
     }
 }
-
-

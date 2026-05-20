@@ -5,7 +5,7 @@ using Berdsk.Sdk.PagarMe.V5.Services.SubscriptionItem.Dtos;
 namespace Berdsk.Sdk.PagarMe.V5.Services.SubscriptionItem
 {
     /// <summary>
-    /// Interface para o serviço de itens de assinatura.
+    ///     Interface para o serviço de itens de assinatura.
     /// </summary>
     public interface IPmSubscriptionItemService
     {
@@ -16,7 +16,8 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.SubscriptionItem
         /// <param name="subscriptionId">Identificador da assinatura</param>
         /// <param name="request">Dados do item</param>
         /// <returns>Dados do item criado</returns>
-        Task<PmSubscriptionItemResponse?> CreateSubscriptionItemAsync(string subscriptionId, PmCreateSubscriptionItemRequestDto request);
+        Task<PmSubscriptionItemResponse?> CreateSubscriptionItemAsync(string subscriptionId,
+            PmCreateSubscriptionItemRequestDto request);
 
         /// <summary>
         ///     Obtém os dados de um item específico de uma assinatura.
@@ -38,7 +39,8 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.SubscriptionItem
         /// <param name="code">Filtro por código</param>
         /// <param name="status">Filtro por status</param>
         /// <returns>Lista de itens</returns>
-        Task<PmListSubscriptionItemsResponse?> ListSubscriptionItemsAsync(string subscriptionId, int? page = null, int? size = null, string? name = null, string? code = null, string? status = null);
+        Task<PmListSubscriptionItemsResponse?> ListSubscriptionItemsAsync(string subscriptionId, int? page = null,
+            int? size = null, string? name = null, string? code = null, string? status = null);
 
         /// <summary>
         ///     Edita um item de uma assinatura.
@@ -48,7 +50,8 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.SubscriptionItem
         /// <param name="itemId">Identificador do item</param>
         /// <param name="request">Dados para atualização</param>
         /// <returns>Dados do item atualizado</returns>
-        Task<PmSubscriptionItemResponse?> UpdateSubscriptionItemAsync(string subscriptionId, string itemId, PmUpdateSubscriptionItemRequest request);
+        Task<PmSubscriptionItemResponse?> UpdateSubscriptionItemAsync(string subscriptionId, string itemId,
+            PmUpdateSubscriptionItemRequest request);
 
         /// <summary>
         ///     Remove um item de uma assinatura.
@@ -60,5 +63,3 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.SubscriptionItem
         Task<PmSubscriptionItemResponse?> DeleteSubscriptionItemAsync(string subscriptionId, string itemId);
     }
 }
-
-

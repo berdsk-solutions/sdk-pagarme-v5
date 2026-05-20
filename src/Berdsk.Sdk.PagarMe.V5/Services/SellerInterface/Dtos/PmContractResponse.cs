@@ -1,5 +1,6 @@
-﻿using System.Text.Json.Serialization;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using System.Text.Json.Serialization;
+
 namespace Berdsk.Sdk.PagarMe.V5.Services.SellerInterface.Dtos
 {
     /// <summary>
@@ -41,7 +42,8 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.SellerInterface.Dtos
         ///     Lista de contas bancárias (domicílio bancário).
         /// </summary>
         [JsonPropertyName("bank_accounts")]
-        public List<PmContractBankAccountResponse> BankAccounts { get; set; } = new List<PmContractBankAccountResponse>();
+        public List<PmContractBankAccountResponse> BankAccounts { get; set; } =
+            new List<PmContractBankAccountResponse>();
 
         /// <summary>
         ///     Registradora do credor.
@@ -50,5 +52,3 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.SellerInterface.Dtos
         public string TradeRepository { get; set; }
     }
 }
-
-

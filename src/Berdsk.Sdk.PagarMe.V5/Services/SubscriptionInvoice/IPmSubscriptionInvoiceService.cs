@@ -5,7 +5,7 @@ using Berdsk.Sdk.PagarMe.V5.Services.SubscriptionInvoice.Dtos;
 namespace Berdsk.Sdk.PagarMe.V5.Services.SubscriptionInvoice
 {
     /// <summary>
-    /// Interface para o serviço de faturas de assinatura.
+    ///     Interface para o serviço de faturas de assinatura.
     /// </summary>
     public interface IPmSubscriptionInvoiceService
     {
@@ -17,7 +17,8 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.SubscriptionInvoice
         /// <param name="page">Número da página</param>
         /// <param name="size">Quantidade de registros por página</param>
         /// <returns>Lista de faturas</returns>
-        Task<PmListSubscriptionInvoicesResponse?> ListSubscriptionInvoicesAsync(string subscriptionId, int? page = null, int? size = null);
+        Task<PmListSubscriptionInvoicesResponse?> ListSubscriptionInvoicesAsync(string subscriptionId, int? page = null,
+            int? size = null);
 
         /// <summary>
         ///     Obtém os dados de uma fatura específica.
@@ -35,14 +36,14 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.SubscriptionInvoice
         /// <param name="cycleId">Identificador do ciclo</param>
         /// <param name="metadata">Metadados opcionais</param>
         /// <returns>Dados da fatura criada</returns>
-        Task<PmSubscriptionInvoiceResponse?> CreateInvoiceAsync(string subscriptionId, string cycleId, Dictionary<string, string>? metadata = null);
+        Task<PmSubscriptionInvoiceResponse?> CreateInvoiceAsync(string subscriptionId, string cycleId,
+            Dictionary<string, string>? metadata = null);
 
         /// <summary>
         ///     Lista todas as faturas do sistema com filtros opcionais.
         ///     <para>Referência: https://docs.pagar.me/reference/listar-faturas-1.md</para>
         /// </summary>
-        Task<PmListSubscriptionInvoicesResponse?> ListAllInvoicesAsync(string? status = null, int? page = null, int? size = null);
+        Task<PmListSubscriptionInvoicesResponse?> ListAllInvoicesAsync(string? status = null, int? page = null,
+            int? size = null);
     }
 }
-
-

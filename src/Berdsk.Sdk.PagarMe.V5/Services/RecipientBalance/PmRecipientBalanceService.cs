@@ -1,5 +1,5 @@
-﻿using System.Threading.Tasks;
-using System.Net.Http;
+﻿using System.Net.Http;
+using System.Threading.Tasks;
 using Berdsk.Sdk.PagarMe.V5.Services.RecipientBalance.Dtos;
 
 namespace Berdsk.Sdk.PagarMe.V5.Services.RecipientBalance
@@ -19,5 +19,3 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.RecipientBalance
         }
     }
 }
-
-

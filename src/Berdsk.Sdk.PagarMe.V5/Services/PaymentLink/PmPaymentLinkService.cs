@@ -1,7 +1,7 @@
-﻿using System.Threading.Tasks;
+﻿using System;
 using System.Collections.Generic;
-using System;
 using System.Net.Http;
+using System.Threading.Tasks;
 using Berdsk.Sdk.PagarMe.V5.Services.PaymentLink.Dtos;
 
 namespace Berdsk.Sdk.PagarMe.V5.Services.PaymentLink
@@ -11,7 +11,7 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.PaymentLink
     ///     <para>
     ///         Observação: a Pagar.me utiliza URLs distintas para Links de Pagamento entre os ambientes
     ///         de produção (<c>https://api.pagar.me/core/v5</c>) e desenvolvimento/sandbox
-    ///         (<c>https://sdx-api.pagar.me/core/v5</c>). Como o <see cref="HttpClient.BaseAddress"/>
+    ///         (<c>https://sdx-api.pagar.me/core/v5</c>). Como o <see cref="HttpClient.BaseAddress" />
     ///         do <c>PagarMeClient</c> já é configurado com a URL de produção, este serviço aceita uma
     ///         <c>baseUrl</c> alternativa no construtor para sobrescrever o destino em todas as chamadas.
     ///     </para>
@@ -33,16 +33,6 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.PaymentLink
         public PmPaymentLinkService(HttpClient httpClient, string? baseUrlOverride = null) : base(httpClient)
         {
             _baseUrlOverride = baseUrlOverride;
-        }
-
-        /// <summary>
-        ///     Monta a URL final, utilizando a baseUrl alternativa (caso configurada no construtor).
-        /// </summary>
-        private string BuildUrl(string relativeUrl)
-        {
-            return string.IsNullOrWhiteSpace(_baseUrlOverride)
-                ? relativeUrl
-                : $"{_baseUrlOverride.TrimEnd('/')}/{relativeUrl.TrimStart('/')}";
         }
 
         /// <inheritdoc />
@@ -87,7 +77,15 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.PaymentLink
             var url = BuildUrl(string.Format(PmEndpoints.PaymentLinks.Cancel, paymentLinkId));
             return await DeleteAsync<PmPaymentLinkResponse>(url);
         }
+
+        /// <summary>
+        ///     Monta a URL final, utilizando a baseUrl alternativa (caso configurada no construtor).
+        /// </summary>
+        private string BuildUrl(string relativeUrl)
+        {
+            return string.IsNullOrWhiteSpace(_baseUrlOverride)
+                ? relativeUrl
+                : $"{_baseUrlOverride.TrimEnd('/')}/{relativeUrl.TrimStart('/')}";
+        }
     }
 }
-
-

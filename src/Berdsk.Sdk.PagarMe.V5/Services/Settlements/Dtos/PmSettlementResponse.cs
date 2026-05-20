@@ -1,5 +1,6 @@
-﻿using System.Text.Json.Serialization;
-using System;
+﻿using System;
+using System.Text.Json.Serialization;
+
 namespace Berdsk.Sdk.PagarMe.V5.Services.Settlements.Dtos
 {
     /// <summary>
@@ -22,19 +23,24 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.Settlements.Dtos
 
         [JsonPropertyName("document_type")] public string DocumentType { get; set; }
 
-        [JsonPropertyName("contract_obligation_id")] public string ContractObligationId { get; set; }
+        [JsonPropertyName("contract_obligation_id")]
+        public string ContractObligationId { get; set; }
 
-        [JsonPropertyName("liquidation_arrangement_id")] public string LiquidationArrangementId { get; set; }
+        [JsonPropertyName("liquidation_arrangement_id")]
+        public string LiquidationArrangementId { get; set; }
 
         [JsonPropertyName("liquidation_type")] public string LiquidationType { get; set; }
 
         [JsonPropertyName("contract_key")] public string ContractKey { get; set; }
 
-        [JsonPropertyName("liquidation_engine")] public string LiquidationEngine { get; set; }
+        [JsonPropertyName("liquidation_engine")]
+        public string LiquidationEngine { get; set; }
 
-        [JsonPropertyName("external_engine_payment_id")] public string ExternalEnginePaymentId { get; set; }
+        [JsonPropertyName("external_engine_payment_id")]
+        public string ExternalEnginePaymentId { get; set; }
 
-        [JsonPropertyName("funding_account_id")] public string FundingAccountId { get; set; }
+        [JsonPropertyName("funding_account_id")]
+        public string FundingAccountId { get; set; }
 
         [JsonPropertyName("status")] public string Status { get; set; }
 
@@ -43,5 +49,3 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.Settlements.Dtos
         [JsonPropertyName("target_account")] public PmSettlementTargetAccountResponse TargetAccount { get; set; }
     }
 }
-
-

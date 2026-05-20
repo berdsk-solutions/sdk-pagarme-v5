@@ -5,12 +5,12 @@ using Berdsk.Sdk.PagarMe.V5.Services.OrderItem;
 namespace Berdsk.Sdk.PagarMe.V5.Services.Order
 {
     /// <summary>
-    /// Interface para o serviço de pedidos.
+    ///     Interface para o serviço de pedidos.
     /// </summary>
     public interface IPmOrderService
     {
         /// <summary>
-        /// Serviço de itens do pedido.
+        ///     Serviço de itens do pedido.
         /// </summary>
         IPmOrderItemService Items { get; }
 
@@ -72,5 +72,3 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.Order
         Task<PmOrderChargeResponse?> AddChargeAsync(string orderId, PmOrderPaymentRequest request);
     }
 }
-
-

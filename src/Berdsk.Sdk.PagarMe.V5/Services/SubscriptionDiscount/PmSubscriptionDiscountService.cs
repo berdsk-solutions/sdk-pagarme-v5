@@ -1,6 +1,6 @@
-﻿using System.Threading.Tasks;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Net.Http;
+using System.Threading.Tasks;
 using Berdsk.Sdk.PagarMe.V5.Services.SubscriptionDiscount.Dtos;
 
 namespace Berdsk.Sdk.PagarMe.V5.Services.SubscriptionDiscount
@@ -50,5 +50,3 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.SubscriptionDiscount
         }
     }
 }
-
-

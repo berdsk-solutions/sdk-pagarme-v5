@@ -1,4 +1,5 @@
 ﻿using System.Text.Json.Serialization;
+
 namespace Berdsk.Sdk.PagarMe.V5.Services.Cards.Dtos
 {
     /// <summary>
@@ -55,5 +56,3 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.Cards.Dtos
         public string? Label { get; set; }
     }
 }
-
-

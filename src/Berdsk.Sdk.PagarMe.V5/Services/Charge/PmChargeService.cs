@@ -1,7 +1,7 @@
-﻿using System.Threading.Tasks;
+﻿using System;
 using System.Collections.Generic;
-using System;
 using System.Net.Http;
+using System.Threading.Tasks;
 using Berdsk.Sdk.PagarMe.V5.Services.Charge.Dtos;
 
 namespace Berdsk.Sdk.PagarMe.V5.Services.Charge
@@ -36,7 +36,8 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.Charge
             if (!string.IsNullOrEmpty(status)) queryParameters.Add($"status={Uri.EscapeDataString(status)}");
             if (!string.IsNullOrEmpty(paymentMethod))
                 queryParameters.Add($"payment_method={Uri.EscapeDataString(paymentMethod)}");
-            if (!string.IsNullOrEmpty(customerId)) queryParameters.Add($"customer_id={Uri.EscapeDataString(customerId)}");
+            if (!string.IsNullOrEmpty(customerId))
+                queryParameters.Add($"customer_id={Uri.EscapeDataString(customerId)}");
             if (!string.IsNullOrEmpty(orderId)) queryParameters.Add($"order_id={Uri.EscapeDataString(orderId)}");
             if (!string.IsNullOrEmpty(createdSince))
                 queryParameters.Add($"created_since={Uri.EscapeDataString(createdSince)}");
@@ -74,7 +75,8 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.Charge
         }
 
         /// <inheritdoc />
-        public async Task<PmChargeResponse?> UpdateChargeDueDateAsync(string chargeId, PmUpdateChargeDueDateRequest request)
+        public async Task<PmChargeResponse?> UpdateChargeDueDateAsync(string chargeId,
+            PmUpdateChargeDueDateRequest request)
         {
             var url = string.Format(PmEndpoints.Charges.UpdateDueDate, chargeId);
             return await PatchAsync<PmChargeResponse, PmUpdateChargeDueDateRequest>(url, request);
@@ -97,7 +99,8 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.Charge
         }
 
         /// <inheritdoc />
-        public async Task<PmChargeResponse?> CancelChargeWithSplitAsync(string chargeId, PmCancelChargeSplitRequest request)
+        public async Task<PmChargeResponse?> CancelChargeWithSplitAsync(string chargeId,
+            PmCancelChargeSplitRequest request)
         {
             var url = string.Format(PmEndpoints.Charges.Cancel, chargeId);
             return await DeleteAsync<PmChargeResponse>(url, request);
@@ -118,6 +121,3 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.Charge
         }
     }
 }
-
-
-

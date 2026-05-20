@@ -1,5 +1,5 @@
-﻿using System.Text.Json.Serialization;
-using System;
+﻿using System;
+using System.Text.Json.Serialization;
 using Berdsk.Sdk.PagarMe.V5.Services.Subscription.Dtos;
 
 namespace Berdsk.Sdk.PagarMe.V5.Services.SubscriptionIncrement.Dtos
@@ -58,5 +58,3 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.SubscriptionIncrement.Dtos
         public PmSubscriptionResponse? Subscription { get; set; }
     }
 }
-
-

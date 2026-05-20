@@ -1,6 +1,6 @@
-﻿using System.Text.Json.Serialization;
+﻿using System;
 using System.Collections.Generic;
-using System;
+using System.Text.Json.Serialization;
 using Berdsk.Sdk.PagarMe.V5.Services.Customer.Dtos;
 
 namespace Berdsk.Sdk.PagarMe.V5.Services.Order.Dtos
@@ -89,5 +89,3 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.Order.Dtos
         public DateTime? ClosedAt { get; set; }
     }
 }
-
-

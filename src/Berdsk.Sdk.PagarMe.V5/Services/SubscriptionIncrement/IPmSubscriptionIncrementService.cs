@@ -4,7 +4,7 @@ using Berdsk.Sdk.PagarMe.V5.Services.SubscriptionIncrement.Dtos;
 namespace Berdsk.Sdk.PagarMe.V5.Services.SubscriptionIncrement
 {
     /// <summary>
-    /// Interface para o serviço de acréscimos (incrementos) de assinatura.
+    ///     Interface para o serviço de acréscimos (incrementos) de assinatura.
     /// </summary>
     public interface IPmSubscriptionIncrementService
     {
@@ -15,7 +15,8 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.SubscriptionIncrement
         /// <param name="subscriptionId">Identificador da assinatura</param>
         /// <param name="request">Dados do incremento</param>
         /// <returns>Dados do incremento criado</returns>
-        Task<PmSubscriptionIncrementResponse?> CreateSubscriptionIncrementAsync(string subscriptionId, PmCreateSubscriptionIncrementRequest request);
+        Task<PmSubscriptionIncrementResponse?> CreateSubscriptionIncrementAsync(string subscriptionId,
+            PmCreateSubscriptionIncrementRequest request);
 
         /// <summary>
         ///     Obtém os dados de um incremento específico de uma assinatura.
@@ -34,7 +35,8 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.SubscriptionIncrement
         /// <param name="page">Número da página</param>
         /// <param name="size">Quantidade de registros por página</param>
         /// <returns>Lista de incrementos</returns>
-        Task<PmListSubscriptionIncrementsResponse?> ListSubscriptionIncrementsAsync(string subscriptionId, int? page = null, int? size = null);
+        Task<PmListSubscriptionIncrementsResponse?> ListSubscriptionIncrementsAsync(string subscriptionId,
+            int? page = null, int? size = null);
 
         /// <summary>
         ///     Remove um incremento de uma assinatura.
@@ -43,8 +45,7 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.SubscriptionIncrement
         /// <param name="subscriptionId">Identificador da assinatura</param>
         /// <param name="incrementId">Identificador do incremento</param>
         /// <returns>Dados do incremento removido</returns>
-        Task<PmSubscriptionIncrementResponse?> DeleteSubscriptionIncrementAsync(string subscriptionId, string incrementId);
+        Task<PmSubscriptionIncrementResponse?> DeleteSubscriptionIncrementAsync(string subscriptionId,
+            string incrementId);
     }
 }
-
-

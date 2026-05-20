@@ -45,5 +45,3 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.Charge.Dtos
         public object? Pix { get; set; }
     }
 }
-
-

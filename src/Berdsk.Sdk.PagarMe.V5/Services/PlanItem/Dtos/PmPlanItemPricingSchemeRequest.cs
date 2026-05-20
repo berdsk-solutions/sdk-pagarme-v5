@@ -1,5 +1,6 @@
-﻿using System.Text.Json.Serialization;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using System.Text.Json.Serialization;
+
 namespace Berdsk.Sdk.PagarMe.V5.Services.PlanItem.Dtos
 {
     /// <summary>
@@ -26,5 +27,3 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.PlanItem.Dtos
         public List<PmPlanItemPriceBracketRequest>? PriceBrackets { get; set; }
     }
 }
-
-

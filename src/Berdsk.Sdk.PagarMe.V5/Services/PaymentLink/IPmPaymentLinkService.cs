@@ -4,7 +4,7 @@ using Berdsk.Sdk.PagarMe.V5.Services.PaymentLink.Dtos;
 namespace Berdsk.Sdk.PagarMe.V5.Services.PaymentLink
 {
     /// <summary>
-    /// Interface para o serviço de Links de Pagamento da Pagar.me.
+    ///     Interface para o serviço de Links de Pagamento da Pagar.me.
     /// </summary>
     public interface IPmPaymentLinkService
     {
@@ -32,7 +32,8 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.PaymentLink
         /// <param name="page">Número da página</param>
         /// <param name="size">Quantidade de registros por página</param>
         /// <returns>Lista de links de pagamento</returns>
-        Task<PmListPaymentLinksResponse?> ListPaymentLinksAsync(string? status = null, int? page = null, int? size = null);
+        Task<PmListPaymentLinksResponse?> ListPaymentLinksAsync(string? status = null, int? page = null,
+            int? size = null);
 
         /// <summary>
         ///     Ativa um link de pagamento que foi criado com status 'building'.
@@ -51,5 +52,3 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.PaymentLink
         Task<PmPaymentLinkResponse?> CancelPaymentLinkAsync(string paymentLinkId);
     }
 }
-
-

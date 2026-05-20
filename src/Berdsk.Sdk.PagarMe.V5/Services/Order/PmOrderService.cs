@@ -1,7 +1,7 @@
-﻿using System.Threading.Tasks;
+﻿using System;
 using System.Collections.Generic;
-using System;
 using System.Net.Http;
+using System.Threading.Tasks;
 using Berdsk.Sdk.PagarMe.V5.Services.Order.Dtos;
 using Berdsk.Sdk.PagarMe.V5.Services.OrderItem;
 
@@ -43,7 +43,8 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.Order
             var queryParameters = new List<string>();
             if (!string.IsNullOrEmpty(code)) queryParameters.Add($"code={Uri.EscapeDataString(code)}");
             if (!string.IsNullOrEmpty(status)) queryParameters.Add($"status={Uri.EscapeDataString(status)}");
-            if (!string.IsNullOrEmpty(customerId)) queryParameters.Add($"customer_id={Uri.EscapeDataString(customerId)}");
+            if (!string.IsNullOrEmpty(customerId))
+                queryParameters.Add($"customer_id={Uri.EscapeDataString(customerId)}");
             if (!string.IsNullOrEmpty(createdSince))
                 queryParameters.Add($"created_since={Uri.EscapeDataString(createdSince)}");
             if (!string.IsNullOrEmpty(createdUntil))
@@ -72,6 +73,3 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.Order
         }
     }
 }
-
-
-

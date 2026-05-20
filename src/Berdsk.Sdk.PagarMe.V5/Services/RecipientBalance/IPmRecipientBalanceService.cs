@@ -4,7 +4,7 @@ using Berdsk.Sdk.PagarMe.V5.Services.RecipientBalance.Dtos;
 namespace Berdsk.Sdk.PagarMe.V5.Services.RecipientBalance
 {
     /// <summary>
-    /// Interface para o serviço de consulta de saldo de recebedores.
+    ///     Interface para o serviço de consulta de saldo de recebedores.
     /// </summary>
     public interface IPmRecipientBalanceService
     {
@@ -17,5 +17,3 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.RecipientBalance
         Task<PmRecipientBalanceResponse?> GetBalanceAsync(string recipientId);
     }
 }
-
-

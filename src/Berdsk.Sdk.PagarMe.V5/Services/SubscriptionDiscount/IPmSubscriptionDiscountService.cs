@@ -4,7 +4,7 @@ using Berdsk.Sdk.PagarMe.V5.Services.SubscriptionDiscount.Dtos;
 namespace Berdsk.Sdk.PagarMe.V5.Services.SubscriptionDiscount
 {
     /// <summary>
-    /// Interface para o serviço de descontos de assinatura.
+    ///     Interface para o serviço de descontos de assinatura.
     /// </summary>
     public interface IPmSubscriptionDiscountService
     {
@@ -15,7 +15,8 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.SubscriptionDiscount
         /// <param name="subscriptionId">Identificador da assinatura</param>
         /// <param name="request">Dados do desconto</param>
         /// <returns>Dados do desconto criado</returns>
-        Task<PmSubscriptionDiscountResponse?> CreateSubscriptionDiscountAsync(string subscriptionId, PmCreateSubscriptionDiscountRequest request);
+        Task<PmSubscriptionDiscountResponse?> CreateSubscriptionDiscountAsync(string subscriptionId,
+            PmCreateSubscriptionDiscountRequest request);
 
         /// <summary>
         ///     Obtém os dados de um desconto específico de uma assinatura.
@@ -34,7 +35,8 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.SubscriptionDiscount
         /// <param name="page">Número da página</param>
         /// <param name="size">Quantidade de registros por página</param>
         /// <returns>Lista de descontos</returns>
-        Task<PmListSubscriptionDiscountsResponse?> ListSubscriptionDiscountsAsync(string subscriptionId, int? page = null, int? size = null);
+        Task<PmListSubscriptionDiscountsResponse?> ListSubscriptionDiscountsAsync(string subscriptionId,
+            int? page = null, int? size = null);
 
         /// <summary>
         ///     Remove um desconto de uma assinatura.
@@ -46,5 +48,3 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.SubscriptionDiscount
         Task<PmSubscriptionDiscountResponse?> DeleteSubscriptionDiscountAsync(string subscriptionId, string discountId);
     }
 }
-
-

@@ -5,7 +5,7 @@ using Berdsk.Sdk.PagarMe.V5.Services.PlanItem.Dtos;
 namespace Berdsk.Sdk.PagarMe.V5.Services.PlanItem
 {
     /// <summary>
-    /// Interface para o serviço de itens de plano.
+    ///     Interface para o serviço de itens de plano.
     /// </summary>
     public interface IPmPlanItemService
     {
@@ -43,7 +43,8 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.PlanItem
         /// <param name="planItemId">Identificador do item do plano</param>
         /// <param name="request">Dados para atualização</param>
         /// <returns>Dados do item atualizado</returns>
-        Task<PmPlanItemResponse?> UpdatePlanItemAsync(string planId, string planItemId, PmUpdatePlanItemRequest request);
+        Task<PmPlanItemResponse?>
+            UpdatePlanItemAsync(string planId, string planItemId, PmUpdatePlanItemRequest request);
 
         /// <summary>
         ///     Remove um item de um plano.
@@ -55,5 +56,3 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.PlanItem
         Task<PmPlanItemResponse?> DeletePlanItemAsync(string planId, string planItemId);
     }
 }
-
-

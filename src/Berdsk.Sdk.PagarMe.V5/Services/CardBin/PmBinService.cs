@@ -1,5 +1,5 @@
-﻿using System.Threading.Tasks;
-using System.Net.Http;
+﻿using System.Net.Http;
+using System.Threading.Tasks;
 using Berdsk.Sdk.PagarMe.V5.Services.CardBin.Dtos;
 
 namespace Berdsk.Sdk.PagarMe.V5.Services.CardBin
@@ -18,6 +18,3 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.CardBin
         }
     }
 }
-
-
-

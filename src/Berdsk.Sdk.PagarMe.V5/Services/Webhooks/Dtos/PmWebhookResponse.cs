@@ -1,4 +1,5 @@
 ﻿using System.Text.Json.Serialization;
+
 namespace Berdsk.Sdk.PagarMe.V5.Services.Webhooks.Dtos
 {
     /// <summary>
@@ -73,5 +74,3 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.Webhooks.Dtos
         public object Data { get; set; }
     }
 }
-
-

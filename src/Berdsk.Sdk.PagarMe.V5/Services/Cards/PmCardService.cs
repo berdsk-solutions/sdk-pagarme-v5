@@ -1,6 +1,6 @@
-﻿using System.Threading.Tasks;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Net.Http;
+using System.Threading.Tasks;
 using Berdsk.Sdk.PagarMe.V5.Services.Cards.Dtos;
 
 namespace Berdsk.Sdk.PagarMe.V5.Services.Cards
@@ -39,7 +39,8 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.Cards
         }
 
         /// <inheritdoc />
-        public async Task<PmCardResponse?> UpdateCardAsync(string customerId, string cardId, PmUpdateCardRequest request)
+        public async Task<PmCardResponse?> UpdateCardAsync(string customerId, string cardId,
+            PmUpdateCardRequest request)
         {
             var url = string.Format(PmEndpoints.Cards.Update, customerId, cardId);
             return await PutAsync<PmCardResponse, PmUpdateCardRequest>(url, request);
@@ -67,6 +68,3 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.Cards
         }
     }
 }
-
-
-

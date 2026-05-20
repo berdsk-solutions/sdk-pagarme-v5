@@ -26,5 +26,3 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.Order.Dtos
         public string? BillingAddressId { get; set; }
     }
 }
-
-

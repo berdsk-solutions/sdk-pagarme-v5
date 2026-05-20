@@ -6,7 +6,7 @@ using Berdsk.Sdk.PagarMe.V5.Services.SellerInterface.Dtos;
 namespace Berdsk.Sdk.PagarMe.V5.Services.SellerInterface
 {
     /// <summary>
-    /// Interface para o serviço de Interface Eletrônica para Sellers (Res. 264/349).
+    ///     Interface para o serviço de Interface Eletrônica para Sellers (Res. 264/349).
     /// </summary>
     public interface IPmSellerInterfaceService
     {
@@ -18,7 +18,8 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.SellerInterface
         /// <param name="startDate">Dia inicial da consulta de agenda</param>
         /// <param name="endDate">Dia final da consulta de agenda</param>
         /// <returns>Lista de Unidades de Recebíveis</returns>
-        Task<List<PmReceivableUnitResponse>?> ListReceivableUnitsAsync(string recipientId, DateTime startDate, DateTime endDate);
+        Task<List<PmReceivableUnitResponse>?> ListReceivableUnitsAsync(string recipientId, DateTime startDate,
+            DateTime endDate);
 
         /// <summary>
         ///     Retorna os efeitos de contratos (obrigações de liquidação).
@@ -45,7 +46,8 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.SellerInterface
         /// <param name="expectedSettlementDateSince">Data inicial da consulta</param>
         /// <param name="expectedSettlementDateUntil">Data final da consulta</param>
         /// <returns>Lista de contratos</returns>
-        Task<List<PmContractResponse>?> ListContractsAsync(string recipientId, DateTime expectedSettlementDateSince, DateTime expectedSettlementDateUntil);
+        Task<List<PmContractResponse>?> ListContractsAsync(string recipientId, DateTime expectedSettlementDateSince,
+            DateTime expectedSettlementDateUntil);
 
         /// <summary>
         ///     Retorna as contestações de contratos.
@@ -76,5 +78,3 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.SellerInterface
         Task CreateContestationAsync(PmCreateContestationRequest request);
     }
 }
-
-

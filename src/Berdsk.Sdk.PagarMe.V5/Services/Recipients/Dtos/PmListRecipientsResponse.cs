@@ -1,5 +1,6 @@
-﻿using System.Text.Json.Serialization;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using System.Text.Json.Serialization;
+
 namespace Berdsk.Sdk.PagarMe.V5.Services.Recipients.Dtos
 {
     /// <summary>
@@ -21,5 +22,3 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.Recipients.Dtos
         public PmPaging Paging { get; set; }
     }
 }
-
-

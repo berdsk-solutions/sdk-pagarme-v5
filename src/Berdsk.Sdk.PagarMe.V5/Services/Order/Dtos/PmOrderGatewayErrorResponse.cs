@@ -1,4 +1,5 @@
 ﻿using System.Text.Json.Serialization;
+
 namespace Berdsk.Sdk.PagarMe.V5.Services.Order.Dtos
 {
     /// <summary>
@@ -11,5 +12,3 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.Order.Dtos
         [JsonPropertyName("code")] public string Code { get; set; }
     }
 }
-
-

@@ -1,8 +1,8 @@
-<Solution>
-  <Folder Name="/src/">
-    <Project Path="src/Berdsk.Sdk.PagarMe.V5/Berdsk.Sdk.PagarMe.V5.csproj" />
-  </Folder>
-  <Folder Name="/tests/">
-    <Project Path="tests/Berdsk.Sdk.PagarMe.V5.Tests.Integration/Berdsk.Sdk.PagarMe.V5.Tests.Integration.csproj" />
-  </Folder>
+﻿<Solution>
+    <Folder Name="/src/">
+        <Project Path="src/Berdsk.Sdk.PagarMe.V5/Berdsk.Sdk.PagarMe.V5.csproj"/>
+    </Folder>
+    <Folder Name="/tests/">
+        <Project Path="tests/Berdsk.Sdk.PagarMe.V5.Tests.Integration/Berdsk.Sdk.PagarMe.V5.Tests.Integration.csproj"/>
+    </Folder>
 </Solution>

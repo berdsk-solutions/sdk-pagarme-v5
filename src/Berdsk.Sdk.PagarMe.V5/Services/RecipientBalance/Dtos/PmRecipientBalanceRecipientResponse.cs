@@ -1,5 +1,6 @@
-﻿using System.Text.Json.Serialization;
-using System;
+﻿using System;
+using System.Text.Json.Serialization;
+
 namespace Berdsk.Sdk.PagarMe.V5.Services.RecipientBalance.Dtos
 {
     /// <summary>
@@ -26,5 +27,3 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.RecipientBalance.Dtos
         [JsonPropertyName("updated_at")] public DateTime? UpdatedAt { get; set; }
     }
 }
-
-

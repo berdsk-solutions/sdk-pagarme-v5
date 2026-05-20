@@ -1,4 +1,5 @@
 ﻿using System.Text.Json.Serialization;
+
 namespace Berdsk.Sdk.PagarMe.V5.Services.Recipients.Dtos
 {
     public class PmRegisterInformationResponse
@@ -31,5 +32,3 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.Recipients.Dtos
         public string ProfessionalOccupation { get; set; }
     }
 }
-
-

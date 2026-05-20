@@ -5,8 +5,8 @@ using Berdsk.Sdk.PagarMe.V5.Services.Payables.Dtos;
 namespace Berdsk.Sdk.PagarMe.V5.Services.Payables
 {
     /// <summary>
-    /// Interface para o serviço de recebíveis (Payables).
-    /// <para>Referência: https://docs.pagar.me/reference/retornando-recebíveis.md</para>
+    ///     Interface para o serviço de recebíveis (Payables).
+    ///     <para>Referência: https://docs.pagar.me/reference/retornando-recebíveis.md</para>
     /// </summary>
     public interface IPmPayablesService
     {
@@ -46,5 +46,3 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.Payables
             int? size = null);
     }
 }
-
-

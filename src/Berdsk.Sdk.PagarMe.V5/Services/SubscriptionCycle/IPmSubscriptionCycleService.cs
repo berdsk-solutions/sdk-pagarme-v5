@@ -4,7 +4,7 @@ using Berdsk.Sdk.PagarMe.V5.Services.SubscriptionCycle.Dtos;
 namespace Berdsk.Sdk.PagarMe.V5.Services.SubscriptionCycle
 {
     /// <summary>
-    /// Interface para o serviço de ciclos de assinatura.
+    ///     Interface para o serviço de ciclos de assinatura.
     /// </summary>
     public interface IPmSubscriptionCycleService
     {
@@ -16,7 +16,8 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.SubscriptionCycle
         /// <param name="page">Número da página</param>
         /// <param name="size">Quantidade de registros por página</param>
         /// <returns>Lista de ciclos</returns>
-        Task<PmListSubscriptionCyclesResponse?> ListSubscriptionCyclesAsync(string subscriptionId, int? page = null, int? size = null);
+        Task<PmListSubscriptionCyclesResponse?> ListSubscriptionCyclesAsync(string subscriptionId, int? page = null,
+            int? size = null);
 
         /// <summary>
         ///     Obtém os dados de um ciclo específico.
@@ -36,5 +37,3 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.SubscriptionCycle
         Task<PmSubscriptionCycleResponse?> RenewSubscriptionCycleAsync(string subscriptionId);
     }
 }
-
-

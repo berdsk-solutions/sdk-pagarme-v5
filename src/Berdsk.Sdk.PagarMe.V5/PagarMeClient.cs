@@ -43,8 +43,8 @@ namespace Berdsk.Sdk.PagarMe.V5
         ///     URL base alternativa exclusiva para os endpoints de Payment Link (ex:
         ///     <c>https://sdx-api.pagar.me/core/v5</c> em sandbox). Necessário porque a Pagar.me utiliza
         ///     hosts distintos entre produção e desenvolvimento para esses endpoints, e o
-        ///     <see cref="HttpClient.BaseAddress"/> já está configurado com a URL principal da API.
-        ///     Se for <c>null</c>, o <see cref="PmPaymentLinkService"/> usa o <c>BaseAddress</c> padrão.
+        ///     <see cref="HttpClient.BaseAddress" /> já está configurado com a URL principal da API.
+        ///     Se for <c>null</c>, o <see cref="PmPaymentLinkService" /> usa o <c>BaseAddress</c> padrão.
         /// </param>
         public PagarMeClient(string apiKey, string baseUrl, HttpClient? httpClient = null,
             string? paymentLinkBaseUrl = null)

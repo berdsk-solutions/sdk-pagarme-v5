@@ -5,7 +5,7 @@ using Berdsk.Sdk.PagarMe.V5.Services.Disputes.Dtos;
 namespace Berdsk.Sdk.PagarMe.V5.Services.Disputes
 {
     /// <summary>
-    /// Interface para o serviço de consulta de disputas de chargeback.
+    ///     Interface para o serviço de consulta de disputas de chargeback.
     /// </summary>
     /// <remarks>
     ///     Referência: https://docs.pagar.me/reference/get_v1-disputes.md
@@ -46,5 +46,3 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.Disputes
         Task<PmDisputeResponse> GetDisputeAsync(string disputeId);
     }
 }
-
-

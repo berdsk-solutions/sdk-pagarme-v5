@@ -1,4 +1,5 @@
 ﻿using System.Text.Json.Serialization;
+
 namespace Berdsk.Sdk.PagarMe.V5.Services.Recipients.Dtos
 {
     public class PmPaging
@@ -6,5 +7,3 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.Recipients.Dtos
         [JsonPropertyName("total")] public int Total { get; set; }
     }
 }
-
-

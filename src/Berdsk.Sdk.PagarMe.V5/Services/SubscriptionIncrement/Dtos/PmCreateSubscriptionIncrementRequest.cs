@@ -1,4 +1,5 @@
 ﻿using System.Text.Json.Serialization;
+
 namespace Berdsk.Sdk.PagarMe.V5.Services.SubscriptionIncrement.Dtos
 {
     /// <summary>
@@ -37,5 +38,3 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.SubscriptionIncrement.Dtos
         public string? Description { get; set; }
     }
 }
-
-

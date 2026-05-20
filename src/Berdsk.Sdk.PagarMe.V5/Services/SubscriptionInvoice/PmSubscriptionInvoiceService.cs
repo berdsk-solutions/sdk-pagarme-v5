@@ -1,7 +1,7 @@
-﻿using System.Threading.Tasks;
+﻿using System;
 using System.Collections.Generic;
-using System;
 using System.Net.Http;
+using System.Threading.Tasks;
 using Berdsk.Sdk.PagarMe.V5.Services.SubscriptionInvoice.Dtos;
 
 namespace Berdsk.Sdk.PagarMe.V5.Services.SubscriptionInvoice
@@ -42,7 +42,8 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.SubscriptionInvoice
         }
 
         /// <inheritdoc />
-        public async Task<PmListSubscriptionInvoicesResponse?> ListAllInvoicesAsync(string? status = null, int? page = null,
+        public async Task<PmListSubscriptionInvoicesResponse?> ListAllInvoicesAsync(string? status = null,
+            int? page = null,
             int? size = null)
         {
             var url = PmEndpoints.SubscriptionInvoices.ListAll;
@@ -57,5 +58,3 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.SubscriptionInvoice
         }
     }
 }
-
-

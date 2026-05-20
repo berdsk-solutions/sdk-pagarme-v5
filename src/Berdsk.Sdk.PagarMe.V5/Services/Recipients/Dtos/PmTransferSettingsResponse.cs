@@ -1,4 +1,5 @@
 ﻿using System.Text.Json.Serialization;
+
 namespace Berdsk.Sdk.PagarMe.V5.Services.Recipients.Dtos
 {
     public class PmTransferSettingsResponse
@@ -11,5 +12,3 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.Recipients.Dtos
         [JsonPropertyName("transfer_day")] public int? TransferDay { get; set; }
     }
 }
-
-

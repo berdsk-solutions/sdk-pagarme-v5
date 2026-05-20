@@ -1,5 +1,5 @@
-﻿using System.Threading.Tasks;
-using System.Net.Http;
+﻿using System.Net.Http;
+using System.Threading.Tasks;
 using Berdsk.Sdk.PagarMe.V5.Services.BalanceOperations;
 using Berdsk.Sdk.PagarMe.V5.Services.Payables;
 using Berdsk.Sdk.PagarMe.V5.Services.RecipientAnticipationService;
@@ -75,7 +75,8 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.Recipients
         }
 
         /// <inheritdoc />
-        public async Task<PmRecipientResponse?> UpdateRecipientAsync(string recipientId, PmUpdateRecipientRequest request)
+        public async Task<PmRecipientResponse?> UpdateRecipientAsync(string recipientId,
+            PmUpdateRecipientRequest request)
         {
             var url = string.Format(PmEndpoints.Recipients.Update, recipientId);
             return await PutAsync<PmRecipientResponse, PmUpdateRecipientRequest>(url, request);
@@ -90,6 +91,3 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.Recipients
         }
     }
 }
-
-
-

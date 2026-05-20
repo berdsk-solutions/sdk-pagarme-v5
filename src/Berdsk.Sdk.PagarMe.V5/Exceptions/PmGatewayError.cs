@@ -1,5 +1,5 @@
 ﻿using System.Text.Json.Serialization;
-using System;
+
 namespace Berdsk.Sdk.PagarMe.V5.Exceptions
 {
     /// <summary>

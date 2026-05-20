@@ -1,6 +1,6 @@
-﻿using System.Text.Json.Serialization;
+﻿using System;
 using System.Collections.Generic;
-using System;
+using System.Text.Json.Serialization;
 using Berdsk.Sdk.PagarMe.V5.Services.Recipients.Dtos;
 
 namespace Berdsk.Sdk.PagarMe.V5.Services.Transfers.Dtos
@@ -47,5 +47,3 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.Transfers.Dtos
         [JsonPropertyName("bank_response")] public string BankResponse { get; set; }
     }
 }
-
-

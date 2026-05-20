@@ -1,6 +1,6 @@
-﻿using System.Text.Json.Serialization;
+﻿using System;
 using System.Collections.Generic;
-using System;
+using System.Text.Json.Serialization;
 using Berdsk.Sdk.PagarMe.V5.Services.Cards.Dtos;
 using Berdsk.Sdk.PagarMe.V5.Services.Customer.Dtos;
 using Berdsk.Sdk.PagarMe.V5.Services.Plan.Dtos;
@@ -139,5 +139,3 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.Subscription.Dtos
         public bool ManualBilling { get; set; }
     }
 }
-
-

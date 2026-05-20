@@ -5,7 +5,7 @@ using Berdsk.Sdk.PagarMe.V5.Services.BalanceOperations.Dtos;
 namespace Berdsk.Sdk.PagarMe.V5.Services.BalanceOperations
 {
     /// <summary>
-    /// Interface para o serviço de operações de saldo (Balance Operations).
+    ///     Interface para o serviço de operações de saldo (Balance Operations).
     /// </summary>
     public interface IPmBalanceOperationsService
     {
@@ -37,5 +37,3 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.BalanceOperations
         Task<PmBalanceOperationResponse?> GetBalanceOperationAsync(string balanceOperationId);
     }
 }
-
-

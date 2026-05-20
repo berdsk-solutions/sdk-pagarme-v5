@@ -7,7 +7,7 @@ using Berdsk.Sdk.PagarMe.V5.Services.Recipients.Dtos;
 namespace Berdsk.Sdk.PagarMe.V5.Services.RecipientAnticipationService
 {
     /// <summary>
-    /// Interface para o serviço de antecipações de recebedores.
+    ///     Interface para o serviço de antecipações de recebedores.
     /// </summary>
     public interface IPmRecipientAnticipationService
     {
@@ -40,7 +40,8 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.RecipientAnticipationService
         /// <param name="paymentDate">Data de pagamento procurada</param>
         /// <param name="amount">Filtro de amount</param>
         /// <returns>Lista de antecipações</returns>
-        Task<List<PmAnticipationResponse>?> ListAnticipationsAsync(string recipientId, int? page = null, int? count = null, string? id = null, string? paymentDate = null, long? amount = null);
+        Task<List<PmAnticipationResponse>?> ListAnticipationsAsync(string recipientId, int? page = null,
+            int? count = null, string? id = null, string? paymentDate = null, long? amount = null);
 
         /// <summary>
         ///     Simula uma antecipação spot para um recebedor.
@@ -49,7 +50,8 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.RecipientAnticipationService
         /// <param name="recipientId">Identificador do recebedor</param>
         /// <param name="request">Dados para simulação</param>
         /// <returns>Dados da simulação</returns>
-        Task<PmAnticipationSimulationResponse?> SimulateAnticipationAsync(string recipientId, PmSimulateAnticipationRequest request);
+        Task<PmAnticipationSimulationResponse?> SimulateAnticipationAsync(string recipientId,
+            PmSimulateAnticipationRequest request);
 
         /// <summary>
         ///     Obtém os limites máximos e mínimos de antecipação que um recebedor pode fazer.
@@ -59,7 +61,8 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.RecipientAnticipationService
         /// <param name="paymentDate">Data de pagamento desejada para a antecipação</param>
         /// <param name="timeframe">Define o período de onde os recebíveis serão escolhidos (start ou end)</param>
         /// <returns>Limites de antecipação</returns>
-        Task<PmAnticipationLimitsResponse?> GetAnticipationLimitsAsync(string recipientId, DateTime paymentDate, string timeframe);
+        Task<PmAnticipationLimitsResponse?> GetAnticipationLimitsAsync(string recipientId, DateTime paymentDate,
+            string timeframe);
 
         /// <summary>
         ///     Cancela uma antecipação com status pending.
@@ -77,8 +80,7 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.RecipientAnticipationService
         /// <param name="recipientId">Identificador do recebedor</param>
         /// <param name="request">Novas configurações</param>
         /// <returns>Configurações de antecipação atualizadas</returns>
-        Task<PmAnticipationSettingsResponse?> UpdateAutomaticAnticipationSettingsAsync(string recipientId, PmUpdateAutomaticAnticipationSettingsRequest request);
+        Task<PmAnticipationSettingsResponse?> UpdateAutomaticAnticipationSettingsAsync(string recipientId,
+            PmUpdateAutomaticAnticipationSettingsRequest request);
     }
 }
-
-

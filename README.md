@@ -6,9 +6,11 @@
     <img src="Resources/logo-pagarme.png" alt="PagarMe" width="300"/>
 </div>
 
-A **Berdsk.Sdk.PagarMe.V5** é uma biblioteca .NET não oficial, desenvolvida pela **Berdsk**, para facilitar a integração com a API v5 da [Pagar.me](https://pagar.me/).
+A **Berdsk.Sdk.PagarMe.V5** é uma biblioteca .NET não oficial, desenvolvida pela **Berdsk**, para facilitar a integração
+com a API v5 da [Pagar.me](https://pagar.me/).
 
-Este SDK fornece uma interface moderna, tipada e assíncrona para gerenciar pagamentos, clientes, assinaturas e muito mais, seguindo as melhores práticas do ecossistema .NET.
+Este SDK fornece uma interface moderna, tipada e assíncrona para gerenciar pagamentos, clientes, assinaturas e muito
+mais, seguindo as melhores práticas do ecossistema .NET.
 
 ---
 
@@ -44,7 +46,8 @@ dotnet add package Berdsk.Sdk.PagarMe.V5
 
 ### Inicializando o Cliente
 
-O `PagarMeClient` centraliza todos os serviços da API. É recomendado utilizá-lo como Singleton ou via Injeção de Dependência para reaproveitar o `HttpClient`.
+O `PagarMeClient` centraliza todos os serviços da API. É recomendado utilizá-lo como Singleton ou via Injeção de
+Dependência para reaproveitar o `HttpClient`.
 
 ```csharp
 using Berdsk.Sdk.PagarMe.V5;
@@ -141,21 +144,21 @@ O projeto conta com uma suíte de testes de integração localizados em `tests/B
 
 ### Como executar os testes
 
-1.  **Configurar a Secret Key:**
-    Crie um arquivo `appsettings.test.json` na raiz do projeto de testes:
-    ```json
-    {
-      "PagarMe": {
-        "SecretKey": "sua_secret_key_aqui",
-        "BaseUrl": "https://api.pagar.me/core/v5/"
-      }
-    }
-    ```
+1. **Configurar a Secret Key:**
+   Crie um arquivo `appsettings.test.json` na raiz do projeto de testes:
+   ```json
+   {
+     "PagarMe": {
+       "SecretKey": "sua_secret_key_aqui",
+       "BaseUrl": "https://api.pagar.me/core/v5/"
+     }
+   }
+   ```
 
-2.  **Executar:**
-    ```bash
-    dotnet test
-    ```
+2. **Executar:**
+   ```bash
+   dotnet test
+   ```
 
 ---
 
@@ -163,20 +166,23 @@ O projeto conta com uma suíte de testes de integração localizados em `tests/B
 
 Contribuições são muito bem-vindas! Para contribuir, siga estas diretrizes:
 
-1.  Faça um **Fork** do projeto.
-2.  Crie uma branch a partir da branch `develop` (ex: `git checkout -b feature/minha-nova-funcionalidade`).
-3.  Envie suas alterações via **Pull Request** para a branch `develop`.
+1. Faça um **Fork** do projeto.
+2. Crie uma branch a partir da branch `develop` (ex: `git checkout -b feature/minha-nova-funcionalidade`).
+3. Envie suas alterações via **Pull Request** para a branch `develop`.
 
-Para reportar bugs, sugestões ou dúvidas, por favor utilize as [Issues](https://github.com/berdsk/sdk-pagarme-v5/issues).
+Para reportar bugs, sugestões ou dúvidas, por favor utilize
+as [Issues](https://github.com/berdsk/sdk-pagarme-v5/issues).
 
 ---
 
 ## ⚠️ Disclaimer & Status do Projeto
 
-Este SDK está em desenvolvimento ativo. 
+Este SDK está em desenvolvimento ativo.
 
-- **Cobertura de Testes:** Embora os fluxos principais (Clientes, Pedidos, Pix, Cartão) estejam cobertos por testes de integração, algumas partes do SDK ainda carecem de validação automatizada completa.
-- **Contribua:** Sinta-se à vontade para relatar problemas, sugerir melhorias ou enviar PRs para aumentar a cobertura de testes.
+- **Cobertura de Testes:** Embora os fluxos principais (Clientes, Pedidos, Pix, Cartão) estejam cobertos por testes de
+  integração, algumas partes do SDK ainda carecem de validação automatizada completa.
+- **Contribua:** Sinta-se à vontade para relatar problemas, sugerir melhorias ou enviar PRs para aumentar a cobertura de
+  testes.
 - **Uso em Produção:** Recomendamos realizar testes exaustivos em ambiente de Sandbox antes de utilizar em produção.
 
 ---
@@ -195,4 +201,5 @@ Visite nosso site: [berdsk.com.br](https://berdsk.com.br)
 
 ---
 
-> **Aviso:** Esta é uma biblioteca independente e não possui vínculo oficial com a Pagar.me (Stone Co.). Todos os direitos da marca Pagar.me pertencem aos seus respectivos proprietários.
+> **Aviso:** Esta é uma biblioteca independente e não possui vínculo oficial com a Pagar.me (Stone Co.). Todos os
+> direitos da marca Pagar.me pertencem aos seus respectivos proprietários.

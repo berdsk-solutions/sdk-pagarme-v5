@@ -1,4 +1,5 @@
 ﻿using System.Text.Json.Serialization;
+
 namespace Berdsk.Sdk.PagarMe.V5.Services.RecipientTransfer.Dtos
 {
     /// <summary>
@@ -26,5 +27,3 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.RecipientTransfer.Dtos
         public int? TransferDay { get; set; }
     }
 }
-
-

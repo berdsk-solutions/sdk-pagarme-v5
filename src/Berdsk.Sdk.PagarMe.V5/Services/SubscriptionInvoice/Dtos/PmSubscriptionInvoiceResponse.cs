@@ -1,5 +1,5 @@
-﻿using System.Text.Json.Serialization;
-using System;
+﻿using System;
+using System.Text.Json.Serialization;
 using Berdsk.Sdk.PagarMe.V5.Services.Charge.Dtos;
 
 namespace Berdsk.Sdk.PagarMe.V5.Services.SubscriptionInvoice.Dtos
@@ -58,5 +58,3 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.SubscriptionInvoice.Dtos
         public PmChargeResponse? Charge { get; set; }
     }
 }
-
-

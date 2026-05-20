@@ -1,5 +1,5 @@
-﻿using System.Text.Json.Serialization;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using System.Text.Json.Serialization;
 using Berdsk.Sdk.PagarMe.V5.Services.Customer.Dtos;
 
 namespace Berdsk.Sdk.PagarMe.V5.Services.Order.Dtos
@@ -58,5 +58,3 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.Order.Dtos
         public Dictionary<string, string>? Metadata { get; set; }
     }
 }
-
-

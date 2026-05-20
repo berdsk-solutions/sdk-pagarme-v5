@@ -11,42 +11,42 @@ using Berdsk.Sdk.PagarMe.V5.Services.Settlements;
 namespace Berdsk.Sdk.PagarMe.V5.Services.Recipients
 {
     /// <summary>
-    /// Interface para o serviço de gerenciamento de recebedores na Pagar.me v5.
+    ///     Interface para o serviço de gerenciamento de recebedores na Pagar.me v5.
     /// </summary>
     public interface IPmRecipientService
     {
         /// <summary>
-        /// Serviço de transferências do recebedor.
+        ///     Serviço de transferências do recebedor.
         /// </summary>
         IPmRecipientTransferService Transfers { get; }
 
         /// <summary>
-        /// Serviço de contas bancárias do recebedor.
+        ///     Serviço de contas bancárias do recebedor.
         /// </summary>
         IPmRecipientBankAccountService BankAccounts { get; }
 
         /// <summary>
-        /// Serviço de consulta de saldo do recebedor.
+        ///     Serviço de consulta de saldo do recebedor.
         /// </summary>
         IPmRecipientBalanceService Balances { get; }
 
         /// <summary>
-        /// Serviço de antecipações do recebedor.
+        ///     Serviço de antecipações do recebedor.
         /// </summary>
         IPmRecipientAnticipationService Anticipations { get; }
 
         /// <summary>
-        /// Serviço de recebíveis do recebedor.
+        ///     Serviço de recebíveis do recebedor.
         /// </summary>
         IPmPayablesService Payables { get; }
 
         /// <summary>
-        /// Serviço de operações de saldo do recebedor.
+        ///     Serviço de operações de saldo do recebedor.
         /// </summary>
         IPmBalanceOperationsService BalanceOperations { get; }
 
         /// <summary>
-        /// Serviço de liquidações do recebedor.
+        ///     Serviço de liquidações do recebedor.
         /// </summary>
         IPmSettlementService Settlements { get; }
 
@@ -88,5 +88,3 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.Recipients
         Task<PmRecipientResponse?> UpdateRecipientCodeAsync(string recipientId, PmUpdateRecipientCodeRequest request);
     }
 }
-
-

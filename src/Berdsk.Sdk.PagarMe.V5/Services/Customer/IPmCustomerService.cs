@@ -6,17 +6,17 @@ using Berdsk.Sdk.PagarMe.V5.Services.Customer.Dtos;
 namespace Berdsk.Sdk.PagarMe.V5.Services.Customer
 {
     /// <summary>
-    /// Interface para o serviço de clientes.
+    ///     Interface para o serviço de clientes.
     /// </summary>
     public interface IPmCustomerService
     {
         /// <summary>
-        /// Serviço de cartões do cliente.
+        ///     Serviço de cartões do cliente.
         /// </summary>
         IPmCardService Cards { get; }
 
         /// <summary>
-        /// Serviço de endereços do cliente.
+        ///     Serviço de endereços do cliente.
         /// </summary>
         IPmAddressService Addresses { get; }
 
@@ -61,5 +61,3 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.Customer
             string? document = null, string? gender = null, string? code = null, int? page = null, int? size = null);
     }
 }
-
-

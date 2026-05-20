@@ -1,5 +1,5 @@
-﻿using System.Text.Json.Serialization;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using System.Text.Json.Serialization;
 using Berdsk.Sdk.PagarMe.V5.Services.Address.Dtos;
 
 namespace Berdsk.Sdk.PagarMe.V5.Services.Recipients.Dtos
@@ -27,5 +27,3 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.Recipients.Dtos
         [JsonPropertyName("phone_numbers")] public List<PmRecipientPhoneRequest> PhoneNumbers { get; set; }
     }
 }
-
-

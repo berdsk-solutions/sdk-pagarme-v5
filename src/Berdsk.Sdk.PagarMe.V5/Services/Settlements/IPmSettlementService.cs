@@ -4,7 +4,7 @@ using Berdsk.Sdk.PagarMe.V5.Services.Settlements.Dtos;
 namespace Berdsk.Sdk.PagarMe.V5.Services.Settlements
 {
     /// <summary>
-    /// Interface para o serviço de liquidações (Settlements).
+    ///     Interface para o serviço de liquidações (Settlements).
     /// </summary>
     public interface IPmSettlementService
     {
@@ -27,7 +27,8 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.Settlements
         ///     Lista os pagamentos (Settlements) de um recebedor específico.
         ///     <para>Referência: https://docs.pagar.me/reference/retornando-pagamentos-por-recebedor</para>
         /// </summary>
-        Task<PmListSettlementsResponse?> ListRecipientSettlementsAsync(string recipientId, string paymentDateStart, string paymentDateEnd);
+        Task<PmListSettlementsResponse?> ListRecipientSettlementsAsync(string recipientId, string paymentDateStart,
+            string paymentDateEnd);
 
         /// <summary>
         ///     Obtém um pagamento específico pelo ID.
@@ -36,5 +37,3 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.Settlements
         Task<PmSettlementResponse?> GetSettlementAsync(string settlementId);
     }
 }
-
-

@@ -1,6 +1,6 @@
-﻿using System.Threading.Tasks;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Net.Http;
+using System.Threading.Tasks;
 using Berdsk.Sdk.PagarMe.V5.Services.Transfers.Dtos;
 
 namespace Berdsk.Sdk.PagarMe.V5.Services.Transfers
@@ -15,15 +15,14 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.Transfers
         }
 
         /// <inheritdoc />
-        public async Task<PmTransferResponse?> CreateTransferAsync(PmCreateTransferRequest request, string? idempotencyKey = null)
+        public async Task<PmTransferResponse?> CreateTransferAsync(PmCreateTransferRequest request,
+            string? idempotencyKey = null)
         {
             var headers = new Dictionary<string, string>();
-            if (!string.IsNullOrEmpty(idempotencyKey))
-            {
-                headers.Add("Idempotency-Key", idempotencyKey);
-            }
+            if (!string.IsNullOrEmpty(idempotencyKey)) headers.Add("Idempotency-Key", idempotencyKey);
 
-            return await PostAsync<PmTransferResponse, PmCreateTransferRequest>(PmEndpoints.Transfers.Base, request, headers);
+            return await PostAsync<PmTransferResponse, PmCreateTransferRequest>(PmEndpoints.Transfers.Base, request,
+                headers);
         }
 
         /// <inheritdoc />
@@ -47,10 +46,7 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.Transfers
             if (!string.IsNullOrEmpty(dateCreated)) queryParameters.Add($"date_created={dateCreated}");
 
             var url = PmEndpoints.Transfers.Base;
-            if (queryParameters.Count > 0)
-            {
-                url += "?" + string.Join("&", queryParameters);
-            }
+            if (queryParameters.Count > 0) url += "?" + string.Join("&", queryParameters);
 
             return await GetAsync<PmListTransfersResponse>(url);
         }
@@ -78,5 +74,3 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.Transfers
         }
     }
 }
-
-

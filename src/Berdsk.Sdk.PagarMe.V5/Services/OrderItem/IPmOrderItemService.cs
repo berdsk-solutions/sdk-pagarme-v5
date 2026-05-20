@@ -4,7 +4,7 @@ using Berdsk.Sdk.PagarMe.V5.Services.OrderItem.Dtos;
 namespace Berdsk.Sdk.PagarMe.V5.Services.OrderItem
 {
     /// <summary>
-    /// Interface para o serviço de itens de pedido.
+    ///     Interface para o serviço de itens de pedido.
     /// </summary>
     public interface IPmOrderItemService
     {
@@ -34,7 +34,8 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.OrderItem
         /// <param name="itemId">Identificador do item</param>
         /// <param name="request">Dados para atualização</param>
         /// <returns>Dados do item atualizado</returns>
-        Task<PmOrderItemResponse?> UpdateOrderItemAsync(string orderId, string itemId, PmUpdateOrderItemRequest request);
+        Task<PmOrderItemResponse?>
+            UpdateOrderItemAsync(string orderId, string itemId, PmUpdateOrderItemRequest request);
 
         /// <summary>
         ///     Deleta um item de um pedido aberto.
@@ -54,5 +55,3 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.OrderItem
         Task<bool> DeleteAllOrderItemsAsync(string orderId);
     }
 }
-
-

@@ -20,7 +20,8 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.Order.Dtos
 
         [JsonPropertyName("document_number")] public string? DocumentNumber { get; set; }
 
-        [JsonPropertyName("statement_descriptor")] public string? StatementDescriptor { get; set; }
+        [JsonPropertyName("statement_descriptor")]
+        public string? StatementDescriptor { get; set; }
 
         [JsonPropertyName("interest")] public PmBoletoInterestRequest? Interest { get; set; }
 
@@ -31,5 +32,3 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.Order.Dtos
         [JsonPropertyName("metadata")] public Dictionary<string, string>? Metadata { get; set; }
     }
 }
-
-

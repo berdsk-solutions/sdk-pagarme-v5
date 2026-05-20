@@ -1,5 +1,5 @@
-﻿using System.Threading.Tasks;
-using System.Net.Http;
+﻿using System.Net.Http;
+using System.Threading.Tasks;
 using Berdsk.Sdk.PagarMe.V5.Services.OrderItem.Dtos;
 
 namespace Berdsk.Sdk.PagarMe.V5.Services.OrderItem
@@ -48,6 +48,3 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.OrderItem
         }
     }
 }
-
-
-

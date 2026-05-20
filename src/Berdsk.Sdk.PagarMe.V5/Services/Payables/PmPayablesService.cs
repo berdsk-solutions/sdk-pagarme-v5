@@ -1,7 +1,7 @@
-﻿using System.Threading.Tasks;
+﻿using System;
 using System.Collections.Generic;
-using System;
 using System.Net.Http;
+using System.Threading.Tasks;
 using Berdsk.Sdk.PagarMe.V5.Services.Payables.Dtos;
 
 namespace Berdsk.Sdk.PagarMe.V5.Services.Payables
@@ -34,8 +34,10 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.Payables
             if (createdSince.HasValue) queryParameters.Add($"created_since={createdSince.Value:yyyy-MM-dd}");
             if (createdUntil.HasValue) queryParameters.Add($"created_until={createdUntil.Value:yyyy-MM-dd}");
             if (!string.IsNullOrEmpty(status)) queryParameters.Add($"status={status}");
-            if (paymentDateSince.HasValue) queryParameters.Add($"payment_date_since={paymentDateSince.Value:yyyy-MM-dd}");
-            if (paymentDateUntil.HasValue) queryParameters.Add($"payment_date_until={paymentDateUntil.Value:yyyy-MM-dd}");
+            if (paymentDateSince.HasValue)
+                queryParameters.Add($"payment_date_since={paymentDateSince.Value:yyyy-MM-dd}");
+            if (paymentDateUntil.HasValue)
+                queryParameters.Add($"payment_date_until={paymentDateUntil.Value:yyyy-MM-dd}");
             if (!string.IsNullOrEmpty(type)) queryParameters.Add($"type={type}");
             if (updatedSince.HasValue) queryParameters.Add($"updated_since={updatedSince.Value:yyyy-MM-dd}");
             if (updatedUntil.HasValue) queryParameters.Add($"updated_until={updatedUntil.Value:yyyy-MM-dd}");
@@ -53,5 +55,3 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.Payables
         }
     }
 }
-
-

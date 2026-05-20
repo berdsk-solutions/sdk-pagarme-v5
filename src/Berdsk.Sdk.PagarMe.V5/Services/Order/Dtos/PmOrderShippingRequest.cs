@@ -39,5 +39,3 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.Order.Dtos
         public PmCreateCustomerAddressRequest? Address { get; set; }
     }
 }
-
-

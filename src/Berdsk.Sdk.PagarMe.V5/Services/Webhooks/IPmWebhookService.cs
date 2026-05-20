@@ -5,7 +5,7 @@ using Berdsk.Sdk.PagarMe.V5.Services.Webhooks.Dtos;
 namespace Berdsk.Sdk.PagarMe.V5.Services.Webhooks
 {
     /// <summary>
-    /// Interface para o serviço de webhooks.
+    ///     Interface para o serviço de webhooks.
     /// </summary>
     public interface IPmWebhookService
     {

@@ -4,7 +4,7 @@ using Berdsk.Sdk.PagarMe.V5.Services.Charge.Dtos;
 namespace Berdsk.Sdk.PagarMe.V5.Services.Charge
 {
     /// <summary>
-    /// Interface para o serviço de cobranças.
+    ///     Interface para o serviço de cobranças.
     /// </summary>
     public interface IPmChargeService
     {
@@ -84,7 +84,8 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.Charge
         /// <param name="chargeId">Identificador da cobrança</param>
         /// <param name="request">Novo método de pagamento</param>
         /// <returns>Dados da cobrança atualizada</returns>
-        Task<PmChargeResponse?> UpdateChargePaymentMethodAsync(string chargeId, PmUpdateChargePaymentMethodRequest request);
+        Task<PmChargeResponse?> UpdateChargePaymentMethodAsync(string chargeId,
+            PmUpdateChargePaymentMethodRequest request);
 
         /// <summary>
         ///     Cancela uma cobrança.
@@ -121,5 +122,3 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.Charge
         Task<PmChargeResponse?> ConfirmCashChargeAsync(string chargeId);
     }
 }
-
-

@@ -4,7 +4,7 @@ using Berdsk.Sdk.PagarMe.V5.Services.Cards.Dtos;
 namespace Berdsk.Sdk.PagarMe.V5.Services.Cards
 {
     /// <summary>
-    /// Interface para o serviço de cartões.
+    ///     Interface para o serviço de cartões.
     /// </summary>
     public interface IPmCardService
     {
@@ -74,5 +74,3 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.Cards
         Task<PmCardTokenResponse?> CreateCardTokenAsync(string publicKey, PmCreateCardTokenRequest request);
     }
 }
-
-

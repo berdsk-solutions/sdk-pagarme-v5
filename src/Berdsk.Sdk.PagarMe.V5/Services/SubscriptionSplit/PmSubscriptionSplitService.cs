@@ -1,5 +1,5 @@
-﻿using System.Threading.Tasks;
-using System.Net.Http;
+﻿using System.Net.Http;
+using System.Threading.Tasks;
 using Berdsk.Sdk.PagarMe.V5.Services.SubscriptionSplit.Dtos;
 
 namespace Berdsk.Sdk.PagarMe.V5.Services.SubscriptionSplit
@@ -26,5 +26,3 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.SubscriptionSplit
         }
     }
 }
-
-

@@ -5,7 +5,7 @@ using Berdsk.Sdk.PagarMe.V5.Services.Recipients.Dtos;
 namespace Berdsk.Sdk.PagarMe.V5.Services.RecipientBankAccount
 {
     /// <summary>
-    /// Interface para o serviço de contas bancárias de recebedores.
+    ///     Interface para o serviço de contas bancárias de recebedores.
     /// </summary>
     public interface IPmRecipientBankAccountService
     {
@@ -16,8 +16,7 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.RecipientBankAccount
         /// <param name="recipientId">ID do recebedor.</param>
         /// <param name="request">Dados da nova conta bancária.</param>
         /// <returns>Detalhes do recebedor com a conta atualizada.</returns>
-        Task<PmRecipientResponse?> UpdateBankAccountAsync(string recipientId, PmUpdateRecipientBankAccountRequest request);
+        Task<PmRecipientResponse?> UpdateBankAccountAsync(string recipientId,
+            PmUpdateRecipientBankAccountRequest request);
     }
 }
-
-

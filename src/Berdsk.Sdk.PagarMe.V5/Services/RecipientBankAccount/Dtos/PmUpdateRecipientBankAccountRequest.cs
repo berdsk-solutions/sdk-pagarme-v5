@@ -16,5 +16,3 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.RecipientBankAccount.Dtos
         public PmCreateBankAccountRequest BankAccount { get; set; }
     }
 }
-
-

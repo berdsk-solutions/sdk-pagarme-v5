@@ -45,5 +45,3 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.Subscription.Dtos
         public int? Cycles { get; set; }
     }
 }
-
-
