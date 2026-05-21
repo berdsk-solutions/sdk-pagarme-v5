@@ -6,7 +6,7 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.Cards.Dtos
 {
     /// <summary>
     ///     Requisição para edição de cartão.
-    ///     <para>Referência: https://docs.pagar.me/reference/editar-cartão.md</para>
+    ///     <see href="https://docs.pagar.me/reference/editar-cartão">Documentação Oficial PagarMe</see>
     /// </summary>
     public class PmUpdateCardRequest
     {

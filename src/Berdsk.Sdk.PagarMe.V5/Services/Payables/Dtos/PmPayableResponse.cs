@@ -5,7 +5,7 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.Payables.Dtos
 {
     /// <summary>
     ///     Representa um recebível (payable) no Pagar.me.
-    ///     <para>Referência: https://docs.pagar.me/reference/retornando-recebíveis.md</para>
+    ///     <see href="https://docs.pagar.me/reference/retornando-recebíveis">Documentação Oficial PagarMe</see>
     /// </summary>
     public class PmPayableResponse
     {

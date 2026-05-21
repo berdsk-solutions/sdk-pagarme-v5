@@ -52,7 +52,8 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.Customer.Dtos
         public string? Gender { get; set; }
 
         /// <summary>
-        ///     Endereço do cliente. Saiba mais sobre endereços: https://docs.pagar.me/reference/endereços
+        ///     Endereço do cliente. Saiba mais sobre endereços:
+        ///     <see href="https://docs.pagar.me/reference/endereços">Documentação Oficial PagarMe</see>
         /// </summary>
         [JsonPropertyName("address")]
         public PmCreateCustomerAddressRequest? Address { get; set; }
@@ -71,7 +72,7 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.Customer.Dtos
 
         /// <summary>
         ///     Objeto chave/valor utilizado para armazenar informações adicionais sobre o cliente. Saiba mais sobre metadata:
-        ///     https://docs.pagar.me/reference/metadata-1
+        ///     <see href="https://docs.pagar.me/reference/metadata-1">Documentação Oficial PagarMe</see>
         /// </summary>
         [JsonPropertyName("metadata")]
         public Dictionary<string, string>? Metadata { get; set; }

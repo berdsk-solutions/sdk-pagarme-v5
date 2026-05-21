@@ -5,7 +5,7 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.Settlements.Dtos
 {
     /// <summary>
     ///     Resposta de um pagamento (Settlement).
-    ///     <para>Referência: https://docs.pagar.me/reference/objeto-settlements</para>
+    ///     <see href="https://docs.pagar.me/reference/objeto-settlements">Documentação Oficial PagarMe</see>
     /// </summary>
     public class PmSettlementResponse
     {

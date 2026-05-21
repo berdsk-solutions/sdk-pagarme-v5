@@ -10,7 +10,7 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.Webhooks
     ///     Serviço para gerenciamento de Webhooks no Pagar.me.
     /// </summary>
     /// <remarks>
-    ///     Referência: https://docs.pagar.me/reference/exemplo-de-webhook-1.md
+    ///     <see href="https://docs.pagar.me/reference/exemplo-de-webhook-1">Documentação Oficial PagarMe</see>
     /// </remarks>
     public class PmWebhookService : PmBaseService, IPmWebhookService
     {

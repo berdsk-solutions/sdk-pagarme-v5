@@ -10,13 +10,13 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.Transfers
     {
         /// <summary>
         ///     Realiza uma transferência para uma conta bancária previamente criada ou para um recebedor.
-        ///     <para>Referência: https://docs.pagar.me/reference/criando-uma-transferência</para>
+        ///     <see href="https://docs.pagar.me/reference/criando-uma-transferência">Documentação Oficial PagarMe</see>
         /// </summary>
         Task<PmTransferResponse?> CreateTransferAsync(PmCreateTransferRequest request, string? idempotencyKey = null);
 
         /// <summary>
         ///     Retorna os dados de todas as transferências previamente realizadas.
-        ///     <para>Referência: https://docs.pagar.me/reference/retornando-transferências</para>
+        ///     <see href="https://docs.pagar.me/reference/retornando-transferências">Documentação Oficial PagarMe</see>
         /// </summary>
         Task<PmListTransfersResponse?> ListTransfersAsync(
             int? count = null,
@@ -29,19 +29,22 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.Transfers
 
         /// <summary>
         ///     Obtém os dados de uma transferência específica pelo ID.
-        ///     <para>Referência: https://docs.pagar.me/reference/retornando-uma-transferência</para>
+        ///     <see href="https://docs.pagar.me/reference/retornando-uma-transferência">Documentação Oficial PagarMe</see>
         /// </summary>
         Task<PmTransferResponse?> GetTransferAsync(string transferId);
 
         /// <summary>
         ///     Cancela uma transferência que ainda não foi processada (status pending_transfer).
-        ///     <para>Referência: https://docs.pagar.me/reference/cancelando-uma-transferência</para>
+        ///     <see href="https://docs.pagar.me/reference/cancelando-uma-transferência">Documentação Oficial PagarMe</see>
         /// </summary>
         Task<PmTransferResponse?> CancelTransferAsync(string transferId);
 
         /// <summary>
         ///     Retorna o comprovante de uma transferência realizada com sucesso (status transferred).
-        ///     <para>Referência: https://docs.pagar.me/reference/retornando-o-comprovante-de-uma-transferência</para>
+        ///     <see href="https://docs.pagar.me/reference/retornando-o-comprovante-de-uma-transferência">
+        ///         Documentação Oficial
+        ///         PagarMe
+        ///     </see>
         /// </summary>
         Task<object?> GetTransferReceiptAsync(string transferId);
     }

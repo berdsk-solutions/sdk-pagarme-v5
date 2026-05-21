@@ -10,7 +10,7 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.Cards
     {
         /// <summary>
         ///     Cria um cartão para um cliente.
-        ///     <para>Referência: https://docs.pagar.me/reference/criar-cartão.md</para>
+        ///     <see href="https://docs.pagar.me/reference/criar-cartão">Documentação Oficial PagarMe</see>
         /// </summary>
         /// <param name="customerId">Identificador do cliente (cus_xxxxxxxxxxxxxxxx)</param>
         /// <param name="request">Dados do cartão</param>
@@ -19,7 +19,7 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.Cards
 
         /// <summary>
         ///     Obtém os dados de um cartão específico de um cliente.
-        ///     <para>Referência: https://docs.pagar.me/reference/obter-cartão.md</para>
+        ///     <see href="https://docs.pagar.me/reference/obter-cartão">Documentação Oficial PagarMe</see>
         /// </summary>
         /// <param name="customerId">Identificador do cliente</param>
         /// <param name="cardId">Identificador do cartão (card_xxxxxxxxxxxxxxxx)</param>
@@ -28,7 +28,7 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.Cards
 
         /// <summary>
         ///     Lista os cartões de um cliente.
-        ///     <para>Referência: https://docs.pagar.me/reference/listar-cartão.md</para>
+        ///     <see href="https://docs.pagar.me/reference/listar-cartão">Documentação Oficial PagarMe</see>
         /// </summary>
         /// <param name="customerId">Identificador do cliente</param>
         /// <param name="page">número da página</param>
@@ -38,7 +38,7 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.Cards
 
         /// <summary>
         ///     Edita um cartão de um cliente.
-        ///     <para>Referência: https://docs.pagar.me/reference/editar-cartão.md</para>
+        ///     <see href="https://docs.pagar.me/reference/editar-cartão">Documentação Oficial PagarMe</see>
         /// </summary>
         /// <param name="customerId">Identificador do cliente</param>
         /// <param name="cardId">Identificador do cartão</param>
@@ -48,7 +48,7 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.Cards
 
         /// <summary>
         ///     Exclui um cartão de um cliente.
-        ///     <para>Referência: https://docs.pagar.me/reference/excluir-cartão.md</para>
+        ///     <see href="https://docs.pagar.me/reference/excluir-cartão">Documentação Oficial PagarMe</see>
         /// </summary>
         /// <param name="customerId">Identificador do cliente</param>
         /// <param name="cardId">Identificador do cartão</param>
@@ -57,7 +57,7 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.Cards
 
         /// <summary>
         ///     Renova um cartão da Wallet do cliente (Card Updater manual).
-        ///     <para>Referência: https://docs.pagar.me/reference/renovar-cartão-1.md</para>
+        ///     <see href="https://docs.pagar.me/reference/renovar-cartão-1">Documentação Oficial PagarMe</see>
         /// </summary>
         /// <param name="customerId">Identificador do cliente</param>
         /// <param name="cardId">Identificador do cartão</param>
@@ -66,7 +66,7 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.Cards
 
         /// <summary>
         ///     Cria um token para um cartão (Tokenização segura).
-        ///     <para>Referência: https://docs.pagar.me/reference/criar-token-cartão-1.md</para>
+        ///     <see href="https://docs.pagar.me/reference/criar-token-cartão-1">Documentação Oficial PagarMe</see>
         /// </summary>
         /// <param name="publicKey">Chave pública (appId na query string)</param>
         /// <param name="request">Dados do cartão para tokenização</param>

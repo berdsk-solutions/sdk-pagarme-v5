@@ -4,7 +4,10 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.RecipientTransfer.Dtos
 {
     /// <summary>
     ///     Requisição para atualizar as informações de transferência do recebedor.
-    ///     <para>Referência: https://docs.pagar.me/reference/atualizar-informaç%C3%B5es-de-transferência-1.md</para>
+    ///     <see href="https://docs.pagar.me/reference/atualizar-informaç%C3%B5es-de-transferência-1">
+    ///         Documentação Oficial
+    ///         PagarMe
+    ///     </see>
     /// </summary>
     public class PmUpdateTransferSettingsRequest
     {

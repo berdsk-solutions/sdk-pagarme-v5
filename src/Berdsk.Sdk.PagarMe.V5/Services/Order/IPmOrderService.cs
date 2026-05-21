@@ -16,17 +16,17 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.Order
 
         /// <summary>
         ///     Cria um pedido.
-        ///     <para>Referência: https://docs.pagar.me/reference/criar-pedido-2.md</para>
-        ///     <para>Multimeios: https://docs.pagar.me/reference/criar-pedido-multimeios.md</para>
-        ///     <para>Multicompradores: https://docs.pagar.me/reference/criar-pedido-multicompradores.md</para>
         /// </summary>
         /// <param name="request">Dados do pedido</param>
         /// <returns>Dados do pedido criado</returns>
+        /// <see href="https://docs.pagar.me/reference/criar-pedido-2">Documentação Oficial PagarMe</see>
+        /// <see href="https://docs.pagar.me/reference/criar-pedido-multimeios">Documentação Oficial PagarMe Multimeios</see>
+        /// <see href="https://docs.pagar.me/reference/criar-pedido-multicompradores">Documentação Oficial PagarMe Multicompradores</see>
         Task<PmOrderResponse?> CreateOrderAsync(PmCreateOrderRequest request);
 
         /// <summary>
         ///     Obtém os dados de um pedido.
-        ///     <para>Referência: https://docs.pagar.me/reference/obter-pedido.md</para>
+        ///     <see href="https://docs.pagar.me/reference/obter-pedido">Documentação Oficial PagarMe</see>
         /// </summary>
         /// <param name="orderId">Identificador do pedido (or_xxxxxxxxxxxxxxxx)</param>
         /// <returns>Dados do pedido</returns>
@@ -34,7 +34,7 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.Order
 
         /// <summary>
         ///     Lista os pedidos com filtros opcionais.
-        ///     <para>Referência: https://docs.pagar.me/reference/listar-pedidos.md</para>
+        ///     <see href="https://docs.pagar.me/reference/listar-pedidos">Documentação Oficial PagarMe</see>
         /// </summary>
         /// <param name="code">código de referência do pedido</param>
         /// <param name="status">Status do pedido (pending, paid, canceled, failed)</param>
@@ -55,7 +55,7 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.Order
 
         /// <summary>
         ///     Fecha um pedido aberto.
-        ///     <para>Referência: https://docs.pagar.me/reference/fechar-um-pedido.md</para>
+        ///     <see href="https://docs.pagar.me/reference/fechar-um-pedido">Documentação Oficial PagarMe</see>
         /// </summary>
         /// <param name="orderId">Identificador do pedido</param>
         /// <param name="status">Status para fechamento (Geralmente 'closed')</param>
@@ -64,7 +64,7 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.Order
 
         /// <summary>
         ///     Inclui uma nova cobrança em um pedido aberto.
-        ///     <para>Referência: https://docs.pagar.me/reference/incluir-cobrança-no-pedido.md</para>
+        ///     <see href="https://docs.pagar.me/reference/incluir-cobrança-no-pedido">Documentação Oficial PagarMe</see>
         /// </summary>
         /// <param name="orderId">Identificador do pedido</param>
         /// <param name="request">Dados da cobrança</param>

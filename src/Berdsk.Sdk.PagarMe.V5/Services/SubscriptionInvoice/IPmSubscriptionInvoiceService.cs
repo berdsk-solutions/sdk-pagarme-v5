@@ -11,7 +11,7 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.SubscriptionInvoice
     {
         /// <summary>
         ///     Lista as faturas de uma assinatura.
-        ///     <para>Referência: https://docs.pagar.me/reference/listar-faturas-de-uma-assinatura-1.md</para>
+        ///     <see href="https://docs.pagar.me/reference/listar-faturas-de-uma-assinatura-1.md">Documentação Oficial PagarMe</see>
         /// </summary>
         /// <param name="subscriptionId">Identificador da assinatura</param>
         /// <param name="page">Número da página</param>
@@ -22,7 +22,7 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.SubscriptionInvoice
 
         /// <summary>
         ///     Obtém os dados de uma fatura específica.
-        ///     <para>Referência: https://docs.pagar.me/reference/obter-fatura-1.md</para>
+        ///     <see href="https://docs.pagar.me/reference/obter-fatura-1.md">Documentação Oficial PagarMe</see>
         /// </summary>
         /// <param name="invoiceId">Identificador da fatura</param>
         /// <returns>Dados da fatura</returns>
@@ -30,7 +30,7 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.SubscriptionInvoice
 
         /// <summary>
         ///     Cria uma fatura de acordo com o identificador do ciclo a ser cobrado.
-        ///     <para>Referência: https://docs.pagar.me/reference/criar-fatura-1.md</para>
+        ///     <see href="https://docs.pagar.me/reference/criar-fatura-1.md">Documentação Oficial PagarMe</see>
         /// </summary>
         /// <param name="subscriptionId">Identificador da assinatura</param>
         /// <param name="cycleId">Identificador do ciclo</param>
@@ -41,7 +41,7 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.SubscriptionInvoice
 
         /// <summary>
         ///     Lista todas as faturas do sistema com filtros opcionais.
-        ///     <para>Referência: https://docs.pagar.me/reference/listar-faturas-1.md</para>
+        ///     <see href="https://docs.pagar.me/reference/listar-faturas-1.md">Documentação Oficial PagarMe</see>
         /// </summary>
         Task<PmListSubscriptionInvoicesResponse?> ListAllInvoicesAsync(string? status = null, int? page = null,
             int? size = null);

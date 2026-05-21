@@ -4,7 +4,7 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.RecipientBalance.Dtos
 {
     /// <summary>
     ///     Resposta do saldo do recebedor.
-    ///     <para>Referência: https://docs.pagar.me/reference/obter-saldo.md</para>
+    ///     <see href="https://docs.pagar.me/reference/obter-saldo">Documentação Oficial PagarMe</see>
     /// </summary>
     public class PmRecipientBalanceResponse
     {

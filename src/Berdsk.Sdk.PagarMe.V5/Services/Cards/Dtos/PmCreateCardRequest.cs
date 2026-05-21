@@ -6,7 +6,7 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.Cards.Dtos
 {
     /// <summary>
     ///     Requisição para criação de cartão.
-    ///     <para>Referência: https://docs.pagar.me/reference/criar-cartão.md</para>
+    ///     <see href="https://docs.pagar.me/reference/criar-cartão">Documentação Oficial PagarMe</see>
     /// </summary>
     public class PmCreateCardRequest
     {

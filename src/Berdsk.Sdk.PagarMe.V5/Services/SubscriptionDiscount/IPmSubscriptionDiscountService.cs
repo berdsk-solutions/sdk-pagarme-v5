@@ -10,7 +10,7 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.SubscriptionDiscount
     {
         /// <summary>
         ///     Inclui um desconto em uma assinatura.
-        ///     <para>Referência: https://docs.pagar.me/reference/incluir-desconto-1.md</para>
+        ///     <see href="https://docs.pagar.me/reference/incluir-desconto-1.md">Documentação Oficial PagarMe</see>
         /// </summary>
         /// <param name="subscriptionId">Identificador da assinatura</param>
         /// <param name="request">Dados do desconto</param>
@@ -20,7 +20,7 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.SubscriptionDiscount
 
         /// <summary>
         ///     Obtém os dados de um desconto específico de uma assinatura.
-        ///     <para>Referência: https://docs.pagar.me/reference/obter-desconto-1.md</para>
+        ///     <see href="https://docs.pagar.me/reference/obter-desconto-1.md">Documentação Oficial PagarMe</see>
         /// </summary>
         /// <param name="subscriptionId">Identificador da assinatura</param>
         /// <param name="discountId">Identificador do desconto</param>
@@ -29,7 +29,7 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.SubscriptionDiscount
 
         /// <summary>
         ///     Lista os descontos de uma assinatura.
-        ///     <para>Referência: https://docs.pagar.me/reference/listar-descontos-2.md</para>
+        ///     <see href="https://docs.pagar.me/reference/listar-descontos-2.md">Documentação Oficial PagarMe</see>
         /// </summary>
         /// <param name="subscriptionId">Identificador da assinatura</param>
         /// <param name="page">Número da página</param>
@@ -40,7 +40,7 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.SubscriptionDiscount
 
         /// <summary>
         ///     Remove um desconto de uma assinatura.
-        ///     <para>Referência: https://docs.pagar.me/reference/remover-desconto-1.md</para>
+        ///     <see href="https://docs.pagar.me/reference/remover-desconto-1.md">Documentação Oficial PagarMe</see>
         /// </summary>
         /// <param name="subscriptionId">Identificador da assinatura</param>
         /// <param name="discountId">Identificador do desconto</param>

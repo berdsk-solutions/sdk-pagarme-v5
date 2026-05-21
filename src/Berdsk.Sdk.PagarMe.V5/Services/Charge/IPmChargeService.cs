@@ -10,7 +10,7 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.Charge
     {
         /// <summary>
         ///     Obtém os dados de uma cobrança.
-        ///     <para>Referência: https://docs.pagar.me/reference/obter-cobrança.md</para>
+        ///     <see href="https://docs.pagar.me/reference/obter-cobrança">Documentação Oficial PagarMe</see>
         /// </summary>
         /// <param name="chargeId">Identificador da cobrança (ch_xxxxxxxxxxxxxxxx)</param>
         /// <returns>Dados da cobrança</returns>
@@ -18,7 +18,7 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.Charge
 
         /// <summary>
         ///     Lista as cobranças com filtros opcionais.
-        ///     <para>Referência: https://docs.pagar.me/reference/listar-cobranças.md</para>
+        ///     <see href="https://docs.pagar.me/reference/listar-cobranças">Documentação Oficial PagarMe</see>
         /// </summary>
         /// <param name="code">código de referência da cobrança</param>
         /// <param name="status">Status da cobrança</param>
@@ -43,7 +43,7 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.Charge
 
         /// <summary>
         ///     Captura uma cobrança com status "authorized".
-        ///     <para>Referência: https://docs.pagar.me/reference/capturar-cobrança.md</para>
+        ///     <see href="https://docs.pagar.me/reference/capturar-cobrança">Documentação Oficial PagarMe</see>
         /// </summary>
         /// <param name="chargeId">Identificador da cobrança</param>
         /// <param name="request">Dados para captura</param>
@@ -52,7 +52,7 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.Charge
 
         /// <summary>
         ///     Captura uma cobrança com regras de split.
-        ///     <para>Referência: https://docs.pagar.me/reference/capturar-cobrança-com-split-1.md</para>
+        ///     <see href="https://docs.pagar.me/reference/capturar-cobrança-com-split-1">Documentação Oficial PagarMe</see>
         /// </summary>
         /// <param name="chargeId">Identificador da cobrança</param>
         /// <param name="request">Dados para captura com split</param>
@@ -61,7 +61,7 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.Charge
 
         /// <summary>
         ///     Edita o cartão de crédito de uma cobrança com status "pending".
-        ///     <para>Referência: https://docs.pagar.me/reference/editar-cartão-de-cobrança.md</para>
+        ///     <see href="https://docs.pagar.me/reference/editar-cartão-de-cobrança">Documentação Oficial PagarMe</see>
         /// </summary>
         /// <param name="chargeId">Identificador da cobrança</param>
         /// <param name="request">Dados do novo cartão</param>
@@ -70,7 +70,7 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.Charge
 
         /// <summary>
         ///     Edita a data de vencimento de uma cobrança com status "pending".
-        ///     <para>Referência: https://docs.pagar.me/reference/editar-data-de-vencimento-da-cobrança.md</para>
+        ///     <see href="https://docs.pagar.me/reference/editar-data-de-vencimento-da-cobrança">Documentação Oficial PagarMe</see>
         /// </summary>
         /// <param name="chargeId">Identificador da cobrança</param>
         /// <param name="request">Nova data de vencimento</param>
@@ -79,7 +79,7 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.Charge
 
         /// <summary>
         ///     Edita o método de pagamento de uma cobrança com status "pending".
-        ///     <para>Referência: https://docs.pagar.me/reference/editar-método-de-pagamento.md</para>
+        ///     <see href="https://docs.pagar.me/reference/editar-método-de-pagamento">Documentação Oficial PagarMe</see>
         /// </summary>
         /// <param name="chargeId">Identificador da cobrança</param>
         /// <param name="request">Novo método de pagamento</param>
@@ -89,7 +89,7 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.Charge
 
         /// <summary>
         ///     Cancela uma cobrança.
-        ///     <para>Referência: https://docs.pagar.me/reference/cancelar-cobrança.md</para>
+        ///     <see href="https://docs.pagar.me/reference/cancelar-cobrança">Documentação Oficial PagarMe</see>
         /// </summary>
         /// <param name="chargeId">Identificador da cobrança</param>
         /// <param name="amount">Valor opcional para cancelamento parcial (centavos)</param>
@@ -98,7 +98,7 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.Charge
 
         /// <summary>
         ///     Cancela uma cobrança com regras de split.
-        ///     <para>Referência: https://docs.pagar.me/reference/cancelar-cobrança-com-split-1.md</para>
+        ///     <see href="https://docs.pagar.me/reference/cancelar-cobrança-com-split-1">Documentação Oficial PagarMe</see>
         /// </summary>
         /// <param name="chargeId">Identificador da cobrança</param>
         /// <param name="request">Dados para cancelamento com split</param>
@@ -107,7 +107,7 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.Charge
 
         /// <summary>
         ///     Retenta uma cobrança com falha manualmente.
-        ///     <para>Referência: https://docs.pagar.me/reference/retentar-uma-cobrança-manualmente.md</para>
+        ///     <see href="https://docs.pagar.me/reference/retentar-uma-cobrança-manualmente.md">Documentação Oficial PagarMe</see>
         /// </summary>
         /// <param name="chargeId">Identificador da cobrança</param>
         /// <returns>Dados da cobrança após retentativa</returns>
@@ -115,7 +115,7 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.Charge
 
         /// <summary>
         ///     Confirma o recebimento de uma cobrança em dinheiro (cash).
-        ///     <para>Referência: https://docs.pagar.me/reference/confirmar-cobrança-cash.md</para>
+        ///     <see href="https://docs.pagar.me/reference/confirmar-cobrança-cash.md">Documentação Oficial PagarMe</see>
         /// </summary>
         /// <param name="chargeId">Identificador da cobrança</param>
         /// <returns>Dados da cobrança confirmada</returns>

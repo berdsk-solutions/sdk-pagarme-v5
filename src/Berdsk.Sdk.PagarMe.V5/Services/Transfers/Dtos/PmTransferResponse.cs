@@ -7,7 +7,7 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.Transfers.Dtos
 {
     /// <summary>
     ///     Resposta de uma transferência.
-    ///     <para>Referência: https://docs.pagar.me/reference/objeto-transferência</para>
+    ///     <see href="https://docs.pagar.me/reference/objeto-transferência">Documentação Oficial PagarMe</see>
     /// </summary>
     public class PmTransferResponse
     {

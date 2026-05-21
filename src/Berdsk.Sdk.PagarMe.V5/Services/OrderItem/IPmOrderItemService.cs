@@ -10,7 +10,7 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.OrderItem
     {
         /// <summary>
         ///     Inclui um item em um pedido aberto.
-        ///     <para>Referência: https://docs.pagar.me/reference/incluir-item.md</para>
+        ///     <see href="https://docs.pagar.me/reference/incluir-item">Documentação Oficial PagarMe</see>
         /// </summary>
         /// <param name="orderId">Identificador do pedido (or_xxxxxxxxxxxxxxxx)</param>
         /// <param name="request">Dados do item</param>
@@ -19,7 +19,7 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.OrderItem
 
         /// <summary>
         ///     Obtém os dados de um item específico de um pedido.
-        ///     <para>Referência: https://docs.pagar.me/reference/obter-item-do-pedido.md</para>
+        ///     <see href="https://docs.pagar.me/reference/obter-item-do-pedido.md">Documentação Oficial PagarMe</see>
         /// </summary>
         /// <param name="orderId">Identificador do pedido</param>
         /// <param name="itemId">Identificador do item (ot_xxxxxxxxxxxxxxxx)</param>
@@ -28,7 +28,7 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.OrderItem
 
         /// <summary>
         ///     Edita um item de um pedido aberto.
-        ///     <para>Referência: https://docs.pagar.me/reference/editar-item-do-pedido.md</para>
+        ///     <see href="https://docs.pagar.me/reference/editar-item-do-pedido.md">Documentação Oficial PagarMe</see>
         /// </summary>
         /// <param name="orderId">Identificador do pedido</param>
         /// <param name="itemId">Identificador do item</param>
@@ -39,7 +39,7 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.OrderItem
 
         /// <summary>
         ///     Deleta um item de um pedido aberto.
-        ///     <para>Referência: https://docs.pagar.me/reference/deletar-item.md</para>
+        ///     <see href="https://docs.pagar.me/reference/deletar-item.md">Documentação Oficial PagarMe</see>
         /// </summary>
         /// <param name="orderId">Identificador do pedido</param>
         /// <param name="itemId">Identificador do item</param>
@@ -48,7 +48,7 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.OrderItem
 
         /// <summary>
         ///     Remove todos os itens de um pedido aberto.
-        ///     <para>Referência: https://docs.pagar.me/reference/remover-todos-os-itens.md</para>
+        ///     <see href="https://docs.pagar.me/reference/remover-todos-os-itens.md">Documentação Oficial PagarMe</see>
         /// </summary>
         /// <param name="orderId">Identificador do pedido</param>
         /// <returns>True se removido com sucesso</returns>

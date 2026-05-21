@@ -22,32 +22,32 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.Customer
 
         /// <summary>
         ///     Cria um novo cliente na PagarMe.
-        ///     <para>Referência: https://docs.pagar.me/reference/criar-cliente-1.md</para>
         /// </summary>
         /// <param name="request">Dados do cliente para criação</param>
         /// <returns>Dados do cliente criado ou null em caso de erro</returns>
+        /// <see href="https://docs.pagar.me/reference/criar-cliente-1">Documentação Oficial PagarMe</see>
         Task<PmCustomerResponse?> CreateCustomerAsync(PmCreateCustomerRequest request);
 
         /// <summary>
         ///     Obtém os dados de um cliente específico.
-        ///     <para>Referência: https://docs.pagar.me/reference/obter-cliente-1.md</para>
         /// </summary>
         /// <param name="customerId">Identificador do cliente (ex: cus_xxxxxxxxxxxxxxxx)</param>
         /// <returns>Dados do cliente ou null se não encontrado</returns>
+        /// <see href="https://docs.pagar.me/reference/obter-cliente-1">Documentação Oficial PagarMe</see>
         Task<PmCustomerResponse?> GetCustomerAsync(string customerId);
 
         /// <summary>
         ///     Atualiza os dados de um cliente existente.
-        ///     <para>Referência: https://docs.pagar.me/reference/editar-cliente-1.md</para>
         /// </summary>
         /// <param name="customerId">Identificador do cliente</param>
         /// <param name="request">Dados para atualização</param>
         /// <returns>Dados do cliente atualizado ou null em caso de erro</returns>
+        /// <see href="https://docs.pagar.me/reference/editar-cliente-1">Documentação Oficial PagarMe</see>
         Task<PmCustomerResponse?> UpdateCustomerAsync(string customerId, PmUpdateCustomerRequest request);
 
         /// <summary>
         ///     Lista os clientes cadastrados com filtros opcionais.
-        ///     <para>Referência: https://docs.pagar.me/reference/listar-clientes-1.md</para>
+        ///     <see href="https://docs.pagar.me/reference/listar-clientes-1">Documentação Oficial PagarMe</see>
         /// </summary>
         /// <param name="name">Filtro por nome</param>
         /// <param name="email">Filtro por email</param>

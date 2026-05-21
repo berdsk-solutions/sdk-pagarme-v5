@@ -1,256 +1,258 @@
 ﻿#Erros
 
-- https://docs.pagar.me/reference/erros-1.md
+- https://docs.pagar.me/reference/erros-1
 
-#SeguranÃ§a
+#Segurança
 
-- https://docs.pagar.me/reference/ip-allowlist-1.md
-- https://docs.pagar.me/reference/rate-limit.md
+- https://docs.pagar.me/reference/ip-allowlist-1
+- https://docs.pagar.me/reference/rate-limit
 
 #Clientes
 
-- https://docs.pagar.me/reference/criar-cliente-1.md
-- https://docs.pagar.me/reference/obter-cliente-1.md
-- https://docs.pagar.me/reference/editar-cliente-1.md
-- https://docs.pagar.me/reference/listar-clientes-1.md
+- https://docs.pagar.me/reference/criar-cliente-1
+- https://docs.pagar.me/reference/obter-cliente-1
+- https://docs.pagar.me/reference/editar-cliente-1
+- https://docs.pagar.me/reference/listar-clientes-1
 
 #CartÃµes
 
-- https://docs.pagar.me/reference/criar-cartÃ£o.md
-- https://docs.pagar.me/reference/obter-cartÃ£o.md
-- https://docs.pagar.me/reference/listar-cartÃ£o.md
-- https://docs.pagar.me/reference/editar-cartÃ£o.md
-- https://docs.pagar.me/reference/excluir-cartÃ£o.md
-- https://docs.pagar.me/reference/renovar-cartÃ£o-1.md
-- https://docs.pagar.me/reference/criar-token-cartÃ£o-1.md
+- https://docs.pagar.me/reference/criar-cartão
+- https://docs.pagar.me/reference/obter-cartão
+- https://docs.pagar.me/reference/listar-cartão
+- https://docs.pagar.me/reference/editar-cartão
+- https://docs.pagar.me/reference/excluir-cartão
+- https://docs.pagar.me/reference/renovar-cartão-1
+- https://docs.pagar.me/reference/criar-token-cartão-1
 
-#EndereÃ§os
+#Endereços
 
-- https://docs.pagar.me/reference/criar-endereÃ§o-1.md
-- https://docs.pagar.me/reference/obter-endereÃ§o-1.md
-- https://docs.pagar.me/reference/editar-endereÃ§o-1.md
-- https://docs.pagar.me/reference/listar-endereÃ§os-1.md
-- https://docs.pagar.me/reference/excluir-endereÃ§o-1.md
+- https://docs.pagar.me/reference/criar-endereço-1
+- https://docs.pagar.me/reference/obter-endereço-1
+- https://docs.pagar.me/reference/editar-endereço-1
+- https://docs.pagar.me/reference/listar-endereços-1
+- https://docs.pagar.me/reference/excluir-endereço-1
 
 #BIN
 
-- https://docs.pagar.me/reference/obter-informações-do-bin.md
+- https://docs.pagar.me/reference/obter-informações-do-bin
 
-#VisÃ£o Geral sobre Pagamento
+#Visão Geral sobre Pagamento
 
-- https://docs.pagar.me/reference/cartÃ£o-de-crÃ©dito-1.md
-- https://docs.pagar.me/reference/pix-2.md
-- https://docs.pagar.me/reference/boleto-1.md
-- https://docs.pagar.me/reference/voucher-1.md
-- https://docs.pagar.me/reference/google-paytm-api.md
-- https://docs.pagar.me/reference/cash-2.md
-- https://docs.pagar.me/reference/safetypay-1.md
-- https://docs.pagar.me/reference/cartÃ£o-private-label-2.md
-- https://docs.pagar.me/reference/cartÃ£o-de-dÃ©bito-2.md
+- https://docs.pagar.me/reference/cartão-de-crédito-1
+- https://docs.pagar.me/reference/pix-2
+- https://docs.pagar.me/reference/boleto-1
+- https://docs.pagar.me/reference/voucher-1
+- https://docs.pagar.me/reference/google-paytm-api
+- https://docs.pagar.me/reference/cash-2
+- https://docs.pagar.me/reference/safetypay-1
+- https://docs.pagar.me/reference/cartão-private-label-2
+- https://docs.pagar.me/reference/cartão-de-débito-2
 
 #Pedidos
 
-- https://docs.pagar.me/reference/criar-pedido-2.md
-- https://docs.pagar.me/reference/incluir-cobranÃ§a-no-pedido.md
-- https://docs.pagar.me/reference/criar-pedido-multimeios.md
-- https://docs.pagar.me/reference/criar-pedido-multicompradores.md
-- https://docs.pagar.me/reference/obter-pedido.md
-- https://docs.pagar.me/reference/fechar-um-pedido.md
-- https://docs.pagar.me/reference/listar-pedidos.md
+- https://docs.pagar.me/reference/criar-pedido-2
+- https://docs.pagar.me/reference/incluir-cobrança-no-pedido
+- https://docs.pagar.me/reference/criar-pedido-multimeios
+- https://docs.pagar.me/reference/criar-pedido-multicompradores
+- https://docs.pagar.me/reference/obter-pedido
+- https://docs.pagar.me/reference/fechar-um-pedido
+- https://docs.pagar.me/reference/listar-pedidos
 
 #Item do pedido
 
-- https://docs.pagar.me/reference/incluir-item.md
-- https://docs.pagar.me/reference/editar-item-do-pedido.md
-- https://docs.pagar.me/reference/deletar-item.md
-- https://docs.pagar.me/reference/remover-todos-os-itens.md
-- https://docs.pagar.me/reference/obter-item-do-pedido.md
+- https://docs.pagar.me/reference/incluir-item
+- https://docs.pagar.me/reference/editar-item-do-pedido
+- https://docs.pagar.me/reference/deletar-item
+- https://docs.pagar.me/reference/remover-todos-os-itens
+- https://docs.pagar.me/reference/obter-item-do-pedido
 
-#CobranÃ§as
+#Cobranças
 
-- https://docs.pagar.me/reference/capturar-cobranÃ§a.md
-- https://docs.pagar.me/reference/obter-cobranÃ§a.md
-- https://docs.pagar.me/reference/editar-cartÃ£o-de-cobranÃ§a.md
-- https://docs.pagar.me/reference/editar-data-de-vencimento-da-cobranÃ§a.md
-- https://docs.pagar.me/reference/editar-mÃ©todo-de-pagamento.md
-- https://docs.pagar.me/reference/cancelar-cobranÃ§a.md
-- https://docs.pagar.me/reference/listar-cobranÃ§as.md
-- https://docs.pagar.me/reference/retentar-uma-cobranÃ§a-manualmente.md
-- https://docs.pagar.me/reference/confirmar-cobranÃ§a-cash.md
+- https://docs.pagar.me/reference/capturar-cobrança
+- https://docs.pagar.me/reference/obter-cobrança
+- https://docs.pagar.me/reference/editar-cartão-de-cobrança
+- https://docs.pagar.me/reference/editar-data-de-vencimento-da-cobrança
+- https://docs.pagar.me/reference/editar-método-de-pagamento
+- https://docs.pagar.me/reference/cancelar-cobrança
+- https://docs.pagar.me/reference/listar-cobranças
+- https://docs.pagar.me/reference/retentar-uma-cobrança-manualmente
+- https://docs.pagar.me/reference/confirmar-cobrança-cash
 
-#VisÃ£o Geral sobre Antifraude
+#Visão Geral sobre Antifraude
 
-- https://docs.pagar.me/reference/criar-pedido-com-antifraude.md
+- https://docs.pagar.me/reference/criar-pedido-com-antifraude
 
 #Link de Pagamento
 
-- https://docs.pagar.me/reference/checkout-response.md
+- https://docs.pagar.me/reference/checkout-response
 
-#PrecificaÃ§Ã£o
+#Precificação
 
-- https://docs.pagar.me/reference/unidade-1.md
-- https://docs.pagar.me/reference/pacote-1.md
-- https://docs.pagar.me/reference/volume-1.md
-- https://docs.pagar.me/reference/faixa.md
+- https://docs.pagar.me/reference/unidade-1
+- https://docs.pagar.me/reference/pacote-1
+- https://docs.pagar.me/reference/volume-1
+- https://docs.pagar.me/reference/faixa
 
 #Planos
 
-- https://docs.pagar.me/reference/criar-plano-1.md
-- https://docs.pagar.me/reference/obter-plano-1.md
-- https://docs.pagar.me/reference/editar-metadados-do-plano-1.md
-- https://docs.pagar.me/reference/editar-plano-1.md
-- https://docs.pagar.me/reference/excluir-plano-1.md
-- https://docs.pagar.me/reference/listar-planos-1.md
+- https://docs.pagar.me/reference/criar-plano-1
+- https://docs.pagar.me/reference/obter-plano-1
+- https://docs.pagar.me/reference/editar-metadados-do-plano-1
+- https://docs.pagar.me/reference/editar-plano-1
+- https://docs.pagar.me/reference/excluir-plano-1
+- https://docs.pagar.me/reference/listar-planos-1
 
 #Assinaturas
 
-- https://docs.pagar.me/reference/criar-assinatura-avulsa.md
-- https://docs.pagar.me/reference/criar-assinatura-de-plano-1.md
-- https://docs.pagar.me/reference/obter-assinatura-1.md
-- https://docs.pagar.me/reference/listar-assinaturas-1.md
-- https://docs.pagar.me/reference/cancelar-assinatura-1.md
-- https://docs.pagar.me/reference/editar-cartÃ£o-da-assinatura-1.md
-- https://docs.pagar.me/reference/editar-metadados-da-assinatura-1.md
-- https://docs.pagar.me/reference/editar-meio-de-pagamento-da-assinatura.md
-- https://docs.pagar.me/reference/editar-data-de-inÃ­cio-da-assinatura-1.md
-- https://docs.pagar.me/reference/editar-minimum-price-da-assinatura.md
-- https://docs.pagar.me/reference/ativar-faturamento-manual-1.md
-- https://docs.pagar.me/reference/desativar-faturamento-manual-1.md
+- https://docs.pagar.me/reference/criar-assinatura-avulsa
+- https://docs.pagar.me/reference/criar-assinatura-de-plano-1
+- https://docs.pagar.me/reference/obter-assinatura-1
+- https://docs.pagar.me/reference/listar-assinaturas-1
+- https://docs.pagar.me/reference/cancelar-assinatura-1
+- https://docs.pagar.me/reference/editar-cartão-da-assinatura-1
+- https://docs.pagar.me/reference/editar-metadados-da-assinatura-1
+- https://docs.pagar.me/reference/editar-meio-de-pagamento-da-assinatura
+- https://docs.pagar.me/reference/editar-data-de-início-da-assinatura-1
+- https://docs.pagar.me/reference/editar-minimum-price-da-assinatura
+- https://docs.pagar.me/reference/ativar-faturamento-manual-1
+- https://docs.pagar.me/reference/desativar-faturamento-manual-1
 
 #Item da assinatura
 
-- https://docs.pagar.me/reference/incluir-item-1.md
-- https://docs.pagar.me/reference/listar-Ã­tens-de-uma-assinatura.md
-- https://docs.pagar.me/reference/editar-item.md
-- https://docs.pagar.me/reference/remover-item.md
+- https://docs.pagar.me/reference/incluir-item-1
+- https://docs.pagar.me/reference/listar-ítens-de-uma-assinatura
+- https://docs.pagar.me/reference/editar-item
+- https://docs.pagar.me/reference/remover-item
 
 #Uso de um item da assinatura
 
-- https://docs.pagar.me/reference/incluir-uso.md
-- https://docs.pagar.me/reference/remover-uso.md
-- https://docs.pagar.me/reference/listar-uso.md
+- https://docs.pagar.me/reference/incluir-uso
+- https://docs.pagar.me/reference/remover-uso
+- https://docs.pagar.me/reference/listar-uso
 
 #Item do plano
 
-- https://docs.pagar.me/reference/incluir-item-2.md
-- https://docs.pagar.me/reference/editar-item-1.md
-- https://docs.pagar.me/reference/remover-item-1.md
+- https://docs.pagar.me/reference/incluir-item-2
+- https://docs.pagar.me/reference/editar-item-1
+- https://docs.pagar.me/reference/remover-item-1
 
 #Desconto
 
-- https://docs.pagar.me/reference/incluir-desconto-1.md
-- https://docs.pagar.me/reference/obter-desconto-1.md
-- https://docs.pagar.me/reference/listar-descontos-2.md
-- https://docs.pagar.me/reference/remover-desconto-1.md
+- https://docs.pagar.me/reference/incluir-desconto-1
+- https://docs.pagar.me/reference/obter-desconto-1
+- https://docs.pagar.me/reference/listar-descontos-2
+- https://docs.pagar.me/reference/remover-desconto-1
 
 #Incremento
 
-- https://docs.pagar.me/reference/incluir-incremento-1.md
-- https://docs.pagar.me/reference/obter-incremento-1.md
-- https://docs.pagar.me/reference/listar-incrementos.md
-- https://docs.pagar.me/reference/remover-incremento-1.md
+- https://docs.pagar.me/reference/incluir-incremento-1
+- https://docs.pagar.me/reference/obter-incremento-1
+- https://docs.pagar.me/reference/listar-incrementos
+- https://docs.pagar.me/reference/remover-incremento-1
 
 #Faturas
 
-- https://docs.pagar.me/reference/criar-fatura-1.md
-- https://docs.pagar.me/reference/obter-fatura-1.md
-- https://docs.pagar.me/reference/listar-faturas-1.md
-- https://docs.pagar.me/reference/editar-metadados-da-fatura-1.md
-- https://docs.pagar.me/reference/cancelar-fatura-1.md
+- https://docs.pagar.me/reference/criar-fatura-1
+- https://docs.pagar.me/reference/obter-fatura-1
+- https://docs.pagar.me/reference/listar-faturas-1
+- https://docs.pagar.me/reference/editar-metadados-da-fatura-1
+- https://docs.pagar.me/reference/cancelar-fatura-1
 
 #Ciclos
 
-- https://docs.pagar.me/reference/renovar-ciclo-1.md
-- https://docs.pagar.me/reference/obter-ciclo-1.md
-- https://docs.pagar.me/reference/listar-ciclos-1.md
+- https://docs.pagar.me/reference/renovar-ciclo-1
+- https://docs.pagar.me/reference/obter-ciclo-1
+- https://docs.pagar.me/reference/listar-ciclos-1
 
 #Split
 
-- https://docs.pagar.me/reference/editar-ativaÃ§Ã£o-ou-regras-do-split.md
+- https://docs.pagar.me/reference/editar-ativação-ou-regras-do-split
 
 #Recebedores
 
-- https://docs.pagar.me/reference/criar-recebedor-1.md
-- https://docs.pagar.me/reference/criar-link-recebedor.md
-- https://docs.pagar.me/reference/editar-recebedor-1.md
-- https://docs.pagar.me/reference/obter-recebedor-1.md
-- https://docs.pagar.me/reference/listar-recebedores-1.md
-- https://docs.pagar.me/reference/atualizar-code-de-recebedor.md
+- https://docs.pagar.me/reference/criar-recebedor-1
+- https://docs.pagar.me/reference/criar-link-recebedor
+- https://docs.pagar.me/reference/editar-recebedor-1
+- https://docs.pagar.me/reference/obter-recebedor-1
+- https://docs.pagar.me/reference/listar-recebedores-1
+- https://docs.pagar.me/reference/atualizar-code-de-recebedor
 
-#Conta bancÃ¡ria
+#Conta bancária
 
-- https://docs.pagar.me/reference/atualizar-conta-bancÃ¡ria-do-recebedor-1.md
+- https://docs.pagar.me/reference/atualizar-conta-bancária-do-recebedor-1
 
 #Saldo
 
-- https://docs.pagar.me/reference/obter-saldo.md
+- https://docs.pagar.me/reference/obter-saldo
 
-#Configurações de transferÃªncia
+#Configurações de transferência
 
-- https://docs.pagar.me/reference/atualizar-informações-de-transferÃªncia-1.md
+- https://docs.pagar.me/reference/atualizar-informações-de-transferência-1
 
-#Configurações de antecipaÃ§Ã£o automÃ¡tica
+#Configurações de antecipação automática
 
-- https://docs.pagar.me/reference/atualizar-informações-de-antecipaÃ§Ã£o-automÃ¡tica-1.md
+- https://docs.pagar.me/reference/atualizar-informações-de-antecipação-automática-1
 
-#RecebÃ­veis
+#Recebíveis
 
-- https://docs.pagar.me/reference/retornando-recebÃ­veis.md
+- https://docs.pagar.me/reference/retornando-recebíveis
 
 #Operações de Saldo
 
-- https://docs.pagar.me/reference/obter-histÃ³rico-das-operações.md
-- https://docs.pagar.me/reference/obter-histÃ³rico-especÃ­fico-de-uma-operaÃ§Ã£o.md
+- https://docs.pagar.me/reference/obter-histórico-das-operações
+- https://docs.pagar.me/reference/obter-histórico-específico-de-uma-operação
 
 #Split
 
-- https://docs.pagar.me/reference/criar-pedido-com-split-1.md
-- https://docs.pagar.me/reference/capturar-cobranÃ§a-com-split-1.md
-- https://docs.pagar.me/reference/cancelar-cobranÃ§a-com-split-1.md
+- https://docs.pagar.me/reference/criar-pedido-com-split-1
+- https://docs.pagar.me/reference/capturar-cobrança-com-split-1
+- https://docs.pagar.me/reference/cancelar-cobrança-com-split-1
 
-#Res.264/349: Interface EletrÃ´nica para Sellers
+#Res.264/349: Interface Eletrônica para Sellers
 
-- https://docs.pagar.me/reference/retornando-urs-de-um-recebedor-v5.md
-- https://docs.pagar.me/reference/retornando-efeitos-de-contratos-v5.md
-- https://docs.pagar.me/reference/retornando-efeitos-de-contratos-copy.md
-- https://docs.pagar.me/reference/retornando-contestacoes.md
-- https://docs.pagar.me/reference/contestando-um-contrato-v5.md
+- https://docs.pagar.me/reference/retornando-urs-de-um-recebedor-v5
+- https://docs.pagar.me/reference/retornando-efeitos-de-contratos-v5
+- https://docs.pagar.me/reference/retornando-efeitos-de-contratos-copy
+- https://docs.pagar.me/reference/retornando-contestacoes
+- https://docs.pagar.me/reference/contestando-um-contrato-v5
 
 #Alternativas ao Tokenizecard JS
 
-- https://docs.pagar.me/reference/tokenizaÃ§Ã£o-1.md
+- https://docs.pagar.me/reference/tokenização-1
 
-#VisÃ£o geral sobre Webhooks
+#Visão geral sobre Webhooks
 
-- https://docs.pagar.me/reference/exemplo-de-webhook-1.md
-- https://docs.pagar.me/reference/eventos-de-webhook-1.md
-- https://docs.pagar.me/reference/enviar-webhook.md
-- https://docs.pagar.me/reference/obter-webhook.md
-- https://docs.pagar.me/reference/listar-webhooks.md
+- https://docs.pagar.me/reference/exemplo-de-webhook-1
+- https://docs.pagar.me/reference/eventos-de-webhook-1
+- https://docs.pagar.me/reference/enviar-webhook
+- https://docs.pagar.me/reference/obter-webhook
+- https://docs.pagar.me/reference/listar-webhooks
 
 #Antecipações
-- https://docs.pagar.me/reference/objeto-antecipaÃ§Ã£o
-- https://docs.pagar.me/reference/criando-uma-antecipaÃ§Ã£o
-- https://docs.pagar.me/reference/simulando-uma-antecipaÃ§Ã£o-spot
-- https://docs.pagar.me/reference/obtendo-os-limites-de-antecipaÃ§Ã£o
-- https://docs.pagar.me/reference/cancelando-uma-antecipaÃ§Ã£o-pending
+
+- https://docs.pagar.me/reference/objeto-antecipação
+- https://docs.pagar.me/reference/criando-uma-antecipação
+- https://docs.pagar.me/reference/simulando-uma-antecipação-spot
+- https://docs.pagar.me/reference/obtendo-os-limites-de-antecipação
+- https://docs.pagar.me/reference/cancelando-uma-antecipação-pending
 - https://docs.pagar.me/reference/retornando-antecipações
 
 #Liquidações
+
 - https://docs.pagar.me/reference/objeto-settlements
 - https://docs.pagar.me/reference/retornando-pagamentos
 - https://docs.pagar.me/reference/retornando-pagamentos-por-recebedor
 - https://docs.pagar.me/reference/retornando-um-pagamento
 
-  #TransfÃªrencias
-- https://docs.pagar.me/reference/objeto-transferÃªncia
-- https://docs.pagar.me/reference/criando-uma-transferÃªncia
-- https://docs.pagar.me/reference/retornando-transferÃªncias
-- https://docs.pagar.me/reference/retornando-uma-transferÃªncia
-- https://docs.pagar.me/reference/cancelando-uma-transferÃªncia
-- https://docs.pagar.me/reference/retornando-o-comprovante-de-uma-transferÃªncia
+  #Transfêrencias
+- https://docs.pagar.me/reference/objeto-transferência
+- https://docs.pagar.me/reference/criando-uma-transferência
+- https://docs.pagar.me/reference/retornando-transferências
+- https://docs.pagar.me/reference/retornando-uma-transferência
+- https://docs.pagar.me/reference/cancelando-uma-transferência
+- https://docs.pagar.me/reference/retornando-o-comprovante-de-uma-transferência
 
 #Disputas
 
-- https://docs.pagar.me/reference/get_v1-disputes.md
-- https://docs.pagar.me/reference/get_v1-disputes-dispute-id.md
+- https://docs.pagar.me/reference/get_v1-disputes
+- https://docs.pagar.me/reference/get_v1-disputes-dispute-id

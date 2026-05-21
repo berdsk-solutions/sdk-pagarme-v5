@@ -20,7 +20,7 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.Webhooks
         /// <param name="size">Quantidade de itens por página.</param>
         /// <returns>Uma lista paginada de webhooks.</returns>
         /// <remarks>
-        ///     Referência: https://docs.pagar.me/reference/listar-webhooks.md
+        ///     <see href="https://docs.pagar.me/reference/listar-webhooks.md">Documentação Oficial PagarMe</see>
         /// </remarks>
         Task<PmListWebhooksResponse?> ListWebhooksAsync(
             string status = null,
@@ -36,7 +36,7 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.Webhooks
         /// <param name="hookId">Código do webhook.</param>
         /// <returns>Os detalhes do webhook.</returns>
         /// <remarks>
-        ///     Referência: https://docs.pagar.me/reference/obter-webhook.md
+        ///     <see href="https://docs.pagar.me/reference/obter-webhook.md">Documentação Oficial PagarMe</see>
         /// </remarks>
         Task<PmWebhookResponse?> GetWebhookAsync(string hookId);
 
@@ -46,7 +46,7 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.Webhooks
         /// <param name="hookId">Código do webhook.</param>
         /// <returns>Um objeto vazio em caso de sucesso.</returns>
         /// <remarks>
-        ///     Referência: https://docs.pagar.me/reference/enviar-webhook.md
+        ///     <see href="https://docs.pagar.me/reference/enviar-webhook.md">Documentação Oficial PagarMe</see>
         /// </remarks>
         Task<object?> RetryWebhookAsync(string hookId);
     }

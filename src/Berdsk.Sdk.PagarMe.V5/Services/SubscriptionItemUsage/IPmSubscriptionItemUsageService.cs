@@ -10,7 +10,7 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.SubscriptionItemUsage
     {
         /// <summary>
         ///     Inclui o registro de uso de um item de assinatura.
-        ///     <para>Referência: https://docs.pagar.me/reference/incluir-uso.md</para>
+        ///     <see href="https://docs.pagar.me/reference/incluir-uso.md">Documentação Oficial PagarMe</see>
         /// </summary>
         /// <param name="subscriptionId">Identificador da assinatura</param>
         /// <param name="itemId">Identificador do item</param>
@@ -21,7 +21,7 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.SubscriptionItemUsage
 
         /// <summary>
         ///     Lista os registros de uso de um item de assinatura.
-        ///     <para>Referência: https://docs.pagar.me/reference/listar-uso.md</para>
+        ///     <see href="https://docs.pagar.me/reference/listar-uso.md">Documentação Oficial PagarMe</see>
         /// </summary>
         /// <param name="subscriptionId">Identificador da assinatura</param>
         /// <param name="itemId">Identificador do item</param>
@@ -33,7 +33,7 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.SubscriptionItemUsage
 
         /// <summary>
         ///     Remove um registro de uso de um item de assinatura.
-        ///     <para>Referência: https://docs.pagar.me/reference/remover-uso.md</para>
+        ///     <see href="https://docs.pagar.me/reference/remover-uso.md">Documentação Oficial PagarMe</see>
         /// </summary>
         /// <param name="subscriptionId">Identificador da assinatura</param>
         /// <param name="itemId">Identificador do item</param>

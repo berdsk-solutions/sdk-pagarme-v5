@@ -17,7 +17,7 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.Plan
 
         /// <summary>
         ///     Cria um novo plano.
-        ///     <para>Referência: https://docs.pagar.me/reference/criar-plano-1.md</para>
+        ///     <see href="https://docs.pagar.me/reference/criar-plano-1">Documentação Oficial PagarMe</see>
         /// </summary>
         /// <param name="request">Dados do plano</param>
         /// <returns>Dados do plano criado</returns>
@@ -25,7 +25,7 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.Plan
 
         /// <summary>
         ///     Obtém os dados de um plano específico.
-        ///     <para>Referência: https://docs.pagar.me/reference/obter-plano-1.md</para>
+        ///     <see href="https://docs.pagar.me/reference/obter-plano-1">Documentação Oficial PagarMe</see>
         /// </summary>
         /// <param name="planId">Identificador do plano (plan_xxxxxxxxxxxxxxxx)</param>
         /// <returns>Dados do plano</returns>
@@ -33,7 +33,7 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.Plan
 
         /// <summary>
         ///     Atualiza os dados de um plano existente.
-        ///     <para>Referência: https://docs.pagar.me/reference/editar-plano-1.md</para>
+        ///     <see href="https://docs.pagar.me/reference/editar-plano-1">Documentação Oficial PagarMe</see>
         /// </summary>
         /// <param name="planId">Identificador do plano</param>
         /// <param name="request">Dados para atualização</param>
@@ -42,7 +42,7 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.Plan
 
         /// <summary>
         ///     Exclui um plano.
-        ///     <para>Referência: https://docs.pagar.me/reference/excluir-plano-1.md</para>
+        ///     <see href="https://docs.pagar.me/reference/excluir-plano-1">Documentação Oficial PagarMe</see>
         /// </summary>
         /// <param name="planId">Identificador do plano</param>
         /// <returns>Dados do plano excluído</returns>
@@ -50,7 +50,7 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.Plan
 
         /// <summary>
         ///     Lista os planos cadastrados com filtros opcionais.
-        ///     <para>Referência: https://docs.pagar.me/reference/listar-planos-1.md</para>
+        ///     <see href="https://docs.pagar.me/reference/listar-planos-1">Documentação Oficial PagarMe</see>
         /// </summary>
         /// <param name="name">Filtro por nome</param>
         /// <param name="status">Filtro por status</param>
@@ -62,7 +62,7 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.Plan
 
         /// <summary>
         ///     Atualiza os metadados de um plano.
-        ///     <para>Referência: https://docs.pagar.me/reference/editar-metadados-do-plano-1.md</para>
+        ///     <see href="https://docs.pagar.me/reference/editar-metadados-do-plano-1">Documentação Oficial PagarMe</see>
         /// </summary>
         /// <param name="planId">Identificador do plano</param>
         /// <param name="metadata">Novos metadados</param>

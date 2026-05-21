@@ -54,8 +54,8 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.Subscription
 
         /// <summary>
         ///     Cria uma nova assinatura (avulsa ou de plano).
-        ///     <para>Referência: https://docs.pagar.me/reference/criar-assinatura-avulsa.md</para>
-        ///     <para>Referência: https://docs.pagar.me/reference/criar-assinatura-de-plano-1.md</para>
+        ///     <see href="https://docs.pagar.me/reference/criar-assinatura-avulsa.md">Documentação Oficial PagarMe</see>
+        ///     <see href="https://docs.pagar.me/reference/criar-assinatura-de-plano-1.md">Documentação Oficial PagarMe</see>
         /// </summary>
         /// <param name="request">Dados da assinatura</param>
         /// <returns>Dados da assinatura criada</returns>
@@ -63,7 +63,7 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.Subscription
 
         /// <summary>
         ///     Obtém os dados de uma assinatura específica.
-        ///     <para>Referência: https://docs.pagar.me/reference/obter-assinatura-1.md</para>
+        ///     <see href="https://docs.pagar.me/reference/obter-assinatura-1.md">Documentação Oficial PagarMe</see>
         /// </summary>
         /// <param name="subscriptionId">Identificador da assinatura (sub_xxxxxxxxxxxxxxxx)</param>
         /// <returns>Dados da assinatura</returns>
@@ -71,7 +71,7 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.Subscription
 
         /// <summary>
         ///     Lista as assinaturas com filtros opcionais.
-        ///     <para>Referência: https://docs.pagar.me/reference/listar-assinaturas-1.md</para>
+        ///     <see href="https://docs.pagar.me/reference/listar-assinaturas-1.md">Documentação Oficial PagarMe</see>
         /// </summary>
         /// <param name="code">Filtro por código</param>
         /// <param name="status">Filtro por status</param>
@@ -85,7 +85,7 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.Subscription
 
         /// <summary>
         ///     Cancela uma assinatura.
-        ///     <para>Referência: https://docs.pagar.me/reference/cancelar-assinatura-1.md</para>
+        ///     <see href="https://docs.pagar.me/reference/cancelar-assinatura-1.md">Documentação Oficial PagarMe</see>
         /// </summary>
         /// <param name="subscriptionId">Identificador da assinatura</param>
         /// <param name="cancelPendingInvoices">Indica se deve cancelar faturas pendentes</param>
@@ -94,7 +94,7 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.Subscription
 
         /// <summary>
         ///     Atualiza o cartão da assinatura.
-        ///     <para>Referência: https://docs.pagar.me/reference/editar-cartão-da-assinatura-1.md</para>
+        ///     <see href="https://docs.pagar.me/reference/editar-cartão-da-assinatura-1.md">Documentação Oficial PagarMe</see>
         /// </summary>
         /// <param name="subscriptionId">Identificador da assinatura</param>
         /// <param name="request">Dados do novo cartão</param>
@@ -104,7 +104,7 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.Subscription
 
         /// <summary>
         ///     Atualiza os metadados da assinatura.
-        ///     <para>Referência: https://docs.pagar.me/reference/editar-metadados-da-assinatura-1.md</para>
+        ///     <see href="https://docs.pagar.me/reference/editar-metadados-da-assinatura-1.md">Documentação Oficial PagarMe</see>
         /// </summary>
         /// <param name="subscriptionId">Identificador da assinatura</param>
         /// <param name="metadata">Novos metadados</param>
@@ -114,7 +114,7 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.Subscription
 
         /// <summary>
         ///     Atualiza o meio de pagamento da assinatura.
-        ///     <para>Referência: https://docs.pagar.me/reference/editar-meio-de-pagamento-da-assinatura.md</para>
+        ///     <see href="https://docs.pagar.me/reference/editar-meio-de-pagamento-da-assinatura.md">Documentação Oficial PagarMe</see>
         /// </summary>
         /// <param name="subscriptionId">Identificador da assinatura</param>
         /// <param name="request">Novos dados de pagamento</param>
@@ -124,7 +124,7 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.Subscription
 
         /// <summary>
         ///     Atualiza a data de início da assinatura.
-        ///     <para>Referência: https://docs.pagar.me/reference/editar-data-de-início-da-assinatura-1.md</para>
+        ///     <see href="https://docs.pagar.me/reference/editar-data-de-início-da-assinatura-1.md">Documentação Oficial PagarMe</see>
         /// </summary>
         /// <param name="subscriptionId">Identificador da assinatura</param>
         /// <param name="startAt">Nova data de início</param>
@@ -133,7 +133,7 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.Subscription
 
         /// <summary>
         ///     Atualiza o preço mínimo da assinatura.
-        ///     <para>Referência: https://docs.pagar.me/reference/editar-minimum-price-da-assinatura.md</para>
+        ///     <see href="https://docs.pagar.me/reference/editar-minimum-price-da-assinatura.md">Documentação Oficial PagarMe</see>
         /// </summary>
         /// <param name="subscriptionId">Identificador da assinatura</param>
         /// <param name="minimumPrice">Novo preço mínimo</param>
@@ -142,8 +142,8 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.Subscription
 
         /// <summary>
         ///     Ativa ou desativa o faturamento manual.
-        ///     <para>Referência: https://docs.pagar.me/reference/ativar-faturamento-manual-1.md</para>
-        ///     <para>Referência: https://docs.pagar.me/reference/desativar-faturamento-manual-1.md</para>
+        ///     <see href="https://docs.pagar.me/reference/ativar-faturamento-manual-1.md">Documentação Oficial PagarMe</see>
+        ///     <see href="https://docs.pagar.me/reference/desativar-faturamento-manual-1.md">Documentação Oficial PagarMe</see>
         /// </summary>
         /// <param name="subscriptionId">Identificador da assinatura</param>
         /// <param name="enabled">True para ativar, False para desativar</param>

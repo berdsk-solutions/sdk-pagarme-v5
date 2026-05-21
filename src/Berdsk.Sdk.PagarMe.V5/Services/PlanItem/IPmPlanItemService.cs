@@ -11,7 +11,7 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.PlanItem
     {
         /// <summary>
         ///     Inclui um item em um plano.
-        ///     <para>Referência: https://docs.pagar.me/reference/incluir-item-2.md</para>
+        ///     <see href="https://docs.pagar.me/reference/incluir-item-2">Documentação Oficial PagarMe</see>
         /// </summary>
         /// <param name="planId">Identificador do plano</param>
         /// <param name="request">Dados do item</param>
@@ -20,7 +20,7 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.PlanItem
 
         /// <summary>
         ///     Obtém os dados de um item específico de um plano.
-        ///     <para>Referência: https://docs.pagar.me/reference/obter-item-1.md</para>
+        ///     <see href="https://docs.pagar.me/reference/obter-item-1">Documentação Oficial PagarMe</see>
         /// </summary>
         /// <param name="planId">Identificador do plano</param>
         /// <param name="planItemId">Identificador do item do plano</param>
@@ -29,7 +29,7 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.PlanItem
 
         /// <summary>
         ///     Lista os itens de um plano.
-        ///     <para>Referência: https://docs.pagar.me/reference/listar-itens-1.md</para>
+        ///     <see href="https://docs.pagar.me/reference/listar-itens-1">Documentação Oficial PagarMe</see>
         /// </summary>
         /// <param name="planId">Identificador do plano</param>
         /// <returns>Lista de itens do plano</returns>
@@ -37,7 +37,7 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.PlanItem
 
         /// <summary>
         ///     Edita um item de um plano.
-        ///     <para>Referência: https://docs.pagar.me/reference/editar-item-1.md</para>
+        ///     <see href="https://docs.pagar.me/reference/editar-item-1">Documentação Oficial PagarMe</see>
         /// </summary>
         /// <param name="planId">Identificador do plano</param>
         /// <param name="planItemId">Identificador do item do plano</param>
@@ -48,7 +48,7 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.PlanItem
 
         /// <summary>
         ///     Remove um item de um plano.
-        ///     <para>Referência: https://docs.pagar.me/reference/remover-item-1.md</para>
+        ///     <see href="https://docs.pagar.me/reference/remover-item-1">Documentação Oficial PagarMe</see>
         /// </summary>
         /// <param name="planId">Identificador do plano</param>
         /// <param name="planItemId">Identificador do item do plano</param>

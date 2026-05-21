@@ -11,7 +11,7 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.RecipientBankAccount
     {
         /// <summary>
         ///     Atualiza a conta bancária padrão de um recebedor.
-        ///     <para>Referência: https://docs.pagar.me/reference/atualizar-conta-bancária-do-recebedor-1.md</para>
+        ///     <see href="https://docs.pagar.me/reference/atualizar-conta-bancária-do-recebedor-1">Documentação Oficial PagarMe</see>
         /// </summary>
         /// <param name="recipientId">ID do recebedor.</param>
         /// <param name="request">Dados da nova conta bancária.</param>

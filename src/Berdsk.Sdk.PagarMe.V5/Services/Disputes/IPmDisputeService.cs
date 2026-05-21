@@ -8,7 +8,7 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.Disputes
     ///     Interface para o serviço de consulta de disputas de chargeback.
     /// </summary>
     /// <remarks>
-    ///     Referência: https://docs.pagar.me/reference/get_v1-disputes.md
+    ///     <see href="https://docs.pagar.me/reference/get_v1-disputes">Documentação Oficial PagarMe</see>
     /// </remarks>
     public interface IPmDisputeService
     {
@@ -24,7 +24,7 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.Disputes
         /// <param name="limit">Número máximo de registros a serem retornados (padrão 5, máximo 100).</param>
         /// <returns>Uma lista paginada de disputas.</returns>
         /// <remarks>
-        ///     Referência: https://docs.pagar.me/reference/get_v1-disputes.md
+        ///     <see href="https://docs.pagar.me/reference/get_v1-disputes">Documentação Oficial PagarMe</see>
         /// </remarks>
         Task<PmListDisputesResponse> ListDisputesAsync(
             DateTime? createdAtLte = null,
@@ -41,7 +41,7 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.Disputes
         /// <param name="disputeId">ID único da disputa.</param>
         /// <returns>Os detalhes da disputa.</returns>
         /// <remarks>
-        ///     Referência: https://docs.pagar.me/reference/get_v1-disputes-dispute-id.md
+        ///     <see href="https://docs.pagar.me/reference/get_v1-disputes-dispute-id">Documentação Oficial PagarMe</see>
         /// </remarks>
         Task<PmDisputeResponse> GetDisputeAsync(string disputeId);
     }

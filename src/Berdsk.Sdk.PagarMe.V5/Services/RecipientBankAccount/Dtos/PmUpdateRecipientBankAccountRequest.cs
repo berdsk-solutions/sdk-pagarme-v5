@@ -5,7 +5,7 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.RecipientBankAccount.Dtos
 {
     /// <summary>
     ///     Requisição para atualizar a conta bancária padrão de um recebedor.
-    ///     <para>Referência: https://docs.pagar.me/reference/atualizar-conta-bancária-do-recebedor-1.md</para>
+    ///     <see href="https://docs.pagar.me/reference/atualizar-conta-bancária-do-recebedor-1.md">Documentação Oficial PagarMe</see>
     /// </summary>
     public class PmUpdateRecipientBankAccountRequest
     {

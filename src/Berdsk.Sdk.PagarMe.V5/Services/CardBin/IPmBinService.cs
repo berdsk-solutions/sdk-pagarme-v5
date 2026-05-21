@@ -10,7 +10,7 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.CardBin
     {
         /// <summary>
         ///     Obtém informações sobre o BIN do cartão.
-        ///     <para>Referência: https://docs.pagar.me/reference/obter-informações-do-bin.md</para>
+        ///     <see href="https://docs.pagar.me/reference/obter-informações-do-bin">Documentação Oficial PagarMe</see>
         /// </summary>
         /// <param name="bin">Bank Identifier Number (primeiros 6 dígitos do cartão)</param>
         /// <returns>Informações do BIN</returns>
