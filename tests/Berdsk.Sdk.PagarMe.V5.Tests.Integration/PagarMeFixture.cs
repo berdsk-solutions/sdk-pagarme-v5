@@ -12,11 +12,12 @@ public class PagarMeFixture : IDisposable
 
         var apiKey = Configuration["PAGARME_SECRET_KEY"] ?? Configuration["PagarMe:SecretKey"];
         var baseUrl = Configuration["PAGARME_BASE_URL"] ?? Configuration["PagarMe:BaseUrl"] ?? "https://api.pagar.me/core/v5/";
+        var paymentLinkBaseUrl = "https://sdx-api.pagar.me/core/v5/";
         
         if (string.IsNullOrEmpty(apiKey))
             throw new InvalidOperationException("PagarMe API Key não fornecida. Defina a variável de ambiente PAGARME_SECRET_KEY.");
         
-        Client = new PagarMeClient(apiKey, baseUrl);
+        Client = new PagarMeClient(apiKey: apiKey, baseUrl: baseUrl, paymentLinkBaseUrl: paymentLinkBaseUrl );
     }
 
     public PagarMeClient Client { get; private set; }
