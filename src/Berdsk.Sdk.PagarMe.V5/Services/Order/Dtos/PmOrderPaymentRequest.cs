@@ -16,6 +16,13 @@ namespace Berdsk.Sdk.PagarMe.V5.Services.Order.Dtos
         public string PaymentMethod { get; set; }
 
         /// <summary>
+        ///     Valor a ser pago por este meio de pagamento (em centavos). 
+        ///     Obrigatório em casos de multimeios de pagamento.
+        /// </summary>
+        [JsonPropertyName("amount")]
+        public int? Amount { get; set; }
+
+        /// <summary>
         ///     Dados sobre o pagamento com cartão de crédito
         /// </summary>
         [JsonPropertyName("credit_card")]

@@ -33,6 +33,9 @@
         /// <summary>Paga a menor.</summary>
         public static string Underpaid { get; set; } = "underpaid";
 
+        /// <summary>Autorizada (valor reservado no cartão, aguardando captura).</summary>
+        public static string Authorized { get; set; } = "authorized";
+
         /// <summary>Chargeback (disputa/contestação).</summary>
         public static string Chargedback { get; set; } = "chargedback";
     }

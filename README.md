@@ -29,6 +29,32 @@ mais, seguindo as melhores práticas do ecossistema .NET.
 - ⚓ **Webhooks:** Facilidade para processar notificações da API.
 - 🛡️ **Tipagem Forte:** DTOs precisos para todas as requisições e respostas.
 - ⚙️ **Interface do Vendedor:** Gestão de sub-contas e configurações de seller.
+- 🤖 **IA-Friendly:** Documentação otimizada para treinamento e uso com LLMs.
+
+---
+
+## 📚 Documentação (IA-Friendly)
+
+O grande diferencial deste SDK é a sua **Jornada de Documentação Otimizada para IAs**. Criamos um conjunto de guias que ensinam não apenas "como usar", mas "como ensinar" IAs (como GitHub Copilot, ChatGPT, Claude e Cursor) a gerar o melhor código possível para o seu projeto.
+
+### 🧭 Navegação Rápida
+- **[00. Comece Aqui (O Ponto de Partida)](./src/Berdsk.Sdk.PagarMe.V5/Docs/Sdk/00-comece-aqui.md)**
+- [01. Configuração do PagarMeClient](./src/Berdsk.Sdk.PagarMe.V5/Docs/Sdk/01-pagarme-client.md)
+- [02. Clientes e Cartões](./src/Berdsk.Sdk.PagarMe.V5/Docs/Sdk/02-customer.md)
+- [03. Pedidos e Pagamentos](./src/Berdsk.Sdk.PagarMe.V5/Docs/Sdk/03-order.md)
+- [04. Gestão de Cobranças (Charges)](./src/Berdsk.Sdk.PagarMe.V5/Docs/Sdk/04-charge.md)
+- [05. Assinaturas e Recorrência](./src/Berdsk.Sdk.PagarMe.V5/Docs/Sdk/05-subscription.md)
+- [06. Gestão de Planos](./src/Berdsk.Sdk.PagarMe.V5/Docs/Sdk/06-plan.md)
+- [07. Link de Pagamento](./src/Berdsk.Sdk.PagarMe.V5/Docs/Sdk/07-payment-link.md)
+- [08. Recebedores (Recipients)](./src/Berdsk.Sdk.PagarMe.V5/Docs/Sdk/08-recipient.md)
+- [09. Interface de Seller](./src/Berdsk.Sdk.PagarMe.V5/Docs/Sdk/09-seller-interface.md)
+- [10. Webhooks e Notificações](./src/Berdsk.Sdk.PagarMe.V5/Docs/Sdk/10-webhook.md)
+- [11. Consulta de BIN](./src/Berdsk.Sdk.PagarMe.V5/Docs/Sdk/11-card-bin.md)
+- [12. Transferências e Saques](./src/Berdsk.Sdk.PagarMe.V5/Docs/Sdk/12-transfer.md)
+- [13. Liquidações e Extratos](./src/Berdsk.Sdk.PagarMe.V5/Docs/Sdk/13-settlement.md)
+- [14. Gestão de Disputas](./src/Berdsk.Sdk.PagarMe.V5/Docs/Sdk/14-dispute.md)
+- [15. Helpers e Constantes](./src/Berdsk.Sdk.PagarMe.V5/Docs/Sdk/15-helpers.md)
+- [16. Tratamento de Exceções](./src/Berdsk.Sdk.PagarMe.V5/Docs/Sdk/16-exceptions.md)
 
 ---
 
@@ -44,155 +70,7 @@ dotnet add package Berdsk.Sdk.PagarMe.V5
 
 ## 🛠️ Como Usar
 
-### Inicializando o Cliente
-
-O `PagarMeClient` centraliza todos os serviços da API. É recomendado utilizá-lo como Singleton ou via Injeção de
-Dependência para reaproveitar o `HttpClient`.
-
-```csharp
-using Berdsk.Sdk.PagarMe.V5;
-
-var client = new PagarMeClient(
-    apiKey: "SUA_SECRET_KEY_AQUI",
-    baseUrl: "https://api.pagar.me/core/v5/" // Utilize a URL de sandbox para testes
-);
-```
-
-### Criando um Cliente
-
-```csharp
-using Berdsk.Sdk.PagarMe.V5.Services.Customer.Dtos;
-
-var customerRequest = new PmCreateCustomerRequest
-{
-    Name = "Thales Berdsk",
-    Email = "contato@berdsk.com.br",
-    Type = "individual",
-    Document = "00000000000" // CPF ou CNPJ
-};
-
-var customer = await client.Customer.CreateCustomerAsync(customerRequest);
-Console.WriteLine($"Cliente criado: {customer.Id}");
-```
-
-### Criando um Pedido (Pix)
-
-```csharp
-using Berdsk.Sdk.PagarMe.V5.Services.Order.Dtos;
-
-var orderRequest = new PmCreateOrderRequest
-{
-    Code = "PEDIDO-001",
-    Customer = new PmCreateCustomerRequest { /* ... dados do cliente ... */ },
-    Items = new List<PmOrderItemRequest>
-    {
-        new() { Amount = 1000, Description = "Produto Teste", Quantity = 1 }
-    },
-    Payments = new List<PmOrderPaymentRequest>
-    {
-        new()
-        {
-            PaymentMethod = "pix",
-            Pix = new PmOrderPixRequest { ExpiresIn = 3600 }
-        }
-    }
-};
-
-var order = await client.Order.CreateOrderAsync(orderRequest);
-Console.WriteLine($"QR Code Pix: {order.Charges[0].LastTransaction.QrCode}");
-```
-
-### Gerenciando Assinaturas
-
-```csharp
-using Berdsk.Sdk.PagarMe.V5.Services.Subscription.Dtos;
-
-var subRequest = new PmCreateSubscriptionRequest
-{
-    Code = "SUB-001",
-    PaymentMethod = "credit_card",
-    Card = new PmCardRequest { /* ... dados do cartão ... */ },
-    Customer = new PmCreateCustomerRequest { /* ... */ },
-    PlanId = "plan_xxxxxxxxxxxxxxxx"
-};
-
-var subscription = await client.Subscription.CreateSubscriptionAsync(subRequest);
-```
-
-### Capturando uma Cobrança
-
-```csharp
-using Berdsk.Sdk.PagarMe.V5.Services.Charge.Dtos;
-
-var charge = await client.Charge.CaptureChargeAsync("ch_xxxxxxxxxxxxxxxx", new PmCaptureChargeRequest
-{
-    Amount = 1000 // Valor em centavos
-});
-```
-
-### Listando Recebedores (Split)
-
-```csharp
-var recipients = await client.Recipient.ListRecipientsAsync(page: 1, size: 10);
-```
-
----
-
-## 🧰 Helpers de Status e Eventos
-
-O SDK inclui classes estáticas auxiliares no namespace `Berdsk.Sdk.PagarMe.V5.Helpers` com **constantes tipadas** para
-todos os valores de `status` e nomes de eventos de webhook utilizados pela API PagarMe v5. Use estas constantes em vez
-de digitar as strings manualmente — assim você evita typos e ganha autocomplete + IntelliSense (com a documentação
-oficial PagarMe linkada em cada propriedade).
-
-Exemplo de uso:
-
-```csharp
-using Berdsk.Sdk.PagarMe.V5.Helpers;
-
-if (charge.Status == PmChargeStatus.Paid)
-{
-    // cobrança paga
-}
-
-if (webhookEvent.Type == PmWebhookEvents.OrderPaid)
-{
-    // tratar evento de pedido pago
-}
-```
-
-### Tabela de Helpers disponíveis
-
-| Helper                        | Descrição                                                                                                                                               |
-|-------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `PmWebhookEvents`             | Nomes de todos os eventos de webhook emitidos pela PagarMe (ex: `customer.created`, `order.paid`, `charge.paid`, `subscription.canceled` etc.).         |
-| `PmBoletoStatus`              | Status de uma transação de **boleto** (ex: `generated`, `viewed`, `paid`, `voided`, `with_error`).                                                      |
-| `PmCreditCardStatus`          | Status de uma transação de **cartão de crédito** (ex: `authorized_pending_capture`, `captured`, `refunded`, `voided`, `partial_capture`).               |
-| `PmDebitCardStatus`           | Status de uma transação de **cartão de débito** (ex: `not_authorized`, `captured`, `refunded`, `failed`).                                               |
-| `PmCashStatus`                | Status de uma transação em **dinheiro / cash** (`pending`, `paid`).                                                                                     |
-| `PmPixStatus`                 | Status de uma transação **Pix** (ex: `waiting_payment`, `paid`, `refunded`, `with_error`).                                                              |
-| `PmSafetyPayStatus`           | Status de uma transação **SafetyPay** (ex: `pending`, `paid`, `overpaid`, `underpaid`).                                                                 |
-| `PmChargeStatus`              | Status de uma **cobrança (charge)** (`pending`, `paid`, `canceled`, `processing`, `failed`, `overpaid`, `underpaid`, `chargedback`).                    |
-| `PmOrderStatus`               | Status de um **pedido (order)** (`pending`, `paid`, `canceled`, `failed`, `closed`).                                                                    |
-| `PmPaymentLinkStatus`         | Status de um **Payment Link** (`active`, `canceled`, `building`).                                                                                       |
-| `PmSubscriptionStatus`        | Status de uma **assinatura** (`active`, `canceled`, `future`).                                                                                          |
-| `PmSubscriptionInvoiceStatus` | Status de uma **fatura de assinatura** (`pending`, `paid`, `canceled`, `scheduled`, `failed`).                                                          |
-| `PmPlanStatus`                | Status de um **plano** ou item de plano (`active`, `inactive`, `deleted`).                                                                              |
-| `PmCustomerStatus`            | Status de um **cliente** (`active`, `deleted`).                                                                                                         |
-| `PmAddressStatus`             | Status de um **endereço** de cliente (`active`, `deleted`).                                                                                             |
-| `PmCardStatus`                | Status de um **cartão salvo** do cliente (`active`, `deleted`, `expired`).                                                                              |
-| `PmRecipientStatus`           | Status de um **recebedor (recipient)** (`registration`, `affiliation`, `active`, `refused`, `suspended`, `blocked`, `inactive`).                        |
-| `PmBankAccountStatus`         | Status de uma **conta bancária** do recebedor (`active`, `inactive`, `deleted`).                                                                        |
-| `PmTransferStatus`            | Status de uma **transferência** de saldo (`pending`, `processing`, `transferred`, `failed`, `canceled`).                                                |
-| `PmAnticipationStatus`        | Status de uma **antecipação** de recebíveis (`pending`, `approved`, `refused`, `building`, `processing`, `success`, `failed`).                          |
-| `PmBalanceOperationStatus`    | Status de uma **operação de saldo** (`waiting_funds`, `available`, `transferred`).                                                                      |
-| `PmPayableStatus`             | Status de um **recebível (payable)** (`paid`, `waiting_funds`, `suspended`, `prepaid`).                                                                 |
-| `PmSettlementsStatus`         | Status de uma **liquidação (settlement)** (`failed`, `success`, `pending`).                                                                             |
-| `PmWebhookDeliveryStatus`     | Status de **entrega de um webhook** (`pending`, `sent`, `failed`).                                                                                      |
-| `PmDisputeStatus`             | Status de uma **disputa / chargeback** (ex: `opened`, `waiting_merchant_response`, `under_analysis`, `accepted`, `contested`, `won`, `lost`, `closed`). |
-
-> 💡 Cada helper traz, no seu XML doc, um link `<see href="...">Documentação Oficial PagarMe</see>` apontando para a
-> referência oficial do recurso correspondente.
+Para um aprendizado profundo e exemplos detalhados de cada serviço, recomendamos a leitura do nosso **[Guia de Início Rápido](./src/Berdsk.Sdk.PagarMe.V5/Docs/Sdk/00-comece-aqui.md)**.
 
 ---
 
