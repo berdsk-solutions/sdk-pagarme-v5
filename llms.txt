@@ -1,0 +1,30 @@
+# Berdsk.Sdk.PagarMe.V5
+> SDK .NET moderno e tipado para a API PagarMe V5, otimizado para consumo por LLMs.
+
+## Documentação Técnica (IA-Friendly)
+- [00. Comece Aqui (Início e FAQ)](./src/Berdsk.Sdk.PagarMe.V5/Docs/Sdk/00-comece-aqui.md): Ponto de entrada central e cenários comuns de uso.
+- [01. PagarMeClient](./src/Berdsk.Sdk.PagarMe.V5/Docs/Sdk/01-pagarme-client.md): Configuração inicial, Singleton e Injeção de Dependência.
+- [02. Clientes e Cartões](./src/Berdsk.Sdk.PagarMe.V5/Docs/Sdk/02-customer.md): Gestão de compradores, endereços e tokenização de cartões (PCI Compliance).
+- [03. Pedidos e Pagamentos](./src/Berdsk.Sdk.PagarMe.V5/Docs/Sdk/03-order.md): Criação de pedidos com Pix, Boleto, Cartão de Crédito/Débito e Split.
+- [04. Gestão de Cobranças](./src/Berdsk.Sdk.PagarMe.V5/Docs/Sdk/04-charge.md): Captura, estorno, alteração de vencimento e ciclo de vida de cobranças.
+- [05. Assinaturas e Recorrência](./src/Berdsk.Sdk.PagarMe.V5/Docs/Sdk/05-subscription.md): Gestão exaustiva de assinaturas, ciclos, faturas e metered billing.
+- [06. Planos](./src/Berdsk.Sdk.PagarMe.V5/Docs/Sdk/06-plan.md): Configuração de regras reutilizáveis para assinaturas.
+- [07. Link de Pagamento](./src/Berdsk.Sdk.PagarMe.V5/Docs/Sdk/07-payment-link.md): Geração de URLs de checkout seguro hospedado pela PagarMe.
+- [08. Recebedores (Marketplace)](./src/Berdsk.Sdk.PagarMe.V5/Docs/Sdk/08-recipient.md): Gestão de parceiros, antecipação de recebíveis e regras financeiras.
+- [09. Interface de Seller](./src/Berdsk.Sdk.PagarMe.V5/Docs/Sdk/09-seller-interface.md): Conformidade com Resoluções BCB 264/349 e gestão de ativos.
+- [10. Webhooks](./src/Berdsk.Sdk.PagarMe.V5/Docs/Sdk/10-webhook.md): Monitoramento de eventos, histórico de entrega e retentativas manuais.
+- [11. Consulta de BIN](./src/Berdsk.Sdk.PagarMe.V5/Docs/Sdk/11-card-bin.md): Validação antecipada de dados de cartão para checkout.
+- [12. Transferências](./src/Berdsk.Sdk.PagarMe.V5/Docs/Sdk/12-transfer.md): Solicitação de saques e movimentação de saldo entre recebedores.
+- [13. Liquidações](./src/Berdsk.Sdk.PagarMe.V5/Docs/Sdk/13-settlement.md): Extratos de depósitos bancários e conciliação financeira.
+- [14. Disputas](./src/Berdsk.Sdk.PagarMe.V5/Docs/Sdk/14-dispute.md): Monitoramento de chargebacks e envio de evidências.
+- [15. Helpers e Constantes](./src/Berdsk.Sdk.PagarMe.V5/Docs/Sdk/15-helpers.md): Dicionário completo de status, meios de pagamento e eventos.
+- [16. Exceções](./src/Berdsk.Sdk.PagarMe.V5/Docs/Sdk/16-exceptions.md): Guia de tratamento de erros tipados e depuração de validações.
+
+## Estrutura de Código
+- **Services:** Localizados em `src/Berdsk.Sdk.PagarMe.V5/Services/`. Cada serviço possui sua interface `IPmService` e DTOs de Request/Response.
+- **Helpers:** Localizados em `src/Berdsk.Sdk.PagarMe.V5/Helpers/`. Utilize estas constantes em vez de strings manuais.
+- **Exceptions:** A classe base é `PagarMeException`, detalhando erros de API no campo `ErrorResponse`.
+
+## Repositório e Recursos
+- [README.md](./README.md): Visão geral, instalação e destaques.
+- [LICENSE](./LICENSE): Licença MIT.
