@@ -21,8 +21,8 @@ O serviço `.PaymentLink` permite gerar URLs seguras hospedadas pela PagarMe par
 
 ## Exemplos de Uso
 
-### 1. Criando um Link de Pagamento Simples
-Este exemplo cria um link para venda de um produto ("Camiseta") aceitando Cartão de Crédito e Pix.
+### 1. Criando um Link de Pagamento Completo
+Este exemplo demonstra a criação de um link com configurações detalhadas para Cartão, Pix e Boleto, além de vincular um cliente existente.
 
 - **DTO de Entrada:** `PmCreatePaymentLinkRequest`
 - **DTO de Saída:** `PmPaymentLinkResponse`
@@ -33,50 +33,82 @@ using Berdsk.Sdk.PagarMe.V5.Helpers;
 
 var request = new PmCreatePaymentLinkRequest
 {
-    Name = "Venda Camiseta Oficial",
-    OrderCode = "PED-12345",
-    Type = "order", // Tipo 'order' para vendas únicas
+    Name = "Venda Curso de C# Avançado",
+    OrderCode = "PED-998877",
+    Type = "order",
+    ExpiresIn = 120, // Expira em 120 minutos (2 horas)
+    
+    // Vincula a um cliente existente (opcional)
+    CustomerSettings = new PmPaymentLinkCustomerSettingsRequest
+    {
+        CustomerId = "cus_xxxxxxxxxxxxxxxx"
+    },
+
     PaymentSettings = new PmPaymentLinkPaymentSettingsRequest
     {
         AcceptedPaymentMethods = new List<string> 
         { 
             PmPaymentMethod.CreditCard, 
-            PmPaymentMethod.Pix 
+            PmPaymentMethod.Pix,
+            PmPaymentMethod.Boleto
         },
+
+        // Configurações de Cartão de Crédito
         CreditCardSettings = new PmPaymentLinkCreditCardSettingsRequest
         {
-            InstallmentsSetup = new List<PmPaymentLinkInstallmentsSetupRequest>
+            OperationType = "auth_and_capture",
+            InstallmentsSetup = new PmPaymentLinkInstallmentsSetupRequest
             {
-                new() { Installments = 1, Number = 1 }, // À vista
-                new() { Installments = 2, Number = 2 }  // 2x
+                MaxInstallments = 12,      // Até 12x
+                FreeInstallments = 2,     // 2 primeiras sem juros
+                InterestRate = 1.5m,      // 1.5% de juros ao mês
+                InterestType = "simple",  // Juros simples
+                Amount = 1000             // Parcela mínima de R$ 10,00
             }
+        },
+
+        // Configurações de Pix
+        PixSettings = new PmPaymentLinkPixSettingsRequest
+        {
+            ExpiresIn = 3600, // Pix expira em 1 hora após gerado
+            AdditionalInformation = new List<PmPaymentLinkPixAdditionalInformationRequest>
+            {
+                new() { Name = "Produto", Value = "Curso C#" },
+                new() { Name = "Unidade", Value = "Matriz" }
+            }
+        },
+
+        // Configurações de Boleto
+        BoletoSettings = new PmPaymentLinkBoletoSettingsRequest
+        {
+            Instructions = "Pagar até o vencimento. Não aceitar após 5 dias.",
+            DueIn = 5,             // Vence em 5 dias
+            Discount = 500,        // R$ 5,00 de desconto
+            // DiscountPercentage = 5.0 // Ou 5% de desconto
         }
     },
+
     CartSettings = new PmPaymentLinkCartSettingsRequest
     {
         Items = new List<PmPaymentLinkItemRequest>
         {
             new()
             {
-                Amount = 5000, // R$ 50,00
-                Name = "Camiseta Preta G",
+                Amount = 15000, // R$ 150,00
+                Name = "Curso C# Avançado",
                 DefaultQuantity = 1,
-                Description = "Camiseta 100% Algodão"
+                Description = "Acesso vitalício ao curso"
             }
         }
     }
 };
 
 var paymentLink = await client.PaymentLink.CreatePaymentLinkAsync(request);
-
-// A URL que você deve enviar ao cliente:
-Console.WriteLine($"Link gerado: {paymentLink.Url}");
+Console.WriteLine($"URL do Checkout: {paymentLink.Url}");
 ```
 
 ### 2. Listagem de Links com Filtro
 Exemplo de como buscar todos os links que estão ativos.
-
-- **DTO de Saída:** `PmListPaymentLinksResponse`
 
 ```csharp
 using Berdsk.Sdk.PagarMe.V5.Helpers;
@@ -89,36 +121,61 @@ var activeLinks = await client.PaymentLink.ListPaymentLinksAsync(
 
 foreach (var link in activeLinks.Data)
 {
-    Console.WriteLine($"ID: {link.Id} - Nome: {link.Name} - URL: {link.Url}");
+    Console.WriteLine($"ID: {link.Id} - URL: {link.Url}");
 }
 ```
 
 ### 3. Cancelando um Link
 Se um produto esgotar ou a promoção acabar, você pode cancelar o link imediatamente.
 
-- **DTO de Saída:** `PmPaymentLinkResponse`
-
 ```csharp
 var canceledLink = await client.PaymentLink.CancelPaymentLinkAsync("pl_xxxxxxxxxxxxxxxx");
-
-if (canceledLink.Status == PmPaymentLinkStatus.Canceled)
-{
-    Console.WriteLine("Link desativado com sucesso.");
-}
+Console.WriteLine($"Status atual: {canceledLink.Status}"); // Deve retornar 'canceled'
 ```
+
+---
+
+## Detalhamento das Configurações
+
+### Pix Settings (`PixSettings`)
+Permite customizar o tempo de vida do QR Code e adicionar campos de informação adicionais.
+
+| Propriedade | Tipo | Descrição |
+| :--- | :--- | :--- |
+| `ExpiresIn` | `int?` | Prazo de vencimento em segundos para o QR Code gerado. |
+| `AdditionalInformation` | `List` | Lista de chave/valor para informações extras no checkout Pix. |
+
+### Boleto Settings (`BoletoSettings`)
+Controla as regras de vencimento, instruções bancárias e descontos para pagamentos via boleto.
+
+| Propriedade | Tipo | Descrição |
+| :--- | :--- | :--- |
+| `Instructions` | `string` | Instruções do boleto (Max 255 caracteres). |
+| `DueIn` | `int?` | Dias para o vencimento a partir da geração do boleto. |
+| `DueAt` | `string` | Data fixa de vencimento (ISO 8601). |
+| `Discount` | `int?` | Valor fixo de desconto em centavos. |
+| `DiscountPercentage` | `double?` | Valor de desconto em porcentagem. |
+
+### Credit Card Settings (`CreditCardSettings`)
+Define como o cartão será processado e quais as regras de parcelamento oferecidas no checkout.
+
+| Propriedade | Tipo | Descrição |
+| :--- | :--- | :--- |
+| `OperationType` | `string` | `auth_and_capture` (padrão) ou `auth_only`. |
+| `InstallmentsSetup` | `Object` | Objeto `PmPaymentLinkInstallmentsSetupRequest` para juros e parcelas. |
 
 ---
 
 ## Dicas para IAs ao utilizar .PaymentLink:
 
 1. **URL de Checkout:** O campo mais importante na resposta é o `paymentLink.Url`. É esta URL que deve ser redirecionada ou enviada ao cliente final.
-2. **Ambiente de Sandbox:** A PagarMe utiliza um host diferente para links em Sandbox. Ao instanciar o `PagarMeClient`, você pode passar o `paymentLinkBaseUrl` (veja o guia 01-pagarme-client).
-3. **Expiração:** Você pode controlar por quanto tempo o link fica disponível usando as propriedades `ExpiresAt` ou `ExpiresIn` (em minutos).
-4. **Limitação de Uso:** Use `MaxSessions` para limitar quantas vezes o link pode ser acessado e `MaxPaidSessions` para limitar quantos pagamentos bem-sucedidos ele pode gerar (útil para estoques limitados).
-5. **Tipos de Link:** Existem dois tipos principais (`Type`):
-    - `order`: Para vendas de produtos/serviços únicos (usa `CartSettings.Items`).
-    - `subscription`: Para criação de assinaturas recorrentes (usa `CartSettings.Recurrences`).
-6. **Uso de Helpers:** Sempre utilize `PmPaymentLinkStatus` para comparar estados e `PmPaymentMethod` para definir os métodos aceitos, garantindo que as strings estejam corretas.
+2. **Settings Mutuamente Exclusivos:** Em `BoletoSettings`, não envie `DueIn` e `DueAt` simultaneamente. O mesmo vale para `Discount` e `DiscountPercentage`.
+3. **Expiração do Link vs. Expiração do Método:**
+    - `ExpiresIn` no nível raiz é a expiração da **URL do Link** (em minutos).
+    - `ExpiresIn` dentro de `PixSettings` é a expiração do **QR Code** (em segundos) após ser gerado.
+4. **Parcelamento:** Ao configurar `InstallmentsSetup`, certifique-se de que o `Amount` (parcela mínima) não torne o parcelamento impossível para o valor total do carrinho.
+5. **Checkout One-Click:** Se você passar um `CustomerId` em `CustomerSettings`, a PagarMe pode oferecer cartões salvos para o cliente, facilitando a conversão.
+6. **Uso de Helpers:** Sempre utilize `PmPaymentLinkStatus` para comparar estados e `PmPaymentMethod` para definir os métodos aceitos.
 
 ---
 
